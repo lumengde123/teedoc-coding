@@ -1,0 +1,69 @@
+{
+    "locale": "zh-cn",
+    "navbar": {
+        "title": "mengdelu",
+        "logo": {
+            "alt": "左上角 logo",
+            "url": ""
+        },
+        "home_url": "/",
+        "items": [
+            {
+                "url": "/my_notes/",
+                "label": "我的笔记",
+                "position": "left"
+            },
+            {
+                "url": "/front-end/",
+                "label": "前端三剑客",
+                "position": "left"
+            },
+            {
+                "url": "/vue/",
+                "label": "Vue",
+                "position": "left"
+            },
+            {
+                "url": "/unity/",
+                "label": "Unity",
+                "position": "left"
+            }
+        ]
+    },
+    "footer":{
+        "top":[
+            {
+                "label": "第一列链接",
+                "items": [
+                    {
+                        "label": "我的博客",
+                        "url": "https://lumengde.com",
+                        "target": "_blank"
+                    },
+                    {
+                        "label": "我的博客",
+                        "url": "https://lumengde.com",
+                        "target": "_blank"
+                    }
+                ]
+            },
+            {
+                "label": "第二列链接",
+                "items": [
+                    {
+                        "label": "Code Monkey - Youtube",
+                        "url": "https://www.youtube.com/@CodeMonkeyUnity/videos",
+                        "target": "_blank"
+                    }
+                ]
+            }
+        ],
+        "bottom": [
+            {
+                "label": "网站使用 teedoc 生成",
+                "url": "https://github.com/teedoc/teedoc",
+                "target": "_blank"
+            }
+        ]
+    }
+}

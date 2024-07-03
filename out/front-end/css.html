@@ -1,0 +1,2905 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn"  class=" heading_no_counter ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="CSS">
+    
+    
+    <meta name="description" content="CSS学习笔记">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>CSS 学习笔记 - mengdelu</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": ["笔记", "CSS"], "date": "2024-06-16", "update": [], "ts": 1718467200, "author": "", "brief": "", "cover": "", "class": "heading_no_counter"}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>mengdelu</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/my_notes/">我的笔记</a></li>
+<li class="active"><a  href="/front-end/">前端三剑客</a></li>
+<li class=""><a  href="/vue/">Vue</a></li>
+<li class=""><a  href="/unity/">Unity</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">站内搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载搜索文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/front-end/index.html"><span class="label">文档说明</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/html5.html"><span class="label">HTML5</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/front-end/css.html"><span class="label">CSS</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css3.html"><span class="label">CSS3</span><span class=""></span></a></li>
+<li class="not_active no_link"><a><span class="label">JavaScript</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/front-end/javascript01.html"><span class="label">ECMAScript</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/javascript02.html"><span class="label">Web-APIs-DOM</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/javascript03.html"><span class="label">JavaScript进阶</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>CSS 学习笔记</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>笔记</li>
+                            
+                                <li>CSS</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2024-06-16">
+                                    2024-06-16
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <p>CSS样式：专门用来&quot;美化&quot;html标签</p>
+<p>CSS规则由两个主要部分构成：选择器 + 一条或多条声明</p>
+
+<pre class="language-css"><code class="language-css">/* 
+    选择器{样式}，即 给谁改样式{改什么样式} 
+    样式 -- 键:值;
+    代码风格：选择器和'{'中间保持空格，属性值前面和'：'后面保持空格
+*/
+
+h1 { color: red;  font-size: 25px; }
+</code></pre>
+<p>选择器：根据不同需求把不同的标签选出来</p>
+<h2 id="1.CSS%E9%80%89%E6%8B%A9%E5%99%A8">1.CSS选择器</h2>
+<p><strong>基础选择器</strong></p>
+<ul>
+<li><p><strong>id选择器（用于唯一性的元素上）</strong></p>
+
+<pre class="language-css"><code class="language-css">#c1 {
+
+}
+
+&lt;div id='c1'&gt;&lt;/div&gt;
+</code></pre>
+</li>
+<li><p><strong>类选择器（常用）</strong></p>
+<p>一个标签可以有多个类，一个类可以被多个标签使用；id是某个标签专属的，唯一指定</p>
+
+<pre class="language-css"><code class="language-css">.red {
+    color: red;
+}
+.green {
+    color: green;
+}
+.font35 {
+  font-size: 35px;
+}
+
+&lt;div class='red font35'&gt;变红色&lt;/div&gt;
+&lt;div class='green font35'&gt;变绿色&lt;/div&gt;
+/* 多类名_降低耦合度，减少代码量，方便修改 */
+</code></pre>
+</li>
+<li><p><strong>标签选择器（常用）</strong></p>
+
+<pre class="language-css"><code class="language-css">div {
+    color: pink;
+}
+
+&lt;div&gt;xxx&lt;/div&gt;
+</code></pre>
+</li>
+<li><p>通配符选择器</p>
+
+<pre class="language-css"><code class="language-css">* {
+  padding: 0;
+  margin: 0;
+}
+/* 无需调用，会自动给所有的元素使用样式。特殊情况才用 */
+</code></pre>
+</li>
+</ul>
+<p><strong>复合选择器：多个基础选择器复合而成</strong></p>
+<ul>
+<li><p><strong>属性选择器</strong></p>
+
+<pre class="language-css"><code class="language-css">input[type='text'] {
+  border: 1px solid red;
+}
+.v1[xx=&quot;999&quot;] {
+  color: gold;
+}
+
+&lt;input type=&quot;text&quot;&gt;
+&lt;div class=&quot;v1&quot; xx=&quot;999&quot;&gt;a&lt;/div&gt;
+</code></pre>
+</li>
+<li><p><strong>后代选择器（常用）</strong></p>
+
+<pre class="language-css"><code class="language-css">ul li { 样式声明 }	/* 选择ul里面所有的 li标签元素。 */
+ol li a { ... }		/* 包含在内的都可以是后代，选中所有后代 */
+.nav li a { ... }
+</code></pre>
+</li>
+<li><p><strong>子选择器（子元素选择器）</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 只能选择某元素最近一级子元素，即亲儿子元素 */
+.nav &gt; a { ... }		// 只会选择下一级的a，再下一级的不会选中
+</code></pre>
+</li>
+<li><p><strong>并集选择器</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 
+  选择要同时修改为相同样式的多组标签,即集体声明
+  约定语法规范：并集选择器喜欢竖着写
+*/
+div,
+p,
+.pig li {
+  color: pink;
+}
+</code></pre>
+</li>
+<li><p><strong>伪类选择器</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 
+  用于向某些选择器添加特殊的效果，例如给链接添加特殊效果，例如选择第1个或第n个元素
+*/
+  
+# 1.链接伪类选择器
+a:link		/* 选择所有未被访问的链接 */
+a:visited	/* 选择所有已被访问的链接 */
+a:hover		/* 选择鼠标指针位于其上的链接 */
+a:active	/* 选择活动链接（鼠标按下未弹起的链接） */
+
+/* 
+  要按照LVHA的顺序声明
+  要给&lt;a&gt;修改样式需要给a单独指定样式
+*/
+
+# 2.:focus伪类选择器
+/* 获取获得焦点的表单元素，一般input类表单元素才能获取 */
+input:focus {
+    background-color: pink;
+    color: red;
+}
+
+# 3.:checked伪类选择器
+/* 修改被选中的复选框的样式 */
+</code></pre>
+</li>
+</ul>
+<p><strong>注意：不同选择器有优先级，复合选择器的权重会叠加，具体可查看7.CSS三大特性</strong></p>
+<h2 id="2.%E5%AD%97%E4%BD%93%E5%B1%9E%E6%80%A7-font%E7%B3%BB%E5%88%97">2.字体属性 font系列</h2>
+
+<pre class="language-css"><code class="language-css">body {
+    font-style: normal;		/* italic为倾斜效果，少用。一般用来把em、i的倾斜字体变得不倾斜 */
+    font-weight: 700;	/*字体粗细,更提倡用数字，也可用normal=400、bold=700、bolder、lighter*/ 
+    font-size: 16px;	/*字体大小,16px为chrome默认字体大小*/ 
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif;
+    /* 
+    尽量使用系统默认自带字体，保证任何用户的浏览器中都能正确显示 
+    显示微软雅黑字体。当用户电脑没有微软雅黑时，查看是否有下一个字体 Arial
+    */
+}
+</code></pre>
+<p>font复合属性写法：</p>
+
+<pre class="language-css"><code class="language-css">/* 基本格式： */
+body {
+    font: font-style font-weight font-size/line-height font-family;
+}
+/* 举例： */
+body {
+    font: italic 700 16px/20px 'Microsoft YaHei';
+}
+
+/* 不需要的属性可以省略，但必须保留font-size和font-family */
+</code></pre>
+<h2 id="3.%E6%96%87%E6%9C%AC%E5%B1%9E%E6%80%A7">3.文本属性</h2>
+<p>文字对齐</p>
+
+<pre class="language-css"><code class="language-css">div {
+    color: #00FF7F;		/*预定义的颜色red,green、十六进制：#FF6600,#00FF7F、RGB代码：rgb(255,0,0)*/
+    text-align: center;		/* 水平对齐文本：left(默认)、right、center */ 
+    text-decoration: none;	/*装饰文本。underline：下划线、none：字体取消下划线，例如&lt;a&gt;的*/ 
+    text-indent: 2em;		/* 文本缩进。通常将段落的首行缩进，除此之外其他场合不太适合用 */
+    line-height: 26px;		/* 文字行间距=上间距+文本高度+下间距，改的是上下间距 */
+}
+
+/* 案例：day3-22 新闻页面 */
+</code></pre>
+<p><strong>em</strong>是一个相对单位，就是当前元素(font-size)1个文字的大小。若当前元素没有设置大小，则会按照父元素的1个文字大小</p>
+<p><strong>文字垂直居中小技巧</strong>：让文字的行高等于盒子的高度，即line-height = height = ??px；上下间距+文字刚好填满盒子，于是文字就居中了</p>
+
+<pre class="language-css"><code class="language-css"># 示例1
+div {
+    width: 230px;
+    height: 40px;
+    font-size: 10px;
+    line-height: 30px;
+}
+在这个示例中：
+- font-size 设置为 10px，表示文字的高度为 10px。
+- line-height 设置为 30px，表示行高为 30px。
+
+计算：
+- 行高为 30px，减去文字高度 10px，剩余 20px。
+- 默认情况下，行高会均匀地分配到文字的上下两侧，因此上下各 10px。
+- 因为 div 的高度为 40px：
+
+- div 高度 40px，减去行高 30px，剩余 10px。
+- 这 10px 没有被行高占据，所以文字会偏上。
+
+
+</code></pre>
+
+<pre class="language-css"><code class="language-css"># 示例2
+div {
+    width: 230px;
+    height: 40px;
+    font-size: 10px;
+    line-height: 60px;
+}
+在这个示例中：
+- font-size 设置为 10px，表示文字的高度为 10px。
+- line-height 设置为 60px，表示行高为 60px。
+
+计算：
+- 行高为 60px，减去文字高度 10px，剩余 50px。
+- 默认情况下，行高会均匀地分配到文字的上下两侧，因此上下各 25px。
+- 因为 div 的高度为 40px：
+
+- 上边 25px 加上文字高度 10px 等于 35px，比 div 高度 40px 低，文字会偏下。
+</code></pre>
+<p><strong>总结</strong></p>
+<ul>
+<li><p>当行高 (line-height) 小于盒子高度 (height) 时，文字会偏上。</p>
+</li>
+<li><p>当行高 (line-height) 大于盒子高度 (height) 时，文字会偏下。</p>
+</li>
+<li><p>默认上下间距相等，若<code>line-height &lt; height</code>，则<strong>文字偏上</strong>；若<code>line-height &gt; height</code>，则<strong>文字偏下</strong>。</p>
+</li>
+</ul>
+<h2 id="4.%3Cstrong%3ECSS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F%3C/strong%3E">4.<strong>CSS引入方式</strong></h2>
+<ul>
+<li><p>行内样式表（行内式）：就在标签上改</p>
+
+<pre class="language-html"><code class="language-html">&lt;img src=&quot;&quot; style=&quot;height:100px;&quot;&gt;
+&lt;div style=&quot;color:red;&quot;&gt;中国联通&lt;/div&gt;
+</code></pre>
+</li>
+<li><p>内部样式表（嵌入式）：写到html页面内部。即将所有CSS代码单独放到 <code>&lt;style&gt;</code> 标签中。</p>
+
+<pre class="language-html"><code class="language-html">&lt;head&gt;
+    &lt;style&gt;
+        .c1{
+            color:red;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class='c1'&gt;中国联通&lt;/h1&gt;
+&lt;h1 class='c1'&gt;中国移动&lt;/h1&gt;
+&lt;/body&gt;
+
+/* &lt;style&gt;标签一般放在&lt;head&gt;中 */
+</code></pre>
+</li>
+<li><p>外部样式表（链接式）：单独写到CSS文件中，再把CSS文件引入到HTML页面中使用</p>
+
+<pre class="language-html"><code class="language-html">&lt;head&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;/static/common.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;h1 class='c1'&gt;中国联通&lt;/h1&gt;
+&lt;h1 class='c1'&gt;中国移动&lt;/h1&gt;
+&lt;/body&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">// common.css
+.c1{
+    height:100px;
+}
+.c1{
+    color:red;
+}
+</code></pre>
+<p><strong>多重样式优先级：行内 &gt; 内部 &gt; 外部 &gt; 默认</strong></p>
+</li>
+</ul>
+<h2 id="5.%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F">5.元素显示模式</h2>
+<p>HTML元素一般分为块元素和行内元素</p>
+<ul>
+<li>块元素：<ul>
+<li><code>&lt;div&gt;</code>、<code>&lt;h1&gt;</code>--<code>&lt;h6&gt;</code>、<code>&lt;p&gt;</code>、<code>&lt;ul&gt;</code>、<code>&lt;ol&gt;</code>、<code>&lt;li&gt;</code>等等</li>
+<li>独占一行</li>
+<li>高宽、内外边距都可以控制</li>
+<li>宽度默认是容器（父级容器）的100%</li>
+<li>是一个容器及盒子，里面可以放行内或者块级元素</li>
+<li>文字类的元素如<code>&lt;p&gt;</code>、<code>&lt;h1&gt;</code>~<code>&lt;h6&gt;</code>内部不能再放块级元素</li>
+</ul>
+</li>
+<li>行内元素（内联元素）：<ul>
+<li><code>&lt;span&gt;</code>、文本格式化标签（<code>&lt;a&gt;</code>、<code>&lt;strong&gt;</code>、<code>&lt;b&gt;</code>、<code>&lt;em&gt;</code>、<code>&lt;i&gt;</code>、<code>&lt;del&gt;</code>、<code>&lt;s&gt;</code>、<code>&lt;ins&gt;</code>、<code>&lt;u&gt;</code>）、等等</li>
+<li>相邻的行内元素在一行上，一行可以显示多个</li>
+<li>高宽设置无效（可以间接设置）</li>
+<li>默认宽度是它本身内容的宽度</li>
+<li>行内元素只能容纳文本或其他行内元素</li>
+<li>链接<code>&lt;a&gt;</code>里面不能再放链接，特殊情况<code>&lt;a&gt;</code>里面可以放块级元素，但是给<code>&lt;a&gt;</code>转换成块级模式最安全</li>
+</ul>
+</li>
+<li>行内块元素：<ul>
+<li>在行内元素中的几个特殊的标签——<code>&lt;img /&gt;</code>、<code>&lt;input /&gt;</code>、<code>&lt;td&gt;</code>,他们同时具有块元素和行内元素的特点</li>
+<li>和相邻行内元素（行内块）在一行上，一行可以显示多个（行内元素特点）。<strong>但它们之间有空白缝隙，可以通过浮动来解决。</strong></li>
+<li>默认宽度是它本身内容的宽度（行内元素特点）</li>
+<li>高、行高、内外边距都可以控制（块级元素特点）</li>
+</ul>
+</li>
+</ul>
+<h2 id="6.%E5%85%83%E7%B4%A0%E6%98%BE%E7%A4%BA%E6%A8%A1%E5%BC%8F%E8%BD%AC%E6%8D%A2">6.元素显示模式转换</h2>
+<p>一个模式的元素需要另外一种模式的特性，需要用到display</p>
+
+<pre class="language-markdown"><code class="language-markdown">/* 把行内元素转换成块级元素 */
+a {
+    display: block;
+    width: 150px;
+    height: 50px;
+    background-color: pink;
+}
+
+&lt;a href=&quot;#&quot;&gt;块级a元素&lt;/a&gt;
+&lt;a href=&quot;#&quot;&gt;块级a元素&lt;/a&gt;
+</code></pre>
+
+<pre class="language-markdown"><code class="language-markdown">/* 把块级元素转换成行内元素 */
+div {
+    display: inline;
+    width: 300;
+    height: 100px;
+    background-color: purple;  
+}
+
+&lt;div&gt;行内的块级元素&lt;/div&gt;
+&lt;div&gt;行内的块级元素&lt;/div&gt;
+</code></pre>
+<p><strong>display</strong></p>
+
+<pre class="language-css"><code class="language-css">display: inline;		- 块级 --&gt; 行内
+display: block;			- 行内 --&gt; 块级
+display: inline-block;	- 块/行--&gt; 行内块
+
+display:hidden;			- 隐藏 --&gt; 隐藏但占用空间
+display: none;			- 隐藏 --&gt; 隐藏且不占用空间
+</code></pre>
+<p>案例：day5-18 简单小米侧边栏</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+        /* 1. 把a转换为块级元素 */
+        a {
+            display: block;
+            width: 230px;
+            height: 40px;
+            background-color: #55585a;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+            text-indent: 2em;
+            line-height: 40px;
+        }
+
+        /* 2 鼠标经过链接变换背景颜色 */
+        a:hover {
+            background-color: #ff6700;
+        }
+    &lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;a href=&quot;#&quot;&gt;手机 电话卡&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;电视 盒子&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;笔记本 平板&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;出行 穿戴&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;智能 路由器&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;健康 儿童&lt;/a&gt;
+    &lt;a href=&quot;#&quot;&gt;耳机 音响&lt;/a&gt;
+&lt;/body&gt;
+</code></pre>
+<h2 id="7.CSS%E7%9A%84%E8%83%8C%E6%99%AF">7.CSS的背景</h2>
+
+<pre class="language-css"><code class="language-css">div {
+    /* background-color: transparent;	透明色，也是默认颜色。背景颜色在背景图片下面 */
+    background-color: pink;
+
+    background-image: none | url(&quot;url&quot;);		/* 背景图片，none是默认值 */
+
+    background-repeat: repeat | no-repeat | repeat-x | repeat-y;	/* 背景平铺，默认是平铺的 */
+
+    background-attachment: scroll | fixed;	/* 背景图像固定（背景附着）：固定或随对象内容一起滚动 */
+
+    background-position: x y; 
+    /*
+    	改背景图片位置,可为方位名词(top bottom left right center)或精确方位
+    	若用方位名词，x y或y x一样的，若用px则不可颠倒
+    	若只指定一个方位名词，另一个省略，则它默认为center；
+    	若只指定一个精确名词，另一个省略，则一定x精确，y为center；
+    	若混合使用，则x y也不可颠倒
+    */
+    background-size: auto | 宽 高 | 百分比 | cover | contain;
+    /* 背景图片大小，auto默认不改变图片大小，宽高用px，cover等比例填满容器，contain等比缩放至紧贴容器边缘 */	
+}
+
+/* 案例：
+    day4-26 五彩导航
+    day4-19~20 背景位置-方位名词应用
+*/
+</code></pre>
+<p>background复合写法</p>
+
+<pre class="language-css"><code class="language-css">div {
+    background: color image repeat attachment position;
+}
+
+div {
+    background: black url(&quot;images/bg.jpg&quot;) no-repeat fixed center top;
+}
+</code></pre>
+<p><strong>背景色</strong>半透明</p>
+
+<pre class="language-css"><code class="language-css">background： rgba(0, 0, 0, .3);
+
+/* 	(0, 0, 0)表示黑色
+    最后一个参数是alpha透明度，取值范围：0~1 ，越小越透明
+*/
+</code></pre>
+<h2 id="8.CSS%E4%B8%89%E5%A4%A7%E7%89%B9%E6%80%A7">8.CSS三大特性</h2>
+<p><strong>1.层叠性</strong></p>
+<p>用同一类选择器给某元素多次修改同一个样式（但不同值），此时下一个样式就会覆盖（层叠）上一个冲突的样式</p>
+
+<pre class="language-css"><code class="language-css">/*多样式&amp;覆盖问题*/
+.c1 {
+    color: red!important;		&lt;!-- 表示不会被覆盖--&gt;
+    border: 1px solid red;
+}
+.c1 {
+    font-size: 28px;
+    color: green;
+}
+
+&lt;div class=&quot;c2 c1&quot;&gt;
+    不重名则样式不冲突，新样式会叠加进去；重名则样式冲突，按离结构就近原则,后来居上进行覆盖
+&lt;/div&gt;
+</code></pre>
+<p>2.<strong>继承性</strong></p>
+<p>子标签会继承父标签的<strong>某些样式</strong>，例如<code>text-</code>、<code>font-</code>、<code>line-</code>、<code>color</code></p>
+<p>恰当地使用继承可以简化代码，降低CSS样式的复杂性</p>
+
+<pre class="language-markdown"><code class="language-markdown">div {
+    color: pink;
+    font-size: 14px;
+}
+&lt;div&gt;
+    &lt;p&gt;龙生龙，凤生凤，老鼠生的孩子会打洞&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p>--<strong>行高的继承</strong></p>
+<p>行高不仅可以是精确值，还可以是倍数。子标签先继承父标签的font，当子标签的font-size覆盖之后，line-height也会按倍数自动改变</p>
+
+<pre class="language-css"><code class="language-css">body {
+    color: pink;
+    /* font: 12px/24px 'Microsoft YaHei'; */
+    font: 12px/1.5 'Microsoft YaHei';
+}
+div {
+    /* 子元素继承了父元素 body 的行高 1.5 */
+    /* 这个1.5 就是当前元素文字大小 font-size 的1.5倍   所以当前div 的行高就是21像素 */
+    font-size: 14px; 
+}
+p {
+    /* 1.5 * 16 =  24 当前的行高 */
+    font-size: 16px;
+}
+/* li 么有手动指定文字大小  则会继承父亲的 文字大小  body 12px 所以 li 的文字大小为 12px 
+
+当前li 的行高就是  12 * 1.5  =  18
+*/
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;div&gt;粉红色的回忆&lt;/div&gt;
+&lt;p&gt;粉红色的回忆&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;我没有指定文字大小&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p><strong>3.选择器优先级</strong></p>
+<p>当同一个元素指定多个选择器，会产生优先级</p>
+<ul>
+<li>选择器相同，则执行层叠性</li>
+<li>选择器不同，则根据选择器权重执行</li>
+</ul>
+<table>
+<thead>
+<tr>
+  <th>选择器</th>
+  <th>选择器权重</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>继承 / *</td>
+  <td>0, 0, 0, 0</td>
+</tr>
+<tr>
+  <td>标签选择器</td>
+  <td>0, 0, 0, 1</td>
+</tr>
+<tr>
+  <td>类选择器，伪类选择器</td>
+  <td>0, 0, 1, 0</td>
+</tr>
+<tr>
+  <td>ID选择器</td>
+  <td>0, 1, 0, 0</td>
+</tr>
+<tr>
+  <td>行内样式 style=&quot;&quot;</td>
+  <td>1, 0, 0, 0</td>
+</tr>
+<tr>
+  <td>!important 重要的</td>
+  <td>∞</td>
+</tr>
+</tbody>
+</table>
+<p><strong>注意！</strong></p>
+<p><strong>继承的权重是0</strong>。如果给自己写了样式，那么将会覆盖继承的样式</p>
+<p><code>&lt;a&gt;</code>链接浏览器默认制定了一个样式 蓝色的 有下划线  <code>a {color: blue;}</code>。因此<strong><code>&lt;a&gt;</code>也不会使用继承的样式</strong>，需要专门为他编写样式。</p>
+<p><strong>CSS复合选择器权重的叠加</strong></p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    /* 复合选择器会有权重叠加的问题 */
+    /* 权重虽然会叠加,但是永远不会有进位 */
+    /* ul li 权重  0,0,0,1 + 0,0,0,1  =  0,0,0,2     2 */
+    ul li {
+    	color: green;
+    }
+    /* li 的权重是 0,0,0,1    1 */
+    li {
+    	color: red;
+    }
+    /* .nav li 权重  0,0,1,0  +  0,0,0,1  =  0,0,1,1    11 */
+    .nav li {
+    	color: pink;
+    }
+&lt;/style&gt;
+
+&lt;body&gt;
+    &lt;ul class=&quot;nav&quot;&gt;
+        &lt;li&gt;大猪蹄子&lt;/li&gt;
+        &lt;li&gt;大肘子&lt;/li&gt;
+        &lt;li&gt;猪尾巴&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/body&gt;
+
+练习：
+div ul li 	--&gt;	0,0,0,3
+.nav ul li	--&gt;	0,0,1,2
+a:hover		--&gt;	0,0,1,1
+.nav a		--&gt;	0,0,1,1
+</code></pre>
+<p>页面布局三大核心：盒子模型、浮动、定位</p>
+<p>网页布局过程：		（其实就是利用CSS摆盒子）</p>
+<ol>
+<li>先准备好相关的网页元素，基本都是盒子Box</li>
+<li>利用CSS设置好盒子样式，然后摆放到相应位置</li>
+<li>往盒子里面装内容</li>
+</ol>
+<h2 id="9.%E7%9B%92%E5%AD%90%E6%A8%A1%E5%9E%8B%E2%98%85%E2%98%85%E2%98%85">9.盒子模型★★★</h2>
+<p>一个盒子分为四个部分：边框<code>border</code>、内边距<code>padding</code>、外边距<code>margin</code>、内容<code>content</code></p>
+<p>每个部分又可以分别分为<code>top</code>、<code>right</code>、<code>bottom</code>、<code>left</code>四条边</p>
+<p>为盒子设置大小，实际上是content的大小，border和padding会在外撑大盒子，margin会使盒子有间距</p>
+<h3 id="%3Cstrong%3E9.1-%E8%BE%B9%E6%A1%86-border%3C/strong%3E"><strong>9.1 边框 border</strong></h3>
+
+<pre class="language-css"><code class="language-css">border: border-witdth | border-style | border-color
+
+div {
+    width: 300px;
+    height: 200px;
+    /* border-width 边框的粗细  一般情况下都用 px */
+    border-width: 5px;
+    /* border-style 边框的样式  solid 实线边框   dashed 虚线边框  dotted 点线边框*/
+    border-style: solid;
+    border-color: pink;
+
+}
+
+border: 5px solid pink;
+border-top: 5px solid pink;
+border-bottom-color: purple transparent;
+
+/* 合并相邻单元格的边框（table中） */
+border-collapse: collapse;
+
+/* border会撑大盒子实际大小,若要一个200*200的盒子，但是border-width: 10px;则盒子宽高要减去边框大小10px*2 */
+/* 案例：day5-12 细线表格今日小说排行榜 */
+</code></pre>
+<h3 id="%3Cstrong%3E9.2-%E5%86%85%E8%BE%B9%E8%B7%9D-padding%3C/strong%3E"><strong>9.2 内边距 padding</strong></h3>
+
+<pre class="language-css"><code class="language-css">/* 内边距padding用来设置边框border和内容content之间的距离 */
+
+/* 内边距复合写法 */
+padding: 5px;			/* 上右下左 */
+padding: 5px 10px;		/* 上下、左右 */
+padding: 5px 10px 20px;	/* 上、左右、下 */
+padding: 5px 10px 20px 30px;/* 上右下左  */
+
+/* padding会撑大盒子实际大小，若要求盒子跟效果图的大小要保持一致，则让width/height减去多出来的padding */
+
+/* 
+    -- 利用padding撑开盒子的特性，设置顶部导航栏时，根据字数不同盒子大小也会相应长一点短一点（一样长不美观） 
+    -- 案例：day5-17 padding应用-新浪导航
+*/
+</code></pre>
+
+<pre class="language-css"><code class="language-css">/* 	-- 但是如果盒子没有指定width/height属性，则此时padding不会撑开盒子大小
+    -- 如果父元素指定宽高，子元素不指定，使用padding时不会撑开盒子。但若子元素也设置宽高，则可能超出父元素
+*/
+h1 {
+    /* width: 100%; */
+    height: 200px;
+    background-color: pink;
+    padding: 30px;
+}
+div {
+    width: 300px;
+    height: 100px;
+    background-color: purple;
+}
+div p {
+    /* width: 100%; */
+    padding: 30px;
+    background-color: skyblue;
+}
+
+&lt;h1&gt;&lt;/h1&gt;
+&lt;div&gt;
+    &lt;p&gt;&lt;/p&gt;	
+&lt;/div&gt;
+</code></pre>
+<p>案例day5-17：新浪导航</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    .nav {
+        height: 41px;
+        border-top: 3px solid #ff8500;
+        border-bottom: 1px solid #edeef0;
+        background-color: #fcfcfc;
+        line-height: 41px;
+    }
+    .nav a {
+        /* a属于行内元素 此时必须要转换 行内块元素 */
+        display: inline-block;
+        height: 41px;
+        padding: 0 20px;
+        font-size: 12px;
+        color: #4c4c4c;
+        text-decoration: none;
+    }
+    .nav a:hover {
+        background-color: #eee;
+        color: #ff8500;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;nav&quot;&gt;
+        &lt;a href=&quot;#&quot;&gt;新浪导航&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;手机新浪网&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;移动客户端&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;微博&lt;/a&gt;
+        &lt;a href=&quot;#&quot;&gt;三个字&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="%3Cstrong%3E9.3-%E5%A4%96%E8%BE%B9%E8%B7%9D-margin%3C/strong%3E"><strong>9.3 外边距 margin</strong></h3>
+
+<pre class="language-css"><code class="language-css">/* margin 控制盒子和盒子之间的距离 */
+
+/* 外边距复合写法 */
+margin: 5px;			/* 上右下左 */
+margin: 5px 10px;		/* 上下、左右 */
+margin: 5px 10px 20px;	/* 上、左右、下 */
+margin: 5px 10px 20px 30px;/* 上右下左  */
+</code></pre>
+<p>块级盒子<strong>水平居中</strong>：盒子有width + 左右margin为auto。<code>margin: 0 auto;</code></p>
+<p>行内元素、行内块元素<strong>水平居中</strong>：给其父元素添加<code>text-align: center;</code>即可</p>
+<p><strong>相邻块元素垂直外边距的合并</strong>：当上面的块元素有下外边距，相邻的下面的块元素有上外边距，则它们的垂直间距不是margin-bottom + margin-top，而是取<code>max(margin-bottom, margin-top)</code>，因此<strong>上下相邻尽量只给一个盒子添加margin值</strong>。</p>
+<p><strong>嵌套块元素垂直外边距的塌陷</strong>：对于两个嵌套关系（父子关系）的块元素，父元素有上外边距的同时子元素也有上外边距，此时父元素会陷较大的外边距值</p>
+<p>-- 解决方案：</p>
+<ul>
+<li><p>为父元素定义上边框</p>
+</li>
+<li><p>为父元素定义上内边距</p>
+</li>
+<li><p>为父元素添加<code>overflow: hidden;</code></p>
+</li>
+<li><p>其他方法：浮动、固定、绝对定位等后面学到</p>
+</li>
+</ul>
+
+<pre class="language-css"><code class="language-css">.father {
+    width: 400px;
+    height: 400px;
+    background-color: purple;
+    margin-top: 50px;
+    /* border: 1px solid red; */
+    /* border: 1px solid transparent; */
+    /* padding: 1px; */
+
+    overflow: hidden;
+    /*  隐藏超出部分的内容
+    	清除浮动
+    	解决外边距塌陷 */
+}
+.son {
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+    margin-top: 100px;
+}
+
+&lt;div class=&quot;father&quot;&gt;
+    &lt;div class=&quot;son&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p>--总结：</p>
+<ul>
+<li><p>两个相邻的元素，只要有一个浮动，就不会有外边距的问题</p>
+</li>
+<li><p>父子盒子只要有一个浮动，就不会发生塌陷</p>
+</li>
+</ul>
+<p><strong>清除内外边距</strong></p>
+<p>网页元素很多都自带默认内外边距，且不同浏览器默认值也不同，因此<strong>在布局前，要清除下网页元素内外边距</strong></p>
+<p>1.body 标签默认有个外边距（白色间隙），无法铺满网页。例如：chrome是8px外边距。</p>
+<p>2.ul有40px默认内边距 等等</p>
+
+<pre class="language-css"><code class="language-css">* {
+    padding: 0;	/* 清除内边距 */
+    margin: 0;	/* 清除外边距 */
+}
+</code></pre>
+<p>此外，<strong>行内元素为了照顾兼容性，尽量只设置左右内外边距</strong>，不设置上下内外边距(设置了也不起作用)。但是转换为块级和行内块元素就可以设置了</p>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%EF%BC%9A%E4%BA%A7%E5%93%81%E5%8D%A1%E7%89%87%E6%A8%A1%E5%9D%97-%E2%98%85%E2%98%85%E2%98%85">综合案例：产品卡片模块 ★★★</h3>
+<p>来自材料 day 5-26</p>
+<img src="./assets/images/day5-26产品模块.jpg" alt="day5-26产品模块.jpg" style="zoom:80%;" />
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #f5f5f5;
+}
+a {
+    color: #333;
+    text-decoration: none;
+}
+.box {
+    width: 298px;
+    height: 415px;
+    background-color:#fff;
+    /* 让块级的盒子水平居中对齐 */
+    margin: 100px auto;
+}
+.box img {
+    /* 图片的宽度和父亲一样宽 */
+    width: 100%;
+}
+.review {
+    height: 70px;
+    font-size: 14px;
+    /* 因为这个段落没有 width属性 所有 padding不会撑开盒子的宽度 */
+    padding: 0 28px;
+    margin-top: 30px;
+}
+.appraise {
+    font-size: 12px;
+    color: #b0b0b0;
+    margin-top: 20px;
+    padding: 0 28px;
+}
+.info {
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 0 28px;
+}
+.info h4 {
+    display: inline-block;
+    font-weight: 400;
+
+}
+.info span {
+    color: #ff6700;    
+}
+.info em {
+    font-style: normal;
+    color: #ebe4e0;
+    margin: 0 6px 0 15px;
+}
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;img src=&quot;images/img.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;p class=&quot;review&quot;&gt;快递牛，整体不错蓝牙可以说秒连。红米给力&lt;/p&gt;
+        &lt;div class=&quot;appraise&quot;&gt;来自于 117384232 的评价&lt;/div&gt;
+        &lt;div class=&quot;info&quot;&gt;
+               &lt;h4&gt; &lt;a href=&quot;#&quot;&gt;Redmi AirDots真无线蓝...&lt;/a&gt;&lt;/h4&gt;
+               &lt;em&gt;|&lt;/em&gt;
+               &lt;span&gt; 99.9元&lt;/span&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%96%B0%E9%97%BB%E5%BF%AB%E6%8A%A5">综合案例：新闻快报</h3>
+<p>来自材料 day 6-1</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    * {
+        margin: 0;
+        padding: 0;
+     }
+    li {
+        /* 去掉li前面的小圆点 */
+        list-style: none;
+    }
+    .box {
+        width: 248px;
+        height: 163px;
+        border: 1px solid #ccc;
+        margin: 100px auto;
+    }
+    .box h3 {
+        height: 32px;
+        border-bottom: 1px dotted #ccc;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 32px;
+        padding-left: 15px;
+    }
+    .box ul li a {
+        font-size: 12px;
+        color: #666;
+        text-decoration: none;
+    }
+    .box ul li a:hover {
+        text-decoration: underline;
+    }
+    .box ul li {
+        height: 23px;
+        line-height: 23px;
+        padding-left: 20px;
+    }
+    .box ul {
+        margin-top: 7px;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;h3&gt;品优购快报&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;【特惠】爆款耳机5折秒！&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;【特惠】国庆节，健康好礼低至5折！&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;【特惠】爆款耳机5折秒！&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;【特惠】9.9元洗100张照片！&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;【特惠】长虹智能空调立省1000&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<h3 id="%E5%9C%86%E8%A7%92%E8%BE%B9%E6%A1%86%E2%80%94CSS3%E6%96%B0%E5%A2%9E">圆角边框—CSS3新增</h3>
+
+<pre class="language-css"><code class="language-css">/* 设置外边框圆角: (椭)圆与边框的交集形成圆角效果 */
+width: 300px;
+height: 100px;
+border-radius: 100px;		/* 做圆角矩形，就先做矩形盒子，圆角设为高度的一半 */
+
+border-radius: 50%;		/* 做圆形，就先做正方形盒子，圆角设为宽高的一半 */
+
+简写：
+border-raduis: 左上右下 右上左下;
+border-radius: 左上 右上左下 右下 ;
+border-radius: 左上 右上 右下 左下;
+
+border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;
+</code></pre>
+<h3 id="%E7%9B%92%E5%AD%90%E9%98%B4%E5%BD%B1%E2%80%94CSS3%E6%96%B0%E5%A2%9E">盒子阴影—CSS3新增</h3>
+
+<pre class="language-css"><code class="language-css">/* 设置盒子阴影，为盒子添加阴影效果，阴影不会占用空间 */
+box-shadow: h-shadow v-shadow blur spread color inset;
+
+h-shadow	必需，阴影的水平位置，允许负值
+v-shadow	必需，阴影的垂直位置，允许负值
+blur 		模糊距离，让影子更模糊
+spread 		阴影的尺寸，即大小
+color 		阴影的颜色
+inset		将外部阴影(outset)改为内部阴影（内凹）
+
+div:hover {
+    box-shadow: 10px 10px 10px -4px rgba(0, 0, 0, .3);	/* outset是默认的，不用写，再写会失效 */
+}
+</code></pre>
+<h3 id="%E6%96%87%E5%AD%97%E9%98%B4%E5%BD%B1%28%E4%BA%86%E8%A7%A3%29">文字阴影(了解)</h3>
+
+<pre class="language-css"><code class="language-css">text-shadow: h-shadow v-shadow blur color;
+text-shadow: 5px 5px 6px rgba(0, 0, 0, .3);
+</code></pre>
+<h2 id="10.float%28%E6%B5%AE%E5%8A%A8%29%E2%98%85%E2%98%85%E2%98%85">10.float(浮动)★★★</h2>
+<p>为什么需要浮动：</p>
+<ul>
+<li><p>当要让div排列在同一行时，转换为行内块会有默认间隙，但是有时候网页的div之间间隙多大是严格要求的</p>
+</li>
+<li><p>有时候需要实现两个盒子在网页两侧的水平左右对齐</p>
+</li>
+</ul>
+<p>——有很多网页布局效果标准流无法完成，此时可以利用浮动完成布局：<strong>浮动可以改变元素标签默认的排列方式</strong></p>
+<p>网页布局第一准则：多个块级元素纵向排列找标准流，横向排列找浮动</p>
+
+<pre class="language-markdown"><code class="language-markdown"># float：用于创建浮动框，将其移动到一边，知道左边缘或右边缘触及包含块或另一个浮动框的边缘
+
+float: none | left | right;
+</code></pre>
+<h3 id="%E6%B5%AE%E5%8A%A8%E7%89%B9%E6%80%A7">浮动特性</h3>
+<p><strong>1.脱标</strong></p>
+<ul>
+<li>浮动元素会<strong>脱离标准流的控制</strong>，(浮)移动到指定位置（<strong>后面的</strong>标准流元素会重新排列，前顶并占据空出来的位置）</li>
+<li>浮动的盒子不再保留原先的位置</li>
+</ul>
+<p><strong>2.浮动元素一行显示</strong></p>
+<ul>
+<li>若多个盒子都设置了浮动，则它们会<strong>按照属性值一行内显示并且顶端对齐顺序排列</strong></li>
+<li>如果父元素装不下它们，多出的盒子会另起一行对齐</li>
+</ul>
+<p><strong>3.浮动元素具有行内块特性</strong></p>
+<ul>
+<li>任何元素都能浮动，浮动后会具有行内块元素的特性</li>
+<li>若行内元素有了浮动，则不需要转换为块级/行内块元素  就可以直接给高度和宽度</li>
+<li>若块级盒子没有设置宽度，则默认宽度和父级一样宽。但是添加浮动后，它的宽度根据内容来定</li>
+<li>浮动的盒子中间没有缝隙，是紧挨着一起的</li>
+<li>浮动的盒子不会有外边距合并的问题</li>
+</ul>
+<p><strong>浮动元素经常和标准流父级搭配使用</strong></p>
+<p>为了约束浮动元素位置，网页布局一般采取的策略是：</p>
+<p>先用标准流的父元素排列上下位置，然后内部子元素采取浮动排列左右位置，符合网页布局第一准则</p>
+<p>注意：浮动进行排列时注意权重问题，有时候权重不够会导致设置无效</p>
+<h3 id="%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%B5%AE%E5%8A%A8%E5%B8%83%E5%B1%80%E7%BB%83%E4%B9%A0">案例：浮动布局练习</h3>
+<p>来自材料 day 6-13</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    .box {
+        width: 1226px;
+        height: 615px;
+        background-color: pink;
+        margin: 0 auto;
+    }
+
+    .left {
+        float: left;
+        width: 234px;
+        height: 615px;
+        background-color: purple;
+    }
+
+    .right {
+        float: left;
+        width: 992px;
+        height: 615px;
+        background-color: skyblue;
+    }
+
+    .right&gt;div {
+        float: left;
+        width: 234px;
+        height: 300px;
+        background-color: pink;
+        margin-left: 14px;
+        margin-bottom: 14px;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;box&quot;&gt;
+    &lt;div class=&quot;left&quot;&gt;左青龙&lt;/div&gt;
+    &lt;div class=&quot;right&quot;&gt;
+        &lt;div&gt;1&lt;/div&gt;
+        &lt;div&gt;2&lt;/div&gt;
+        &lt;div&gt;3&lt;/div&gt;
+        &lt;div&gt;4&lt;/div&gt;
+        &lt;div&gt;5&lt;/div&gt;
+        &lt;div&gt;6&lt;/div&gt;
+        &lt;div&gt;7&lt;/div&gt;
+        &lt;div&gt;8&lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>浮动子元素脱离了文档流，不会撑起父元素，更别说父元素也浮动了。他们都脱离了标准流的控制</strong></p>
+<p>此外，<strong>高度无论何时都不会继承，自己设置或者不设置仅靠内容撑开</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 案例6-14 常见网络布局 代码 */
+&lt;style&gt;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
+
+    .top {
+        height: 50px;
+        background-color: gray;
+    }
+
+    .banner {
+        width: 980px;
+        height: 150px;
+        background-color: gray;
+        margin: 10px auto;
+    }
+
+    .box {
+        width: 980px;
+        margin: 0 auto;
+        height: 300px;
+        background-color: pink;
+    }
+
+    .box li {
+        float: left;
+        width: 237px;
+        height: 300px;
+        background-color: gray;
+        margin-right: 10px;
+    }
+
+    .box .last {
+        margin-right: 0;
+    }
+
+    /* 只要是通栏的盒子(和浏览器一样宽) 不需要指定宽度 */
+    .footer {
+        height: 200px;
+        background-color: gray;
+        margin-top: 10px;
+    }
+&lt;/style&gt;
+
+&lt;body&gt;
+    &lt;div class=&quot;top&quot;&gt;top&lt;/div&gt;
+    &lt;div class=&quot;banner&quot;&gt;banner&lt;/div&gt;
+    &lt;div class=&quot;box&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;1&lt;/li&gt;
+            &lt;li&gt;2&lt;/li&gt;
+            &lt;li&gt;3&lt;/li&gt;
+            &lt;li class=&quot;last&quot;&gt;4&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;footer&quot;&gt;footer&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>重点课程：21节--浮动的两个注意点</p>
+<p><strong>注意：</strong></p>
+<ol>
+<li><strong>浮动和标准流的父盒子搭配</strong><ul>
+<li>先用标准流的父元素排列上下位置，之后内部子元素采取浮动排列左右位置</li>
+</ul>
+</li>
+<li><strong>一个盒子浮动了，理论上其余的兄弟元素也要浮动</strong><ul>
+<li>浮动之后是自己的位置被后面的标准流元素占用，而浮动元素在原地飘。即浮动元素覆盖住后面顶上来的标准流，不会影响前面的标准流</li>
+</ul>
+</li>
+</ol>
+<h3 id="%E6%B8%85%E9%99%A4%E6%B5%AE%E5%8A%A8%EF%BC%884%E7%A7%8D%EF%BC%89">清除浮动（4种）</h3>
+<p>给父盒子高度会有以下问题：</p>
+<ul>
+<li>父盒子里面可能有非常多元素，不方便定高度</li>
+<li>有时候父盒子里面不知道给多高，随时变化的，例如：新闻内容有的长有的短</li>
+</ul>
+<p>因此，我们可以不给父盒子高度，由孩子来决定高度，由子盒子来撑开。但也会遇到问题：</p>
+<ul>
+<li>如果给子盒子添加浮动，它们确实会排列在一行里，但父盒子将会没有高度 值为0，若再来一个标准流子盒子，将会被前面的子盒子覆盖</li>
+</ul>
+<p><strong>为了能不给父盒子具体高度，还不会遇到浮动导致的问题，我们需要清除浮动</strong></p>
+<p><strong>本质：清楚浮动元素脱离标准流造成的影响</strong></p>
+<hr />
+<p>清除浮动后，父盒子就会根据浮动的子盒子自动检测高度。父盒子有了高度，就不会影响下面的标准流</p>
+
+<pre class="language-css"><code class="language-css">/* 清除浮动策略：闭合浮动 */
+/* 实际中只用both */
+clear: left | right | both;
+</code></pre>
+<p><strong>1.额外标签法(了解)</strong></p>
+<p>可以在最后一个浮动子元素后面额外添加一个块级标签，用 【clear属性】来清除浮动，从而撑起父亲。</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;...&lt;/style&gt;
+&lt;div class=&quot;box&quot;&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;item&quot;&gt;&lt;/div&gt;
+    &lt;div style=&quot;clear: both; &quot;&gt;&lt;/div&gt;
+    /* clear: 某侧不允许浮动，both两侧，none允许（默认值），left、right */
+&lt;/div&gt;
+
+优点：书写方便
+缺点：添加许多无意义的标签，结构化差
+</code></pre>
+<p><strong>2.给父级添加overflow属性</strong></p>
+
+<pre class="language-css"><code class="language-css">父级 {
+    overflow: hidden;
+}
+
+优点：代码简介
+缺点：无法显示溢出的部分
+</code></pre>
+<p><strong>3.给父级添加after伪元素</strong></p>
+
+<pre class="language-css"><code class="language-css">/* :after 伪元素清除，是额外标签法的升级版 */
+.clearfix:after{
+    content: &quot;&quot;;
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+.clearfix {		/* IE6、7专有 */
+    *zoom: 1;
+}
+
+优点：没有增加标签，结构更简单
+缺点：需要照顾低版本浏览器
+</code></pre>
+<p><strong>4.给父级添加双伪元素（常用）</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 双伪元素清除 */
+
+&lt;某标签....class=&quot;clearfix&quot;....&gt;
+
+.clearfix:before,
+.clearfix:after {
+    content: &quot;&quot;;
+    display: table;
+}
+.clearfix:after {
+    clear: both;
+}
+.clearfix {		/* IE6、7专有 */
+    *zoom: 1;
+}
+优点：代码更更简洁
+缺点：需要照顾低版本浏览器
+</code></pre>
+<h2 id="%E8%A1%A5%E5%85%85%EF%BC%9ACSS%E5%B1%9E%E6%80%A7%E4%B9%A6%E5%86%99%E9%A1%BA%E5%BA%8F">补充：CSS属性书写顺序</h2>
+<ol>
+<li>布局定位属性：display、position、float、clear、visibility、overflow(建议display第一个写)</li>
+<li>自身属性：width、height、margin、padding、border、background</li>
+<li>文本属性：color、font、text-decoration、text-align、vertical-align、white-space、break-word</li>
+<li>其他属性(CSS3)：content、cursor、border-radius、box-shadow、text-shadow、background:linear-gradient...</li>
+</ol>
+
+<pre class="language-css"><code class="language-css">.jdc {
+    display: block;
+    position: relative;
+    float: left;
+    
+    width: 100px
+    height: 100px;
+    margin: 0 10px;
+    padding: 20px 0;
+    
+    font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+    color: #333;
+    
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+</code></pre>
+<h2 id="11.%E5%A4%A7%E6%A1%88%E4%BE%8B%EF%BC%9A%E5%AD%A6%E6%88%90%E5%9C%A8%E7%BA%BF%E9%A6%96%E9%A1%B5%EF%BC%88%E5%BE%85%E8%A1%A5%E5%85%85%EF%BC%89%E2%98%85%E2%98%85%E2%98%85%E2%98%85">11.大案例：学成在线首页（待补充）★★★★</h2>
+<p>来自材料的 day 7 ：代码+工具软件压缩包</p>
+<p>准备材料：学成在线PSD源文件、PS、VSCode、Chrome</p>
+<p>P119 开始—— 学习如何使用PS进行切图、用像素大厨代替PS也行</p>
+<img src="assets/images/image-20240627212659766.png" alt="image-20240627212659766" style="zoom:80%;" />
+<blockquote>
+<p>页面布局整体思路</p>
+</blockquote>
+<ol>
+<li>必须确定页面的版心（可视区），测量可得知</li>
+<li>分析页面中的行模块，以及每个行模块中的列模块。即页面布局第一准则</li>
+<li>一行中的列模块经常浮动布局，先确定每个列的大小，之后确定列的位置。即页面布局第二准则</li>
+<li>制定HTML结构。遵循先有结构，后有样式的原则</li>
+<li>先理清楚布局结构，再写代码</li>
+</ol>
+<p>版心</p>
+
+<pre class="language-css"><code class="language-css">.w {
+    width: 1200px;
+    margin: auto;
+}
+</code></pre>
+<h3 id="%E5%A4%B4%E9%83%A8-header-%E5%8C%BA%E5%9F%9F">头部 header 区域</h3>
+<p><img src="assets/images/image-20240625111537985.png" alt="image-20240625111537985" /></p>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 1.header 头部区域开始 --&gt;
+&lt;div class=&quot;header w&quot;&gt;
+    &lt;!-- 里面插入 logo nav search 和 user 模块 --&gt;
+&lt;/div&gt;
+&lt;!-- 头部区域结束 --&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.header {
+    height: 42px;
+    background-color: pink;
+    /* 注意这里的margin会层叠.w里的margin	*/
+    margin: 30px auto;
+}
+</code></pre>
+<h3 id="%E6%A0%87%E5%BF%97-logo%E5%8C%BA%E5%9F%9F">标志 logo区域</h3>
+
+<pre class="language-html"><code class="language-html">&lt;!-- logo 部分 --&gt;
+&lt;div class=&quot;logo&quot;&gt;
+    &lt;img src=&quot;images/logo.png&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.logo {
+    width: 198px;
+    height: 42px;
+    background-color: purple
+}
+</code></pre>
+<h3 id="%E5%AF%BC%E8%88%AA%E6%A0%8F-nav-%E5%8C%BA%E5%9F%9F">导航栏 nav 区域</h3>
+<ul>
+<li>实际开发中，导航栏用<code>li</code>+<code>a</code>来实现。如果直接用<code>&lt;a&gt;</code>，会被搜索引擎认为有堆砌关键字嫌疑（即故意堆砌关键字容易被搜索引擎降权），影响网站排名</li>
+<li>导航栏nav可以不给宽度，将来可以继续添加文字</li>
+<li>导航栏里面文字不一样多，最好给<code>&lt;a&gt;</code>一个左右<code>padding</code>撑开盒子，而不是指定宽度</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 导航栏部分 nav --&gt;
+&lt;div class=&quot;nav&quot;&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;首页&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;课程&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;职业规划&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-diff"><code class="language-diff">.logo {
++++    float: left;
+}
+
+</code></pre>
+
+<pre class="language-css"><code class="language-css">li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+.nav {
+    float: left;	/* .logo和.nav都向左浮动*/	
+    margin-left: 60px;
+}
+.nav ul li {
+    float: left;
+    margin: 0 15px;
+}
+.nav ul li a {
+    display: block;
+    height: 42px;
+    padding: 0 10px;
+    line-height: 42px;
+    font-size: 18px;
+    color: #050505;
+}
+.nav ul li a:hover {
+    border-bottom: 2px solid #00a4ff;
+    color: #00a4ff;
+}
+</code></pre>
+<h3 id="%E6%90%9C%E7%B4%A2%E6%A0%8F-search-%E6%A8%A1%E5%9D%97">搜索栏 search 模块</h3>
+<ul>
+<li>一个 search 大盒子里面包含2个表单</li>
+<li>注意搜索款和搜索按钮都是行内块元素，之间有一个很小的缝隙，父元素刚好装不下，按钮只能另起一行。所以可以给它们俩加上浮动</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 搜索模块 --&gt;
+&lt;div class=&quot;search&quot;&gt;
+    &lt;input type=&quot;text&quot; value=&quot;输入关键词&quot;&gt;
+    &lt;button&gt;&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.search {
+    float: left;
+    width: 412px;
+    height: 42px;
+    background-color: skyblue;
+    margin-left: 70px;
+}
+.search input {
+    float: left;
+    width: 345px;
+    height: 40px;
+    border: 1px solid #00a4ff;
+    border-right: none;
+    color: #bfbfbf;
+    font-size: 14px;
+    padding-left: 15px;
+    /* 这里padding-left会撑大盒子，所以width要减去15px */
+}
+.search button {
+    float: left;
+    width: 50px;
+    height: 42px;
+    background: url(images/btn.png);
+    /* button 默认有边框，需要手动去除	 */
+    border: 0;
+}
+</code></pre>
+<h3 id="%E7%94%A8%E6%88%B7-user-%E6%A8%A1%E5%9D%97">用户 user 模块</h3>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 用户模块 --&gt;
+&lt;div class=&quot;user&quot;&gt;
+    &lt;img src=&quot;images/user.png&quot; alt=&quot;&quot;&gt;
+    qq-lilei
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">body {
+    background-color: #f3f5f7;
+}
+.user {
+    float: right;
+    line-height: 42px;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #666;
+}
+</code></pre>
+<p>然后可以把 <code>.header</code>、<code>.logo</code>、<code>.search</code> 的背景色都删了，这样页面 header 部分就完成了</p>
+<p>补充：用户头像和用户昵称没有水平对齐，需要使用<code>vertical-align</code>参数来对齐</p>
+
+<pre class="language-html"><code class="language-html">&lt;img src=&quot;images/user.png&quot; alt=&quot;&quot; style=&quot;vertical-align: middle;&quot;&gt;
+</code></pre>
+<h3 id="%E6%A8%AA%E5%B9%85-banner-%E6%A8%A1%E5%9D%97">横幅 banner 模块</h3>
+<h3 id="%E4%BE%A7%E8%BE%B9%E6%A0%8F-subnav-%E6%A8%A1%E5%9D%97">侧边栏 subnav 模块</h3>
+<ul>
+<li>大盒子 banner 不给宽度，只给高度和一个背景色；版心盒子要水平居中对齐；左对齐 subnav 侧导航栏；右对齐 course 课程</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 2. banner 模块开始 --&gt;
+&lt;div class=&quot;banner&quot;&gt;
+    &lt;div class=&quot;w&quot;&gt;
+        &lt;div class=&quot;subnav&quot;&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+                &lt;li&gt;&lt;a href=&quot;#&quot;&gt;前端开发 &lt;span&gt; &amp;gt; &lt;/span&gt; &lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/div&gt;
+    	&lt;!-- 这里编写 course 部分 --&gt;     
+    &lt;/div&gt;
+&lt;/div&gt;
+&lt;!-- banner 模块结束 --&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">/* banner 区域  */
+.banner {
+    height: 421px;
+    background-color: #1c036c;
+}
+.banner .w {
+    height: 421px;
+    background: url(images/banner2.png) no-repeat top center;
+}
+.subnav {
+    width: 190px;
+    height: 421px;
+    background: rgba(0, 0, 0, 0.3);
+}
+.subnav ul li {
+    height: 45px;
+    line-height: 45px;
+    padding: 0 20px;
+}
+.subnav ul li a {
+    font-size: 14px;
+    color: #fff;
+}
+.subnav ul li span {
+    float: right;
+}
+.subnav ul li a:hover {
+    color: #00a4ff;
+}
+</code></pre>
+<h3 id="%E8%AF%BE%E7%A8%8B%E8%A1%A8-course-%E6%A8%A1%E5%9D%97">课程表 course 模块</h3>
+<ul>
+<li>浮动的盒子不会有外边距合并的问题</li>
+</ul>
+
+<pre class="language-diff"><code class="language-diff">.subnav {
++++		float: left;
+}
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;!-- course 课程表模块 --&gt;
+&lt;div class=&quot;course&quot;&gt;
+    &lt;h2&gt;我的课程表&lt;/h2&gt;
+    &lt;div class=&quot;bd&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;h4&gt;继续学习 程序语言设计&lt;/h4&gt;
+                &lt;p&gt;正在学习-使用对象&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h4&gt;继续学习 程序语言设计&lt;/h4&gt;
+                &lt;p&gt;正在学习-使用对象&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;li&gt;
+                &lt;h4&gt;继续学习 程序语言设计&lt;/h4&gt;
+                &lt;p&gt;正在学习-使用对象&lt;/p&gt;
+            &lt;/li&gt;
+        &lt;/ul&gt;
+
+        &lt;a href=&quot;#&quot; class=&quot;more&quot;&gt;全部课程&lt;/a&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.course {
+    float: right;
+    width: 230px;
+    height: 300px;
+    background-color: #fff;
+    /* 浮动的盒子不会有外边距合并的问题 */
+    margin-top: 50px;
+}
+.course h2 {
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    line-height: 48px;
+    font-size: 18px;
+    color: #fff;
+}
+.bd {
+    padding: 0 20px;
+}
+.bd ul li {
+    padding: 14px 0;
+    border-bottom: 1px solid #ccc;
+}
+.bd ul li h4 {
+    font-size: 16px;
+    color: #4e4e4e;
+}
+.bd ul li p {
+    font-size: 12px;
+    color: #a5a5a5;
+}
+.bd .more {
+    display: block;
+    height: 38px;
+    border: 1px solid #00a4ff;
+    margin-top: 5px;
+    text-align: center;
+    line-height: 38px;
+    color: #00a4ff;
+    font-size: 16px;
+    font-weight: 700;
+}
+</code></pre>
+<h3 id="%E7%B2%BE%E5%93%81%E6%8E%A8%E8%8D%90%E6%A8%AA%E6%9D%A1%E6%A8%A1%E5%9D%97">精品推荐横条模块</h3>
+<ul>
+<li>大盒子水平居中 goods 精品，注意这里有个盒子阴影</li>
+<li>左侧盒子是H3左侧浮动</li>
+<li>中间盒子放链接左侧浮动，goods-item 距离可以控制链接的左右外边距（注意行内元素只给左右内外边距）</li>
+<li>右侧盒子右浮动 mod 修改</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 3.精品推荐模块开始 --&gt;
+&lt;div class=&quot;goods w&quot;&gt;
+    &lt;h3&gt;精品推荐&lt;/h3&gt;
+    &lt;ul&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href=&quot;#&quot;&gt;jQuery&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href=&quot;#&quot; class=&quot;mod&quot;&gt;修改兴趣&lt;/a&gt;
+&lt;/div&gt;
+&lt;!-- 精品推荐模块结束 --&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">/* 精品推荐模块 */
+.goods {
+    height: 60px;
+    background-color: #fff;
+    margin-top: 10px;
+    box-shadow: 0 2px 3px 3px rgba(0,0,0, 0.1);
+    /* 行高会继承， 会继承给3个孩子 */
+    line-height: 60px;
+}
+.goods h3 {
+    float: left;
+    margin-left: 30px;
+    font-size: 16px;
+    color: #00a4ff;
+}
+.goods ul {
+    float: left;
+    margin-left: 30px;
+}
+.goods ul li {
+    float: left;
+}
+.goods ul li a {
+    padding: 0 30px;
+    font-size: 16px;
+    color: #050505;
+    border-left: 1px solid #ccc;
+}
+.mod {
+    float: right;
+    margin-right: 30px;
+    font-size: 14px;
+    color: #00a4ff;
+}
+</code></pre>
+<h3 id="%E7%B2%BE%E5%93%81%E6%8E%A8%E8%8D%90%E6%A0%B8%E5%BF%83%E6%A8%A1%E5%9D%97">精品推荐核心模块</h3>
+<ul>
+<li><p>大盒子版心水平居中对齐</p>
+</li>
+<li><p>上盒子 <code>box-hd</code> 里面左侧标题 h3 左浮动， 右侧链接 a 右浮动</p>
+</li>
+<li><p>下盒子 <code>box-bd</code> 里面是无序列表，有10个 li 组成</p>
+</li>
+<li><p>技巧：如果一行要装5个盒子但是宽度不够装，第五个到了下一行，<strong>可以适当的加宽父元素</strong>（因为第五个元素的右边距其实没颜色、看不到，在视觉上其实没变化）</p>
+</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;box w&quot;&gt;
+    &lt;div class=&quot;box-hd&quot;&gt;
+        &lt;h3&gt;精品推荐&lt;/h3&gt;
+        &lt;a href=&quot;#&quot;&gt;查看全部&lt;/a&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;box-bd&quot;&gt;
+        &lt;ul&gt;
+            &lt;li&gt;
+                &lt;img src=&quot;images/pic.png&quot; alt=&quot;&quot;&gt;
+                &lt;h4&gt;
+                    Think PHP 5.0 博客系统实战项目演练
+                &lt;/h4&gt;
+                &lt;div class=&quot;info&quot;&gt;
+                    &lt;span&gt;高级&lt;/span&gt; • 1125人在学习
+                &lt;/div&gt;
+            &lt;/li&gt;
+    		&lt;!-- 这里再粘贴9个相同的li；后面js课程会学习怎么动态渲染li标签，不用重复粘贴 --&gt;         
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.box {
+    margin-top: 30px;
+}
+.box-hd {
+    height: 45px;
+}
+.box-hd h3 {
+    float: left;
+    font-size: 20px;
+    color: #494949;
+}
+.box-hd a {
+    float: right;
+    font-size: 12px;
+    color: #a5a5a5;
+    margin-top: 10px;
+    margin-right: 30px;
+}   
+/* 把li 的父亲ul 修改的足够宽一行能装开5个盒子就不会换行了 */
+.box-bd ul {
+    width: 1225px;
+}
+.box-bd ul li {
+    float: left;
+    width: 228px;
+    height: 270px;
+    background-color: #fff;
+    margin-right: 15px;
+    margin-bottom: 15px;
+}
+/*  限制图片不要超出li盒子的大小 */
+.box-bd ul li img {
+    width: 100%;
+}
+.box-bd ul li h4 {
+    margin: 20px 20px 20px 25px;
+    font-size: 14px;
+    color: #050505;
+    font-weight: 400;
+}
+.box-bd .info {
+    margin: 0 20px 0 25px;
+    font-size: 12px;
+    color: #999;
+}
+.box-bd .info span {
+    color: #ff7c2d;
+}
+</code></pre>
+<p><strong>这里后面还有一个类似的模块，课程省略了，课后作业自己完成</strong></p>
+<h3 id="%E5%BA%95%E9%83%A8-footer-%E6%A8%A1%E5%9D%97">底部 footer 模块</h3>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 5.footer 模块制作 --&gt;
+&lt;div class=&quot;footer&quot;&gt;
+    &lt;div class=&quot;w&quot;&gt;这里面放copyright和links代码&lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.footer {
+    height: 415px;
+    background-color: pink;
+}
+</code></pre>
+<ul>
+<li>编写 footer 盒子测试后发现会顶到上面去，因为<code>.box-bd ul li</code>是浮动的，并且父盒子为了具有延展性，没有设置高度。为了解决这个布局问题，需要给<code>li</code>的父盒子<code>ul</code>清除浮动。</li>
+</ul>
+
+<pre class="language-diff"><code class="language-diff">&lt;div class=&quot;box-bd&quot;&gt;
+---		&lt;ul&gt;
++++		&lt;ul class=&quot;clearfix&quot;&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.clearfix:before,.clearfix:after {
+    content:&quot;&quot;;
+    display:table; 
+}
+.clearfix:after {
+    clear:both;
+}
+.clearfix {
+    *zoom:1;
+}  
+</code></pre>
+<p><code>footer</code> 模块里分为左对齐的版权<code>copyright</code>盒子和右对齐的链接组<code>links</code>盒子</p>
+<h3 id="%E7%89%88%E6%9D%83-copyright-%E6%A8%A1%E5%9D%97">版权 copyright 模块</h3>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;copyright&quot;&gt;
+    &lt;img src=&quot;images/logo.png&quot; atl=&quot;&quot;&gt;
+    &lt;p&gt;学成在线致力于普及中国最好的教育它与中国一流大学和机构合作提供在线课程。&lt;br&gt;
+        © 2017年XTCG Inc.保留所有权利。-沪ICP备15025210号&lt;/p&gt;
+    &lt;a href=&quot;#&quot; class=&quot;app&quot;&gt;下载APP&lt;/a&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.copyright {
+    float: left;
+}
+.copyright p {
+    font-size: 12px;
+    color: #666;
+    margin: 20px 0 15px 0;
+}
+.copyright .app {
+    display: block;
+    width: 118px;
+    height: 33px;
+    border: 1px solid #00a4ff;
+    text-align: center;
+    line-height: 33px;
+    color: #00a4ff;
+    font-size: 16px;
+}
+</code></pre>
+<h3 id="%E9%93%BE%E6%8E%A5%E7%BB%84-links-%E6%A8%A1%E5%9D%97">链接组 links 模块</h3>
+<ul>
+<li>链接组这里有3列，可以用自定义列表<code>dl dt dd</code>来实现，每个<code>dl</code>为一列，都需要左浮动并且给个外边距分隔开</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;links&quot;&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;关于学成网&lt;/dt&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;关于&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;管理团队&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;工作机会&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;客户服务&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;帮助&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;关于学成网&lt;/dt&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;关于&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;管理团队&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;工作机会&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;客户服务&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;帮助&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;dl&gt;
+        &lt;dt&gt;关于学成网&lt;/dt&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;关于&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;管理团队&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;工作机会&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;客户服务&lt;/a&gt;&lt;/dd&gt;
+        &lt;dd&gt;&lt;a href=&quot;#&quot;&gt;帮助&lt;/a&gt;&lt;/dd&gt;
+    &lt;/dl&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.links {
+    float: right;
+}
+.links dl {
+    float: left;
+    margin-left: 100px;
+}
+.links dl dt {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 5px;
+}
+.links dl dd a {
+    color: #333;
+    font-size: 12px;
+}
+</code></pre>
+<p>最后把<code>footer</code>颜色改回<code>#fff</code>即可。</p>
+<p>到此为止，学成在线首页基本完成。其中还有一个模块为课后作业，需要自己完成。此外，hot小标签会在下一小节<strong>定位</strong>中学习。后面js课程还会学习如何通过JavaScript动态渲染卡片，而不要重复性的写死的html代码中。</p>
+<h3 id="hot-new-%E6%A8%A1%E5%9D%97%E6%B7%BB%E5%8A%A0">hot new 模块添加</h3>
+<blockquote>
+<p>涉及到定位的子绝父相知识</p>
+</blockquote>
+<p>首先在HTML中添加角标图片的代码</p>
+
+<pre class="language-diff"><code class="language-diff">&lt;li&gt;
++++    &lt;em&gt;
++++        &lt;img src=&quot;images/hot.png&quot; alt=&quot;&quot;&gt;
++++    &lt;/em&gt;
+    &lt;img src=&quot;images/pic.png&quot; alt=&quot;&quot;&gt;
+    &lt;h4&gt;
+        Think PHP 5.0 博客系统实战项目演练
+    &lt;/h4&gt;
+    &lt;div class=&quot;info&quot;&gt;
+        &lt;span&gt;高级&lt;/span&gt; • 1125人在学习
+    &lt;/div&gt;
+&lt;/li&gt;
+</code></pre>
+<p>为了区别卡片图片和角标图片，可以用<code>li img</code>和<code>li &gt; img</code>来区分</p>
+
+<pre class="language-diff"><code class="language-diff">---.box-bd ul li img {
++++.box-bd ul li &gt; img {
+    width: 100%;
+}
+</code></pre>
+<p>添加以下内容：</p>
+
+<pre class="language-css"><code class="language-css">.box-bd ul li em {
+    position: absolute;
+    top: 4px;
+    right: -4px;
+}
+</code></pre>
+<p><strong>子绝父相</strong>，需要给<code>em</code>父盒子添加相对定位，不然角标图片会以浏览器为基准，出现在页面右上角</p>
+
+<pre class="language-diff"><code class="language-diff">.box-bd ul li {
++++	position: relative;
+}
+</code></pre>
+<h2 id="12.%E5%AE%9A%E4%BD%8D%E2%98%85%E2%98%85%E2%98%85">12.定位★★★</h2>
+<p>某些场景标准流和浮动无法实现，但是定位可以</p>
+<ul>
+<li>浮动可以让多个块级盒子一行没有缝隙排列显示，经常用于横向排列盒子</li>
+<li>定位可以让盒子自由地在某个盒子内移动位置或者固定在屏幕中某个位置，并且可以压住其他盒子</li>
+</ul>
+<p><strong>定位 = 定位模式 + 边偏移</strong></p>
+<p>1.定位模式：制定一个元素在文档中的定位方式</p>
+<p>2.边偏移：决定该元素的最终位置，<code>top bottom left right</code>四个属性，定义元素相对于它的父元素边线的距离/偏移量，这四个属性只有在定位里可以用</p>
+<h3 id="%3Cstrong%3E%E5%AE%9A%E4%BD%8D%E6%A8%A1%E5%BC%8F%285%E7%A7%8D%29%3C/strong%3E"><strong>定位模式(5种)</strong></h3>
+<p><strong>1.1 静态定位 static(了解即可)</strong></p>
+<ul>
+<li>元素默认的定位方式，即无定位</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">选择器 { position: static; }
+</code></pre>
+<ul>
+<li>按照标准流特性摆放位置（不脱标），它没有边偏移</li>
+<li>在布局时很少用到</li>
+</ul>
+<p><strong>1.2 相对定位 relative（重要）</strong></p>
+<ul>
+<li>移动位置时<strong>参照点是自己原来的位置</strong>（不脱标，保留原位置）</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">选择器 { position: relative; }
+</code></pre>
+<ul>
+<li><strong>偏移后标准流位置保留，只是“显示上”偏移了位置</strong></li>
+<li>相对位移的典型应用是给绝对定位当爹，用来限制绝对定位</li>
+</ul>
+<p><strong>1.3 绝对定位 absolute（重要）</strong></p>
+<ul>
+<li>移动位置时参照点是自己的祖先元素</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">选择器 { position: absolute; }
+</code></pre>
+<ul>
+<li>如果没有祖先元素或祖先元素没有定位，则以浏览器（Document文档）为参照点进行定位</li>
+<li>如果祖先元素有定位（非静态定位），则以最近一级的有定位祖先元素为参照点</li>
+<li>绝对定位不再占有原先的位置（脱标）</li>
+</ul>
+<p><strong>相对定位是相对于自己的，绝对定位是相对于有定位的最近一级祖先元素或浏览器</strong></p>
+<p><strong>子绝父相： 如果子级使用绝对定位，则父级要使用相对定位</strong></p>
+<ul>
+<li>子级绝对定位，不会占有位置，可以放到父盒子里面的任何一个地方，不会影响其他的兄弟盒子。</li>
+<li>父盒子需要加定位限制子盒子在父盒子内显示。</li>
+<li>父盒子布局时，需要占有位置，因此父亲只能是相对定位。</li>
+</ul>
+<p>因为父级要占有位置，因此是相对定位；子盒子不需要占有位置，则是绝对定位</p>
+<p><strong>1.4 固定定位 fixed</strong></p>
+<ul>
+<li>元素固定于浏览器可视区的位置</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">选择器 { position: fixed; }
+</code></pre>
+<ul>
+<li>以浏览器的可视窗口为参照点移动位置</li>
+<li>与父元素无关，不随滚动条而滚动</li>
+<li>不占有原先的位置（脱标）</li>
+</ul>
+
+<pre class="language-css"><code class="language-css">&lt;title&gt;固定到版心右侧&lt;title/&gt;
+&lt;style&gt;
+.w {
+    width: 800px;
+    height: 1400px;
+    background-color: pink;
+    margin: 0 auto;
+}
+.fixed {
+    position: fixed;
+    /* 1. 走浏览器宽度的一半 */
+    left: 50%;
+    top: 70%;
+    /* 2. 利用margin 走版心盒子宽度的一半距离 */
+    margin-left: 405px;
+    width: 50px;
+    height: 150px;
+    background-color: skyblue;
+}
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;fixed&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;w&quot;&gt;版心盒子 800像素&lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p><strong>1.5 粘性定位 sticky</strong></p>
+<ul>
+<li>可以理解为相对定位和固定定位的混合</li>
+</ul>
+
+<pre class="language-markdown"><code class="language-markdown">选择器 { position: sticky; top: 10px; }
+</code></pre>
+<ul>
+<li>以浏览器的可视窗口为参照点移动位置（固定定位特点）</li>
+<li>占有原先的位置，不脱标（相对定位特点）</li>
+<li>必须添加 top、left、right、bottom中的一个才有效</li>
+<li>兼容性差，IE不支持</li>
+</ul>
+
+<pre class="language-css"><code class="language-css">.nav {
+    /* 粘性定位 */
+    position: sticky;
+    top: 30px;
+    width: 800px;
+    height: 50px;
+    background-color: pink;
+    margin: 100px auto;
+}
+
+# 若滚动条向下滚动，则盒子向上移动，当距离可视窗口顶部30px时固定住
+# 若滚动条向上滚动，盒子不移动，当快到顶部时才逐渐移动到原有位置
+</code></pre>
+<p>粘性定位导航栏，往下滑页面，导航栏固定在顶部。不过大部分网站都是通过js来实现的</p>
+<h3 id="%3Cstrong%3E%E5%AE%9A%E4%BD%8D%E5%8F%A0%E6%94%BE%E6%AC%A1%E5%BA%8F%3C/strong%3E"><strong>定位叠放次序</strong></h3>
+<p>在使用定位布局时，可能出现盒子重叠的情况。此时可以用z-index来控制盒子的前后次序（Z轴）</p>
+
+<pre class="language-none"><code class="language-none">选择器 { z-index: 1; }
+</code></pre>
+<ul>
+<li><p>数值可以是正整数、负整数或者0，默认为auto；值越大，盒子越靠上；数字后面不加单位</p>
+</li>
+<li><p>如果属性值相同，按书写顺序后来者居上</p>
+</li>
+<li><p>只有定位的盒子才有z-index属性</p>
+</li>
+</ul>
+<h3 id="%3Cstrong%3E%E5%AE%9A%E4%BD%8D%E6%8B%93%E5%B1%95%3C/strong%3E"><strong>定位拓展</strong></h3>
+<p><strong>3.1 绝对定位的盒子居中</strong></p>
+<ul>
+<li>绝对定位的盒子不能通过<code>margin: 0 auto</code>水平居中，但可用以下方式(以200px方形盒子为例)：</li>
+<li>水平居中：<code>left: 50%; margin-left: -100px;</code></li>
+<li>垂直居中：<code>top: 50%; margin-top: -100px;</code></li>
+</ul>
+<p><strong>3.2 定位的特殊特性</strong></p>
+<p>绝对定位和固定定位也和浮动类似</p>
+<ul>
+<li>行内元素添加绝对或固定定位，可以直接设置宽度和高度</li>
+<li>块级元素添加绝对或固定定位，若不给宽高，默认大小就是内容大小</li>
+</ul>
+<p><strong>3.3 脱标的盒子不会触发外边距坍塌</strong></p>
+<ul>
+<li>float、absolute、fixed 都不会触发外边距合并的问题</li>
+</ul>
+<p><strong>3.4 绝对定位/固定定位 会完全压住盒子</strong></p>
+<ul>
+<li>浮动的元素不会压住下面的文字（显示在侧边），因为浮动最初就是为了实现文字环绕效果</li>
+<li>但是绝对定位/固定定位会完全压住下面标准流所有内容</li>
+</ul>
+<h2 id="%3Cstrong%3E%E6%A1%88%E4%BE%8B%EF%BC%9A%E6%B7%98%E5%AE%9D%E8%BD%AE%E6%92%AD%E5%9B%BE%3C/strong%3E"><strong>案例：淘宝轮播图</strong></h2>
+
+<pre class="language-css"><code class="language-css">&lt;title&gt;淘宝轮播图&lt;/title&gt;
+&lt;style&gt;
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    .tb-promo {
+        position: relative;
+        width: 520px;
+        height: 280px;
+        margin: 100px auto;
+    }
+    .tb-promo img {
+        width: 100%;
+    }
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        margin-top: -15px;
+        width: 20px;
+        height: 30px;
+        background: rgba(0,0,0,.3);
+        color: #fff;
+        text-align: center;
+        line-height: 30px;
+        text-decoration: none;
+    }
+    .prev {   
+        left: 0;
+        border-radius: 0 15px 15px 0;
+    }
+    .next {
+        right: 0;
+        border-radius: 15px 0 0 15px;
+    }
+    .promo-nav {
+        position: absolute;
+        list-style: none; 
+        bottom: 15px;
+        left: 50%;
+        margin-left: -35px;
+        width: 70px;
+        height: 13px;
+        background-color: rgba(255,255,255, .3);
+        border-radius: 7px;
+    }
+    .promo-nav li {
+        float: left;
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        border-radius: 50%;
+        margin: 3px;
+    }
+    .promo-nav .selected {
+        background-color: #ff5000;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;tb-promo&quot;&gt;
+        &lt;img src=&quot;images/tb.jpg&quot; alt=&quot;&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;prev&quot;&gt;&amp;lt;&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;next&quot;&gt;&amp;gt;&lt;/a&gt;
+        &lt;ul class=&quot;promo-nav&quot;&gt;
+            &lt;li class=&quot;selected&quot;&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>先写大盒子，然后放图，相对定位先设置前后链接按钮，然后设置底册选择小圆点按钮</p>
+<p>后面学习js时会加上点击换图的功能</p>
+<h2 id="%E5%85%83%E7%B4%A0%E7%9A%84%E6%98%BE%E7%A4%BA%E4%B8%8E%E9%9A%90%E8%97%8F">元素的显示与隐藏</h2>
+<p><strong>display</strong></p>
+
+<pre class="language-css"><code class="language-css">display: block;			- 显示隐藏的元素 / 行内 --&gt; 块级
+display:hidden;			- 隐藏 --&gt; 隐藏但保留空间
+
+display: none;			- 隐藏 --&gt; 隐藏且不保留空间
+</code></pre>
+<p><strong>visibility 可见性</strong></p>
+
+<pre class="language-css"><code class="language-css">visibility: inherit | visible | collapse| hidden
+visibility: inherit		- 默认，继承上一个父对象的可见性
+visibility: visible		- 可见
+visibility: hidden		- 隐藏 --&gt; 隐藏但保留位置（display: none 更常用）
+visibility: collapse	- 主要用于表格
+</code></pre>
+<p><strong>overflow 溢出</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 如果一个元素框的内容溢出了，由 overflow 来决定会发生什么 */
+overflow: visible | auto | hidden | scroll
+overflow: visible		- 默认，溢出来显示
+overflow: auto			- 在需要的时候才添加滚动条
+overflow: hidden		- 隐藏溢出的部分
+overflow: scroll		- 总显示滚动条
+
+/* 如果有定位的盒子，慎用overflow: hidden，因为会隐藏多余的部分，例如学成在线案例的HOT角标 */
+</code></pre>
+<h2 id="%3Cstrong%3E%E6%A1%88%E4%BE%8B%EF%BC%9A%E4%BB%BF%E5%9C%9F%E8%B1%86%E7%BD%91%E6%98%BE%E7%A4%BA%E9%9A%90%E8%97%8F%E9%81%AE%E7%BD%A9%3C/strong%3E"><strong>案例：仿土豆网显示隐藏遮罩</strong></h2>
+<p>原理：原先半透明遮罩看不见，鼠标经过大盒子就显示出来。遮罩的盒子不占有位置，需要用到绝对定位和display</p>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;tudou&quot;&gt;
+        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+        &lt;img src=&quot;images/tudou.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;tudou&quot;&gt;
+        &lt;div class=&quot;mask&quot;&gt;&lt;/div&gt;
+        &lt;img src=&quot;images/tudou.jpg&quot; alt=&quot;&quot;&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">&lt;title&gt;仿土豆网显示隐藏遮罩案例&lt;/title&gt;
+&lt;style&gt;
+.tudou {
+    position: relative;
+    width: 444px;
+    height: 320px;
+    background-color: pink;
+    margin: 30px auto;
+}
+
+.tudou img {
+    width: 100%;
+    height: 100%;
+}
+
+.mask {
+    /* 隐藏遮罩层 */
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .4) url(images/arr.png) no-repeat center;
+}
+
+/* 当我们鼠标经过了 土豆这个盒子，就让里面遮罩层显示出来 */
+.tudou:hover .mask {
+    /* 而是显示元素 */
+    display: block;
+}
+&lt;/style&gt;
+</code></pre>
+<h2 id="%E2%80%94%E2%80%94CSS%E9%AB%98%E7%BA%A7%E6%8A%80%E5%B7%A7%E2%80%94%E2%80%94">——CSS高级技巧——</h2>
+<h2 id="%E7%B2%BE%E7%81%B5%E5%9B%BE">精灵图</h2>
+<p>一个网页中有很多很多小的背景图来装饰网页，会频繁地接收和发送请求图片，造成服务器压力过大，降低页面加载速度</p>
+<p>因此有了CSS精灵技术（CSS Sprite），能有效减少服务器接收和发送请求的次数，提高页面的加载速度</p>
+<p>原理：将网页中一些小背景图整合到一张大图中，则服务器只需一次请求即可</p>
+<ul>
+<li>主要针对不常替换的小背景图</li>
+<li>整合的大图也称为 <strong>sprite 精灵图</strong> 或 雪碧图</li>
+<li>移动背景图片位置可以用 background-position</li>
+<li>移动距离为目标图片的x y 坐标（右、下 为正方向），因此一般情况下往左往上移动的数值为负值</li>
+</ul>
+
+<pre class="language-css"><code class="language-css">.box1 {
+    width: 60px;
+    height: 60px;   
+    margin: 100px auto;
+    background: url(images/sprites.png) no-repeat -182px 0;
+}
+
+/* 图片先压住左上角，然后再水平垂直位移到对应位置，显示对应的背景图像
+
+    缺点：
+    	1.图片占用空间大，并且放大和缩小会失真
+    	2.一旦图片制作完毕要更换比较困难
+
+    可以用字体图标解决
+*/
+</code></pre>
+<h2 id="%E5%AD%97%E4%BD%93%E5%9B%BE%E6%A0%87-iconfont">字体图标 iconfont</h2>
+<p><strong>1.字体图标的产生</strong></p>
+<p>字体图标使用场景: 主要用于显示网页中通用、常用的一些小图标</p>
+<p>精灵图是有诸多优点的，但是缺点很明显</p>
+<ol>
+<li>图片文件还是比较大的</li>
+</ol>
+<p>2.图片本身放大和缩小会失真</p>
+<p>3.一旦图片制作完毕想要更换非常复杂。</p>
+<p>此时，有一种技术的出现很好的解决了以上问题，就是<strong>字体图标iconfont</strong>。</p>
+<p>字体图标可以为前端工程师提供一种方便高效的图标使用方式，<strong>展示的是图标，本质属于字体</strong></p>
+<p><strong>2.字体图标的优点</strong></p>
+<ul>
+<li>轻量级：一个图标字体要比一系列的图像要小。一旦字体加载了，图标就会马上渲染出来，减少了服务器请求</li>
+<li>灵活性：本质其实是文字，可以很随意的改变颜色、产生阴影、透明效果、旋转等</li>
+<li>兼容性:几乎支持所有的浏览器，请放心使用</li>
+</ul>
+<p>注意：字体图标不能替代精灵技术，只是对工作中图标部分技术的提升和优化。</p>
+<p>精灵图 或 字体图标：</p>
+<ul>
+<li><p>如果遇到一些结构和样式比较简单的小图标，就用字体图标</p>
+</li>
+<li><p>如果遇到一些结构和样式复杂一点的小图片，就用精灵图。</p>
+</li>
+</ul>
+<p>字体图标是一些网页常见的小图标，我们直接网上下载即可。因此使用可以分为：</p>
+<p>1.字体图标的下载</p>
+<p>2.字体图标的引入(引入到我们htmI页面中)</p>
+<p>3.字体图标的追加(以后添加新的小图标)</p>
+<p><strong>3.字体图标的下载</strong></p>
+<p>推荐下载网站：</p>
+<ul>
+<li>icomoon字库 <a href="http://icomoon.io"  target="_blank">http://icomoon.io</a><br />
+IcoMoon 成立于 2011年，推出了第一个自定义图标字体生成器，它允许用户选择所需要的图标，使它们成<br />
+一字型。该字库内容种类繁多，非常全面，唯一的遗憾是国外服务器，打开网速较慢。</li>
+<li>阿里iconfont宇库 <a href="http://www.iconfont.cn/"  target="_blank">http://www.iconfont.cn/</a><br />
+这个是阿里妈妈M2UX的一个iconfont 字体图标字库，包含了淘宝图标库和阿里妈妈图标库。可以使用AI<br />
+制作图标上传生成。重点是，免费!</li>
+</ul>
+<p>教程以icomoon为例，详细内容请看课程P257</p>
+<p><strong>4.字体图标的引入</strong></p>
+<p>不同浏览器支持的字体文件格式(ttf、woff、eot、svg)是不一样的；字体文件夹<code>fonts</code>有四个文件格式，就是为了兼容性</p>
+<ul>
+<li><p>去图标库网站下载图标文件后，把<code>fonts</code>文件夹放在页面同级目录下</p>
+</li>
+<li><p>复制字体图标特殊文字到页面 html 代码中</p>
+</li>
+</ul>
+
+<pre class="language-html"><code class="language-html">&lt;!-- 在 icomoon/demo.html 文件中有展示对应的字体图标和代码
+     直接复制对应字体图标的小框框(特殊文字)粘贴到&lt;span&gt;代码中即可 
+--&gt;
+&lt;body&gt;
+    &lt;span&gt;&lt;/span&gt;
+    &lt;span&gt;&lt;/span&gt;
+&lt;/body&gt;
+</code></pre>
+<ul>
+<li>在CSS样式中全局声明字体：把这些字体文件通过css引入到我们页面中并声明。一定注意字体文件路径的问题</li>
+</ul>
+
+<pre class="language-css"><code class="language-css">/* 字体声明，代码可以在下载的 icomoon/style.css 文件里复制 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?p4ssmb');
+    src:  url('fonts/icomoon.eot?p4ssmb#iefix') format('embedded-opentype'),
+        url('fonts/icomoon.ttf?p4ssmb') format('truetype'),
+        url('fonts/icomoon.woff?p4ssmb') format('woff'),
+        url('fonts/icomoon.svg?p4ssmb#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: block;
+}
+span {
+    font-family: 'icomoon';
+    /* 给span指定字体，必须和@font-face里的字体一样 */
+    font-size: 100px;
+    color:pink;
+  }
+</code></pre>
+<h2 id="CSS%E4%B8%89%E8%A7%92%E6%A0%B7%E5%BC%8F">CSS三角样式</h2>
+<p>盒子不设置宽高，只设置<strong>四边宽度</strong>和<strong>某条边颜色</strong>，则会形成正方形1/4的三角形——可以理解为边变成了三角</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    .box1 {
+        width: 0;
+        height: 0;
+        /* border: 10px solid pink; */
+        border-top: 10px solid pink;
+        border-right: 10px solid red;
+        border-bottom: 10px solid blue;
+        border-left: 10px solid green;
+    }
+    .box2 {
+        width: 0;
+        height: 0;
+        border: 50px solid transparent;
+        border-left-color: pink;
+        margin: 100px auto;
+    }
+    .jd {
+        position: relative;
+        width: 120px;
+        height: 249px;
+        background-color: pink;
+    }
+    .jd span {
+        position: absolute;
+        right: 15px;
+        top: -10px;
+        width: 0;
+        height: 0;
+        /* 为了照顾兼容性 */
+        line-height: 0;  
+        font-size: 0;
+        border: 5px solid transparent;
+        border-bottom-color: pink;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;box2&quot;&gt;&lt;/div&gt;
+    &lt;div class=&quot;jd&quot;&gt;
+        &lt;span&gt;&lt;/span&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+</code></pre>
+<p>可以用来制作消息气泡框/提示框 的小三角</p>
+<h2 id="CSS%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E6%A0%B7%E5%BC%8F">CSS用户界面样式</h2>
+<p>即更改一些用户操作样式，以提高用户体验</p>
+<p><strong>更改用户的鼠标样式 cursor</strong></p>
+
+<pre class="language-css"><code class="language-css">li { cursor: pointer; }
+
+&lt;li style=&quot;cursor: move;&quot;&gt;默认样式&lt;/li&gt;
+</code></pre>
+<p>设置或检索在对象上移动的鼠标指针采用何种系统预定义的光标形状</p>
+
+<pre class="language-html"><code class="language-html">default		- 默认
+pointer		- 小手
+move		- 移动
+text		- 文本
+not-allowed	- 禁止
+</code></pre>
+<p><strong>表单轮廓线 outline</strong></p>
+
+<pre class="language-css"><code class="language-css">/* 去掉表单框选中时显示的蓝色边框 */ 
+input { outline: none; }  |  input { outline: 0; }
+</code></pre>
+<p><strong>防止表单文本域拖拽 resize</strong></p>
+
+<pre class="language-css"><code class="language-css">textarea { resize: none; }
+</code></pre>
+<h2 id="%3Cstrong%3Evertical-align-%E5%B1%9E%E6%80%A7%E5%9E%82%E7%9B%B4%E5%AF%B9%E9%BD%90%3C/strong%3E"><strong>vertical-align 属性垂直对齐</strong></h2>
+<p><strong>1. 图片、表单、文字 对齐</strong></p>
+<p>使用场景：经常用于设置图片、表单（行内块元素）和文字  一起垂直对齐。</p>
+<p>用于设置一个元素的垂直对齐方式；只对行内元素或行内块元素有效，对块级元素无效</p>
+
+<pre class="language-css"><code class="language-css">/* 相对于父元素进行对齐 */
+vertical-align: baseline | top | middle | bottom;
+</code></pre>
+<p>top：把元素的顶端与行中最高元素的顶端对齐；bottom同理</p>
+<p>baseline：放在父元素基线上；middle：放在父元素的中部</p>
+<ul>
+<li>图片和文字，默认基线对齐，可以使用<code>vertical-align: middle</code>让图片文字表单等行内块元素垂直居中对齐</li>
+</ul>
+<p><strong>2. 解决图片底部默认空白缝隙问题</strong></p>
+<p>bug：图片底侧会有一个空白缝隙，原因是行内块元素会和文字的基线对齐</p>
+
+<pre class="language-html"><code class="language-html">&lt;div&gt;
+    &lt;img src=&quot;images/ldh.jpg&quot; alt=&quot;&quot;&gt;
+&lt;/div&gt; 
+</code></pre>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    div {
+        border: 2px solid red;
+    }
+    img {
+        /* vertical-align: middle; */
+        /* display: block; */
+    }
+&lt;/style&gt;
+</code></pre>
+<p>主要解决方法有两种：</p>
+<ol>
+<li>给图片添加<code>vertical-align:middle | top | bottom</code>等。 (提倡使用的)</li>
+<li>把图片转换为块级元素 <code>display: block;</code></li>
+</ol>
+<h2 id="%E6%BA%A2%E5%87%BA%E7%9A%84%E6%96%87%E5%AD%97%E7%9C%81%E7%95%A5%E5%8F%B7%E6%98%BE%E7%A4%BA">溢出的文字省略号显示</h2>
+<p><strong>1.单行文本溢出显示省略号</strong></p>
+
+<pre class="language-html"><code class="language-html">&lt;div&gt;
+    啥也不说，此处省略一万字
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">div {
+    width: 150px;
+    height: 80px;
+    background-color: pink;
+    margin: 100px auto;
+
+    /*1.先强制一行内显示文本*/
+    white-space: nowrap;(默认 normal 文字够了自动换行，nowrap 强制不换行)
+    /*2.超出的部分隐藏*/
+    overflow: hidden;
+    /*3，文字用省略号替代超出的部分*/
+    text-overflow: ellipsis;
+}
+</code></pre>
+<p><strong>2.多行文本溢出显示省略号</strong></p>
+<p>多行文本溢出显示省略号，有较大兼容性问题，适合于 webKit 浏览器或移动端(移动端大部分是 webkit 内核)</p>
+
+<pre class="language-html"><code class="language-html">&lt;div&gt;
+    啥也不说，此处省略一万字,啥也不说，此处省略一万字此处省略一万字
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">div {
+    width: 150px;
+    height: 65px;
+    background-color: pink;
+    margin: 100px auto;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    /* 弹性伸缩盒子模型显示 */
+    display: -webkit-box;
+    /* 限制在一个块元素显示的文本的行数 */
+    -webkit-line-clamp: 3;
+    /* 设置或检索伸缩盒对象的子元素的排列方式 */
+    -webkit-box-orient: vertical;
+}
+</code></pre>
+<h2 id="%E5%B8%B8%E8%A7%81%E5%B8%83%E5%B1%80%E6%8A%80%E5%B7%A7">常见布局技巧</h2>
+<p><strong>1.margin负值的运用</strong></p>
+<p>一行有多个盒子排在一起，边框会贴在一起，出现1+1=2边框变粗，所以需要让后面的盒子margin值为-1px，正好压住相邻盒子边框。</p>
+
+<pre class="language-css"><code class="language-css">ul li {
+    float: left;
+    list-style: none;
+    width: 150px;
+    height: 200px;
+    border: 1px solid red;
+    margin-left: -1px;
+}
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;ul&gt;
+    &lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;1&lt;/li&gt;
+    &lt;li&gt;1&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre>
+<p>这里虽然每一个盒子左移了1px，但是从第二个盒子开始，会先向左浮动 和前一个盒子贴在一起，然后再左移1px实现边框重叠覆盖。</p>
+<p><strong>现在要实现一个效果</strong>：把鼠标放入盒子中时，盒子四个边框都变色。但是出现问题，前面几个盒子的右边框都不变色。</p>
+<p>解决方法：鼠标经过某个盒子的时候，提高当前盒子的层级即可</p>
+<p>1.如果盒子没有定位，则hover时给盒子加上相对定位(保留位置)即可；</p>
+
+<pre class="language-css"><code class="language-css">ul li:hover {
+    position: relative;
+    border: 1px solid blue;
+}
+</code></pre>
+<p>2.如果盒子内部用到绝对定位，盒子本身就用到相对定位，则可以使用z-index提高该盒子层级压住其他盒子。</p>
+
+<pre class="language-css"><code class="language-css">ul li {
+    ...
+    position: relative;
+}
+ul li:hover {
+    z-index: 1;
+    border: 1px solid blue;
+}
+</code></pre>
+<p><strong>2.文字围绕浮动元素</strong></p>
+<p>一个盒子，左侧是图片，右侧是文字。以前的做法是两个盒子，左侧图片右侧文字。</p>
+<p>现在可以在大盒子里套小盒子放图片，此时图片和文字都是标准流，会上下显示。可以设小盒子为左侧浮动，则文字会自动环绕在图片周围即右侧。这里巧用了浮动元素不会压住文字的特性。</p>
+
+<pre class="language-css"><code class="language-css">    &lt;style&gt;
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 300px;
+            height: 70px;
+            background-color: pink;
+            margin: 0 auto;
+            padding: 5px;
+        }
+        .pic {
+            float: left;
+            width: 120px;
+            height: 65px;
+            margin-right: 5px;
+        }
+        .pic img {
+            width: 100%;
+        }
+        .box p {
+            /* 限制文字只显示三行，超出的省略 */
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;   
+        }
+    &lt;/style&gt;
+</code></pre>
+<p>这里要用 <code>*{}</code> 清楚HTML元素默认的内外边距。</p>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;box&quot;&gt;
+    &lt;div class=&quot;pic&quot;&gt;
+    	&lt;img src=&quot;/images/0.webp&quot; alt=&quot;&quot;&gt;
+        &lt;！-- https://inews.gtimg.com/news_ls/OYSUp43BEHmUxKXRuBiQAKhe2zKuhR_s7hM4-EzO324d4AA_870492/0 --&gt;
+    &lt;/div&gt;
+    &lt;p&gt;拉法空袭造成大量伤亡，白宫挺以引发各方不满，国际社会质问美国“红线”在哪&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>3.行内块的巧妙运用</strong></p>
+<p>在开发中，对于页码模块，需要在版心居中对齐，对于每个页码按钮需要调整盒子大小和距离，比较麻烦。</p>
+<p>行内块元素本身就有大小和距离，并且对父盒子设置 <code>text-align: center;</code>，则其中的行内块元素都能自然而然的水平居中对齐了，简单高效。</p>
+
+<pre class="language-css"><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+}
+.box {
+    text-align: center;
+}
+.box a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    text-align: center;
+    line-height: 36px;
+    color: #333;
+    font-size: 14px;
+}
+/* 这里涉及到选择器的权重，需要加上.box，否则修改无效 */
+.box .prev,
+.box .next {
+    width: 85px;
+}
+.box .current,
+.box .elp {
+    background-color: #fff;   
+    border: none;
+}
+.box input {
+    height: 36px;
+    width: 45px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+.box button {
+    width: 60px;
+    height: 36px;
+    background-color: #f7f7f7;
+    border: 1px solid #ccc;
+}
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;box&quot;&gt;
+    &lt;a href=&quot;&quot; class=&quot;prev&quot;&gt;&amp;lt;&amp;lt;上一页&lt;/a&gt;
+    &lt;a href=&quot;&quot;&gt;1&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;current&quot;&gt;2&lt;/a&gt;
+    &lt;a href=&quot;&quot;&gt;3&lt;/a&gt;
+    &lt;a href=&quot;&quot;&gt;4&lt;/a&gt;
+    &lt;a href=&quot;&quot;&gt;5&lt;/a&gt;
+    &lt;a href=&quot;&quot;&gt;6&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;elp&quot;&gt;...&lt;/a&gt;
+    &lt;a href=&quot;&quot; class=&quot;next&quot;&gt;下一页&amp;gt;&amp;gt;&lt;/a&gt;
+    到第
+    &lt;input type=&quot;text&quot;&gt;
+    页
+    &lt;button&gt;确定&lt;/button&gt;
+&lt;/div&gt;
+</code></pre>
+<p><strong>4.css三角强化</strong></p>
+<p>要实现一个效果，在矩形方框内部有一个斜线，将矩形分为左右两个直角梯形。原理就是两个矩形中间拼接一个等高的直角三角形，与右侧同色。接下来学习如何制作中间的直角三角。</p>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;box1&quot;&gt;&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.box1 {
+    width: 0;
+    height: 0;
+    border-top: 50px solid pink;
+    border-right: 50px solid skyblue;
+    border-bottom: 50px solid blue;
+    border-left: 50px solid green;
+}
+</code></pre>
+<p>给盒子四边都设置等宽的边框，则会变成四个直角三角形拼接在一起，我们实际要的是加长的右侧三角形。</p>
+<p>先把底部边框设为0px，则变成左右小直角三角形，中间大直角三角形。再把左侧边框设为0px，则变成顶部和底部边框形成的两个三角形拼接成正方形。</p>
+<p>把<strong>顶部边框</strong>设为100px，则两个三角<strong>垂直方向</strong>变长一倍。</p>
+<p>再把顶部边框设为透明色，则成功实现所需的斜三角。</p>
+
+<pre class="language-css"><code class="language-css">.box1 {
+    width: 0;
+    height: 0;
+    border-top: 100px solid transparent;
+    border-right: 50px solid skyblue;
+    border-bottom: 0 solid blue;
+    border-left: 0 solid green;
+}
+</code></pre>
+<p>可以简写（上右下左）：</p>
+
+<pre class="language-css"><code class="language-css">.box1 {
+    width: 0;
+    height: 0;
+    border-color: transparent red transparent transparent;
+    border-style: solid;
+    border-width: 100px 50px 0 0;
+}
+</code></pre>
+<p>完整的实现效果（商城秒杀价&amp;原价）：</p>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;price&quot;&gt;
+    &lt;span class=&quot;miaosha&quot;&gt;
+        ￥1650
+        &lt;i&gt;&lt;/i&gt;
+    &lt;/span&gt;
+    &lt;span class=&quot;origin&quot;&gt;￥1950&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-css"><code class="language-css">.price {
+    width: 160px;
+    height: 24px;
+    border: 1px solid red;
+    margin: 0 auto;
+    line-height: 24px;/* 子元素可继承 */
+}
+.miaosha {
+    position: relative;
+    float: left;
+    width: 90px;
+    height: 100%;
+    background-color: red;
+    text-align: center;
+    color: #fff;
+    font-weight: 700;
+    margin-right: 8px;
+}
+.miaosha i {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 0;
+    height: 0;
+    border-color: transparent #fff transparent transparent;
+    border-style: solid;
+    border-width: 24px 10px 0 0;
+}
+.origin {
+    font-size: 12px;
+    color: gray;
+    text-decoration: line-through;
+}
+</code></pre>
+<h2 id="CSS%E5%88%9D%E5%A7%8B%E5%8C%96">CSS初始化</h2>
+<p>不同浏览器对有些标签的默认值是不同的，为了消除不同浏览器对HTML文本呈现的差异，照顾浏览器的兼<br />
+容，我们需要对CSS初始化。</p>
+<p>简单理解: CSS初始化是指重新设置浏览器的样式。(也称为CSS reset)。每个网页都必须首先进行CSS初始化。</p>
+<p>以京东的CSS初始化为例：</p>
+
+<pre class="language-css"><code class="language-css">* {
+    margin: 0;
+    padding: 0;
+}
+/* em 和 i 斜体的文字不倾斜 */
+em,
+i {
+    font-style: normal;
+}
+/* 去掉 li 的小圆点 */
+li {
+    list-style: none;
+}
+img {
+    border: 0;	/* 照顾低版本浏览器，解决图片外面包含链接可能会有的边框问题 */
+    vertical-align: middle;	/* 解决图片底侧空白缝隙问题 */
+}
+button {
+    cursor: pointer;
+}
+a {
+    color: #666;
+    text-decoration: none;
+}
+a:hover {
+    color: #c81623;
+}
+...
+</code></pre>
+<h2 id="%3Cstrong%3EUnicode%E7%BC%96%E7%A0%81%E5%AD%97%E4%BD%93%3C/strong%3E"><strong>Unicode编码字体</strong></h2>
+<p>在CSS中使用中文字体名称时，有时会遇到浏览器无法正确解析的问题，导致乱码或者字体无法正确应用。为了解决这个问题，可以使用 <code>Unicode编码</code> 来<strong>替代中文字体名称</strong>，从而提高兼容性。</p>
+<p><strong>为什么使用Unicode编码</strong></p>
+<ul>
+<li><strong>避免乱码</strong>：某些浏览器或编辑器在解析CSS时会对中文字符处理不当，使用Unicode编码可以避免这些问题。</li>
+<li><strong>提高兼容性</strong>：Unicode编码是一种通用的字符编码方式，在不同的系统和浏览器中都有较好的支持。</li>
+<li><strong>标准化</strong>：统一使用Unicode编码可以使代码更加规范和一致。</li>
+</ul>
+<p><strong>如何使用Unicode编码</strong></p>
+<p>将中文字符转换为相应的<code>Unicode编码</code>，然后在CSS中使用 <code>\</code> 作为前缀，以下是一些常用中文字体的Unicode编码示例：</p>
+<ul>
+<li>黑体：黑体的Unicode编码是 <code>\9ED1\4F53</code></li>
+<li>宋体：宋体的Unicode编码是 <code>\5B8B\4F53</code></li>
+<li>微软雅黑：微软雅黑的Unicode编码是 <code>\5FAE\8F6F\96C5\9ED1</code></li>
+</ul>
+<p><strong>示例</strong></p>
+<p>以下是如何在CSS中使用Unicode编码的示例：</p>
+
+<pre class="language-css"><code class="language-css">body {
+    font-family: &quot;\9ED1\4F53&quot;, &quot;\5B8B\4F53&quot;, &quot;\5FAE\8F6F\96C5\9ED1&quot;, sans-serif;
+}
+</code></pre>
+<p>在上述CSS代码中，分别指定了黑体、宋体和微软雅黑三种字体，并用Unicode编码来表示它们。</p>
+<p><strong>Unicode编码的具体解释</strong></p>
+<p>以 &quot;微软雅黑&quot; 为例，其每个汉字的Unicode编码如下：</p>
+<ul>
+<li>微：Unicode编码是 <code>\5FAE</code></li>
+<li>软：Unicode编码是 <code>\8F6F</code></li>
+<li>雅：Unicode编码是 <code>\96C5</code></li>
+<li>黑：Unicode编码是 <code>\9ED1</code></li>
+</ul>
+<p>因此，&quot;微软雅黑&quot; 可以表示为 <code>\5FAE\8F6F\96C5\9ED1</code></p>
+<p><strong>如何获取Unicode编码</strong></p>
+<p>要将中文字符转换为Unicode编码，可以使用在线工具或编程语言的内置函数。例如，可以使用JavaScript来获取Unicode编码：</p>
+
+<pre class="language-js"><code class="language-js">function getUnicode(str) {
+    return str.split('').map(function(char) {
+        return '\\' + char.charCodeAt(0).toString(16).toUpperCase();
+    }).join('');
+}
+
+console.log(getUnicode(&quot;微软雅黑&quot;)); // 输出 \5FAE\8F6F\96C5\9ED1
+</code></pre>
+<p>通过这种方式，可以方便地将中文字符转换为Unicode编码，并在CSS中使用。</p>
+<p><strong>总结</strong></p>
+<p>使用Unicode编码字体可以有效避免浏览器解析CSS代码时出现的乱码问题，并提高跨平台的兼容性。通过将中文字体名称转换为Unicode编码，可以确保CSS代码在各种环境下都能正常工作。</p>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/front-end/html5.html">
+                            <span class="icon"></span>
+                            <span class="label">HTML5</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/front-end/css3.html">
+                            <span class="label">CSS3</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>第一列链接</a><ul><li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+<li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+</ul>
+</li>
+<li><a>第二列链接</a><ul><li><a target="_blank" href="https://www.youtube.com/@CodeMonkeyUnity/videos">Code Monkey - Youtube</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">网站使用 teedoc 生成</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

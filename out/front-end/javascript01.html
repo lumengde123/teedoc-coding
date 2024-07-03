@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn"  class=" heading_no_counter ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="JavaScript">
+    
+    
+    <meta name="description" content="JavaScript学习笔记">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>JavaScript 学习笔记 - mengdelu</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": ["笔记", "JavaScript"], "date": "2024-06-16", "update": [], "ts": 1718467200, "author": "", "brief": "", "cover": "", "class": "heading_no_counter"}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>mengdelu</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/my_notes/">我的笔记</a></li>
+<li class="active"><a  href="/front-end/">前端三剑客</a></li>
+<li class=""><a  href="/vue/">Vue</a></li>
+<li class=""><a  href="/unity/">Unity</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">站内搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载搜索文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/front-end/index.html"><span class="label">文档说明</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/html5.html"><span class="label">HTML5</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css.html"><span class="label">CSS</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css3.html"><span class="label">CSS3</span><span class=""></span></a></li>
+<li class="active_parent no_link"><a><span class="label">JavaScript</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="active with_link"><a href="/front-end/javascript01.html"><span class="label">ECMAScript</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/javascript02.html"><span class="label">Web-APIs-DOM</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/javascript03.html"><span class="label">JavaScript进阶</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>JavaScript 学习笔记</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>笔记</li>
+                            
+                                <li>JavaScript</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2024-06-16">
+                                    2024-06-16
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="%E5%89%8D%E8%A8%80">前言</h2>
+<blockquote>
+<p>JavaScript是一种运行在客户端（浏览器）的编程语言，实现人机交互效果</p>
+</blockquote>
+<ul>
+<li>网页特效（监听用户的行为让网页做出对应的反馈）</li>
+<li>表单验证（针对表单数据的合法性进行判断）</li>
+<li>数据交互（获取后台的数据，渲染到前端）</li>
+<li>服务器编程（node.js）</li>
+</ul>
+<p><strong><code>JavaScript = ECMAScript + Web APIs(= DOM + BOM)</code></strong></p>
+<p>ECMAScript: JavaScript语言基础</p>
+<ul>
+<li>规定了js基础语法核心知识</li>
+<li>比如：变量、分支语句、循环语句等等</li>
+</ul>
+<p>Web APIs</p>
+<ul>
+<li>DOM：页面文档对象模型。操作文档，比如对页面元素进行移动、大小、添加删除等操作</li>
+<li>BOM：浏览器对象模型。操作浏览器，比如页面弹窗、检测窗口高度、存储数据到浏览器等等</li>
+</ul>
+<p><strong>以下整理<code>ECMAScript</code>部分的知识。</strong></p>
+<h2 id="JS%E5%BC%95%E5%85%A5%E6%96%B9%E5%BC%8F">JS引入方式</h2>
+<p>JavaScript 程序不能独立运行，它需要被嵌入 HTML 中，然后浏览器才能执行 JavaScript 代码。<br />
+通过 <code>script</code> 标签将 JavaScript 代码引入到 HTML 中，有两种方式：</p>
+<p><strong>1.内部方式</strong></p>
+<p>在<code>&lt;/body&gt;</code>上方，通过 <code>script</code> 标签包裹 JavaScript 代码</p>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+  &lt;!-- 内联形式：通过 script 标签包裹 JavaScript 代码 --&gt;
+  &lt;script&gt;
+    alert('嗨，欢迎来传智播学习前端技术！')
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<p><strong>2.外部方式</strong></p>
+<p>如果<code>script</code>标签放在<code>&lt;body&gt;</code>开头，则会先加载 js 再加载 html 显示页面<br />
+此时如果js操作比较耗时，页面会卡住，得等一段时间才能加载出页面——除非要先发生某些事件再显示页面</p>
+<p>一般将 JavaScript 代码写在独立的 <code>.js</code> 文件中，然后通过 <code>script</code> 标签的 <code>src</code> 属性引入，并且<strong>此时 <code>script</code>标签内的代码会被忽略！</strong>如下代码所示：</p>
+
+<pre class="language-javascript"><code class="language-javascript">// my.js
+document.write('嗨，欢迎来传智播学习前端技术！')
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+  &lt;!-- 外部形式：通过 script 的 src 属性引入独立的 .js 文件 --&gt;
+  &lt;script src=&quot;./js/my.js&quot;&gt;
+    // script内的代码全会被忽略掉！
+    alert(666);  
+  &lt;/script&gt;
+&lt;/body&gt;
+
+等效于：&lt;script src=&quot;./js/my.js&quot;&gt;&lt;/script&gt;
+</code></pre>
+<p><strong>3.内联（行内）方式</strong></p>
+<p>直接在HTML标签代码内添加<code>js</code>代码</p>
+
+<pre class="language-html"><code class="language-html">&lt;button onclick=&quot;alart('逗你玩~~')&quot;&gt;点击我&lt;/button&gt;
+</code></pre>
+<h2 id="%E6%B3%A8%E9%87%8A%E5%92%8C%E7%BB%93%E6%9D%9F%E7%AC%A6">注释和结束符</h2>
+<p><strong>注释：</strong></p>
+<ul>
+<li>单行注释（ctrl + /）：<code>//</code></li>
+<li>块(多行)注释（shift + alt + a）：<code>/* */</code></li>
+</ul>
+<p><strong>结束符：</strong></p>
+<p><code>;</code>代表一段代码的结束。多数情况下可以省略，使用回车<code>enter</code>替代。<strong>二选一即可，不要混着用</strong></p>
+
+<pre class="language-js"><code class="language-js">  &lt;script&gt; 
+      alert(1);
+      alert(1)  // 这里应该也加上;的
+      alert(2);
+  &lt;/script&gt;
+</code></pre>
+<h2 id="%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E8%AF%AD%E6%B3%95">输入输出语法</h2>
+<p>输出语法：</p>
+
+<pre class="language-javascript"><code class="language-javascript"># 文档输出内容
+document.write('要输出的内容')
+document.write('&lt;h1&gt;一级标题&lt;/h1&gt;')
+
+# 页面弹出警告框
+alert('要输出的内容')
+
+# 控制台输出，调试用
+console.log('控制台打印')
+</code></pre>
+<p>输入语法：</p>
+
+<pre class="language-javascript"><code class="language-javascript">prompt('please input your name: ')
+</code></pre>
+<p>正常是按HTML文档流顺序执行JavaScript代码，其中 <code>alert()</code> 和 <code>prompt()</code> 会跳过页面渲染先被执行</p>
+<p><strong>字面量</strong>：在代码中表示固定值的数据</p>
+<ul>
+<li>字符串字面量：&quot;Hello, world!&quot;</li>
+<li>数字字面量：42</li>
+<li>布尔字面量：true 或 false</li>
+<li>数组字面量：[1, 2, 3]</li>
+<li>对象字面量：{ key: 'value' }</li>
+</ul>
+<h2 id="%E5%8F%98%E9%87%8F">变量</h2>
+<p>变量可以理解为存储数据的<code>容器</code>，存储的内容可改变</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 不提倡同时声明多个变量，如：let age = 18, uname = '张三'
+// 变量的初始化 = 变量声明+变量赋值
+let age = 18
+let uname = '张三'
+age = 19    // 更新变量
+
+console.log(age, uname)
+
+let uname = prompt('please input your name: ')
+document.write(uname)
+
+</code></pre>
+<p><strong>命名规则</strong></p>
+<ul>
+<li><strong>不能用关键字</strong>；只能由<code>下划线、数字、字母、$</code>组成，<strong>数字不能开头</strong>；字母<strong>严格区分大小写</strong></li>
+<li>起名要有意义；遵守<strong>小驼峰命名法</strong>，例：userName</li>
+</ul>
+<p>let 和 var 的区别【现在都用let】</p>
+<ul>
+<li>var可以先使用再声明（不合理）</li>
+<li>var声明的变量可以重复声明，但let不允许多次声明同一个变量</li>
+<li>其它问题：变量提升、全局变量、没有块级作用域等等</li>
+</ul>
+<p><strong>常量</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">//常量声明的同时必须赋值，初始化后不允许重新赋值
+const G = 9.8
+console.log(G)
+</code></pre>
+<h2 id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">数据类型</h2>
+<p>JavaScript是弱数据类型的语言，<strong>变量只有赋值之后才知道是什么数据类型</strong></p>
+<ul>
+<li>基本数据类型</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">number，string，boolean，undefined，null
+</code></pre>
+<ul>
+<li>引用数据类型</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">object，array，function，date
+</code></pre>
+<p><strong>1.数字类型 Number</strong></p>
+<p>可以是整数，小数，正数，负数</p>
+<p><code>NaN</code>代表一个计算错误，它是一个<strong>不正确的</strong>或者一个<strong>未定义的</strong>数学操作所得到的结果</p>
+<p>任何对NaN的操作都会返回NaN（NaN具有粘性）</p>
+<p><strong>2.字符串类型 String</strong></p>
+
+<pre class="language-js"><code class="language-js">let name = '中国联通';
+
+let v1 = name.length;
+let v2 = name[0];		// name.charAt(0);
+let v3 = name.trim();	// 去除空白
+let v4 = name.substring(1,2);	// 切片，范围：[前闭,后开)
+
+console.log(&quot;pink老师很有'激情'&quot;)
+
+document.write('我的名字叫' + uname + '.')	// 字符串拼接
+document.write(`我的名字叫${uname}.`)	// 模板字符串★★★
+</code></pre>
+<p><strong>3.布尔类型boolean</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">let isCool = true
+console.log(isCool)
+
+// 布尔型字面量：true  false
+</code></pre>
+<p><strong>4.未定义类型undefined</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// 只声明不赋值的情况下，变量默认值为undefined.一般很少将变量赋值为undefined
+let num
+console.log(num)
+</code></pre>
+<p>【技巧】在开发中，等待某个变量是否有数据从后端传送过来，可以通过检测它是不是<code>undefined</code>来判断</p>
+<p><strong>5.空类型null</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// undefined表示没有赋值，null表示赋值了但是 值为空
+
+// 计算上的区别
+undefined + 1 = NaN
+null + 1 = 1
+
+//obj里存对象，但是对象还没准备好，就可以先用null代替
+</code></pre>
+<p><strong>检测数据类型typeof：</strong></p>
+
+<pre class="language-js"><code class="language-js">let num1 = prompt('请输入第一个数：')
+console.log(typeof num1)
+</code></pre>
+<h2 id="%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2">类型转换</h2>
+<p>使用表单、prompt获取过来的数据默认是字符串类型的，不能直接进行运算，需要进行类型转换</p>
+<p><strong>1.隐式转换</strong></p>
+<p>某些运算符被执行时，系统内部自动将数据类型进行转换。<strong>缺点：转换类型不明确，靠经验总结。</strong></p>
+<ul>
+<li>任何数据 + <strong><code>字符串</code></strong> = <strong><code>字符串</code></strong></li>
+<li><code>+</code>作为正号，可以转换字符串为<strong>数字型</strong>；若字符串不全是数字，则转为<code>NaN</code></li>
+<li>除<code>+</code>以外的运算符，如<code>-*/</code>等都会把数据转换成<strong>数字型</strong></li>
+</ul>
+
+<pre class="language-js"><code class="language-js">// 在控制台中，蓝色为数字，黑色为字符串
+console.log(2 + 2)    // 4
+
+console.log('pink' + 2) // `pink2`
+console.log(2 + '2') // `22`
+
+console.log(+'123')  // 123
+console.log(+12)    // 12
+
+console.log(2 - '2')  // 0  
+</code></pre>
+<p><strong>2.显式转换</strong></p>
+<p>转换为数字型</p>
+
+<pre class="language-javascript"><code class="language-javascript">- Number(数据)
+- +'字符串'
+
+若字符串里有非数字，则转换失败，结果为NaN(Not a Number)
+但NaN也是number类型的数据，代表 非数字
+
+只能截取数字开头，还没那么智能能从中间截取数据
+- parseInt(数据)	// 只保留整数
+    console.log(parseInt('12.94px'))	// 12
+    console.log(parseInt('abc12.94px'))	// NaN
+
+- parseFloat(数据)	// 可以保留小数
+    console.log(parseFloat('12.94px')) // 12.94
+    console.log(parseFloat('abc12.94px')) // NaN
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">//案例
+// 1. 用户输入 prompt 得到字符串类型 要转换为 数字型
+    let num1 = +prompt('请输入第一个数字：')
+    let num2 = +prompt('请输入第二个数字：')
+    // 2. 输出
+    document.write(`
+    	&lt;p&gt;两个数相加的和是:${num1 + num2}&lt;/p&gt;
+    `)
+</code></pre>
+<p><strong>综合案例</strong></p>
+
+<pre class="language-html"><code class="language-html">&lt;style&gt;
+    h2 {
+      text-align: center;
+    }
+
+    table {
+      /* 合并相邻边框 */
+      border-collapse: collapse;
+      height: 80px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    th {
+      padding: 5px 30px;
+    }
+
+    table,
+    th,
+    td {
+      border: 1px solid #000;
+    }
+&lt;/style&gt;
+
+&lt;body&gt;
+  &lt;h2&gt;订单确认&lt;/h2&gt;
+
+
+  &lt;script&gt;
+    // 1 用户输入
+    let price = +prompt('请输入商品价格：')
+    let num = +prompt('请输入商品数量：')
+    let address = prompt('请输入收获地址：')
+    // 2.计算总额
+    let total = price * num
+    // 3.页面打印渲染
+    document.write(`
+      &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th&gt;商品名称&lt;/th&gt;
+            &lt;th&gt;商品价格&lt;/th&gt;
+            &lt;th&gt;商品数量&lt;/th&gt;
+            &lt;th&gt;总价&lt;/th&gt;
+            &lt;th&gt;收货地址&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;小米青春版PLUS&lt;/td&gt;
+            &lt;td&gt;${price}元&lt;/td&gt;
+            &lt;td&gt;${num}&lt;/td&gt;
+            &lt;td&gt;${total}元&lt;/td&gt;
+            &lt;td&gt;${address}&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
+    `)
+  &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h2 id="%E8%BF%90%E7%AE%97%E7%AC%A6">运算符</h2>
+<p><strong>赋值运算符</strong></p>
+<ul>
+<li>包括：<code>=</code>、<code>+=</code>、<code>-=</code>、<code>*=</code>、<code>/=</code>、<code>%=</code></li>
+</ul>
+<p><strong>一元运算符</strong></p>
+<ul>
+<li>作正号：<code>+'123'</code></li>
+<li>自增<code>++</code>、自减<code>--</code></li>
+<li><code>!</code></li>
+</ul>
+<p><strong>比较运算符</strong></p>
+<ul>
+<li><p>包括：<code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code>、<code>==</code>、<code>!==</code></p>
+</li>
+<li><p>比较运算符也有隐式转换，<code>数字==字符</code>比较时，把字符型转化为<strong>数字型</strong></p>
+</li>
+<li><p><code>==</code>只判断<strong>值</strong></p>
+</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">console.log(2 == 2)    // true
+console.log(2 == '2')  // true
+console.log(2 != '2') // false
+</code></pre>
+<ul>
+<li><code>NaN</code>不等于任何数据，包括它自己。比较NaN的结果都是false</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">console.log(NaN === NaN)  // false
+</code></pre>
+<ul>
+<li>字符串的比较，实际上是一个一个<code>比较ASCⅡ码</code>，如'aa'&lt;'aac'</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">console.log('a' &lt; 'b') // true
+console.log('aa' &lt; 'ab') // true
+console.log('aa' &lt; 'aac') // true
+</code></pre>
+<ul>
+<li><code>===</code>同时判断<strong>值</strong>和<strong>类型</strong>是否相等</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">console.log(2 === '2')  // false
+console.log(undefined === null) // false
+console.log(2 !== '2')  // true  
+</code></pre>
+<ul>
+<li>小数比较的时候先乘为整数再比较</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">console.log(2.1 &lt; 2.11) // true
+</code></pre>
+<p><strong>逻辑运算符</strong></p>
+<ul>
+<li>与或非：<code>&amp;&amp;</code>，<code>||</code>，<code>!</code></li>
+</ul>
+<p><strong>运算符优先级</strong></p>
+<table>
+<thead>
+<tr>
+  <th>优先级</th>
+  <th>运算符</th>
+  <th>顺序</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>1</td>
+  <td>小括号</td>
+  <td>()</td>
+</tr>
+<tr>
+  <td>2</td>
+  <td>一元运算符</td>
+  <td>++  --  !</td>
+</tr>
+<tr>
+  <td>3</td>
+  <td>算术运算符</td>
+  <td>先* / % 后 + -</td>
+</tr>
+<tr>
+  <td>4</td>
+  <td>关系运算符</td>
+  <td>&gt;  &gt;=  &lt;  &lt;=</td>
+</tr>
+<tr>
+  <td>5</td>
+  <td>相等运算符</td>
+  <td>==  !=  ===  !===</td>
+</tr>
+<tr>
+  <td>6</td>
+  <td>逻辑运算符</td>
+  <td>先&amp;&amp;后||</td>
+</tr>
+<tr>
+  <td>7</td>
+  <td>赋值运算符</td>
+  <td>=</td>
+</tr>
+<tr>
+  <td>8</td>
+  <td>逗号运算符</td>
+  <td>,</td>
+</tr>
+</tbody>
+</table>
+<h2 id="%E5%88%86%E6%94%AF%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5">分支循环语句</h2>
+<h3 id="%E5%88%86%E6%94%AF%E8%AF%AD%E5%8F%A5">分支语句</h3>
+<p><strong>1.if 语句</strong></p>
+<p>除了<code>0</code>，所有数字都为真；除了<code>''</code>，所有字符串都为真</p>
+
+<pre class="language-js"><code class="language-js">// 1. 用户输入
+let year = +prompt('请输入年份')
+// 2. 判断输出
+if (year % 4 === 0 &amp;&amp; year % 100 !== 0 || year % 400 === 0) {
+    alert(`${year}年是闰年`)
+} else {
+    alert(`${year}年是平年`)
+}
+</code></pre>
+
+<pre class="language-js"><code class="language-js">// 1. 用户输入
+let score = +prompt('请输入成绩：')
+// 2. 判断输出
+if (score &gt;= 90) {
+    alert('成绩优秀，宝贝，你是我的骄傲')
+} else if (score &gt;= 70) {
+    alert('成绩良好，宝贝，你要加油哦~~')
+} else if (score &gt;= 60) {
+    alert('成绩及格，宝贝，你很危险~')
+} else {
+    alert('成绩不及格，宝贝，我不想和你说话，我只想用鞭子和你说话~')
+}
+</code></pre>
+<p><strong>2.三元运算符</strong></p>
+<p><code>条件 ? 满足条件才执行的代码 : 不满足条件才执行的代码</code></p>
+
+<pre class="language-js"><code class="language-js">3 &gt; 5 ? 3 : 5   // 5   
+
+let num1 = +prompt('请您输入第一个数：')
+let num2 = +prompt('请您输入第二个数：')
+num1 &gt; num2 ? alert(`最大值是: ${num1}`) : alert(`最大值是: ${num2}`)
+</code></pre>
+<p><strong>案例：</strong>小于10的数字，前面补0（返回的都是string类型）</p>
+
+<pre class="language-javascript"><code class="language-javascript">let num1 = prompt('请输入一个数字：')
+num1 = num1 &lt; 10 ? 0 + num1 : num1
+
+let num2 = +prompt('请输入一个数字：')
+num2 = num2 &lt; 10 ? '0' + num2 : `${num2}`
+
+console.log(num1)
+console.log(num2)
+</code></pre>
+<p><strong>3.switch 语句</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// 1.用户输入  2个数字 +  操作符号  + - *  / 
+let num1 = +prompt('请您输入第一个数字:')
+let num2 = +prompt('请您输入第二个数字:')
+let sp = prompt('请您输入 + - * / 其中一个:')
+// 2. 判断输出
+switch (sp) {
+    case '+':
+        alert(`两个数的加法操作是${num1 + num2}`)
+        break
+    case '-':
+        alert(`两个数的减法操作是${num1 - num2}`)
+        break
+    case '*':
+        alert(`两个数的乘法操作是${num1 * num2}`)
+        break
+    case '/':
+        alert(`两个数的除法操作是${num1 / num2}`)
+        break
+    default:
+        alert(`你干啥咧，请输入+-*/`)
+} 
+</code></pre>
+<h3 id="%E5%BE%AA%E7%8E%AF%E8%AF%AD%E5%8F%A5">循环语句</h3>
+<p><strong>1.do-while循环</strong></p>
+<p><strong>2.while循环</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">while(循环条件) {
+    要重复执行的代码(循环体)
+}
+// 三要素：变量起始值，终止条件，变量变化量
+</code></pre>
+
+<pre class="language-js"><code class="language-js">while(true) {
+    let res = prompt('1 + 1 = ?')
+    if(res === '2')
+        break
+}
+</code></pre>
+<p>循环退出</p>
+<ul>
+<li>break：退出整个循环</li>
+<li>continue：结束本轮循环，进入下一轮循环</li>
+</ul>
+<p><strong>断点调试</strong></p>
+<p>运行网页，按F12打开开发者工具，找到Resources，点击html文件，点击某行代码前的序号设置断点</p>
+<p>然后刷新网页，代码会执行到断点处。右侧scope为当前变量的值，watch可以添加需要监视的变量，</p>
+<p>可以点击某按钮执行下一句</p>
+<p><strong>综合案例：</strong>ATM取款机</p>
+
+<pre class="language-js"><code class="language-js">// 1. 开始循环 输入框写到 循环里面
+// 3. 准备一个总的金额
+let money = 100
+while (true) {
+    let re = +prompt(`
+        请您选择操作：
+        1.存钱
+        2.取钱
+        3.查看余额
+        4.退出
+    `)
+    // 2. 如果用户输入的 4 则退出循环， break  写到if 里面，没有写到switch里面， 因为4需要break退出循环
+    if (re === 4) {
+        break
+    }
+    // 4. 根据输入做操作
+    switch (re) {
+        case 1:
+            // 存钱
+            let cun = +prompt('请输入存款金额')
+            money = money + cun
+            break
+        case 2:
+            // 存钱
+            let qu = +prompt('请输入取款金额')
+            money = money - qu
+            break
+        case 3:
+            // 存钱
+            alert(`您的银行卡余额是${money}`)
+            break
+    }
+}
+</code></pre>
+<p><strong>for循环</strong></p>
+
+<pre class="language-none"><code class="language-none">for(变量起始值;终止条件;变量变化量){
+    // 循环体
+}
+</code></pre>
+
+<pre class="language-js"><code class="language-js">// 外层循环打印 第 n 天
+for (let i = 1; i &lt;= 3; i++) {
+    document.write(`第${i}天&lt;br&gt;`)
+    // 里层循环打印 第几个单词
+    for (let j = 1; j &lt;= 5; j++) {
+        document.write(`记住了第${j}个单词&lt;br&gt;`)
+    }
+}
+</code></pre>
+<h2 id="%E6%95%B0%E7%BB%84">数组</h2>
+<ul>
+<li><strong>数组元素插入和删除</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">let arr = ['刘德华', '张学友', '黎明', '郭富城', 'pink老师', 10]
+console.log(arr[4])		// pink老师
+console.log(arr.length) // 6
+
+// 返回值是 新数组的长度
+console.log(arr.push('成龙'))		// 在数组尾插入，返回7
+console.log(arr.unshift('成龙'))	// 在数组头插入，返回8
+
+// 返回值是 删除的元素的值
+arr.pop()		// 删除数组最后一个元素
+arr.shift()		// 删除数组第一个元素并返回
+arr.splice(start, deleteCount)	// 以下标strat为起点删除deleteCount个元素
+</code></pre>
+<ul>
+<li><strong>数组排序—— sort()</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">// arr.sort()   // 排序
+
+let arr = [4, 2, 5, 1, 3]
+
+arr.sort(function (a, b) {  // 升序写法 [1, 2, 3, 4, 5]
+    return a - b
+})
+
+arr.sort(function (a, b) {  // 降序写法 [5, 4, 3, 2, 1]
+    return b - a
+})
+
+console.log(arr)
+</code></pre>
+<ul>
+<li><strong>迭代数组—— map()</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">// arr.map()	// 迭代数组，返回值为新数组
+
+const arr = ['red', 'green', 'blue']
+const newArr = arr.map(function(ele, index) {
+    console.log(ele)		// 数组元素
+    console.log(index)		// 数组索引号
+    return ele + '颜色'
+})
+
+console.log(newArr) // ['red颜色', 'green颜色', 'blue颜色']
+</code></pre>
+<ul>
+<li><strong>数组元素拼接—— join()</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">// arr.join()	// 把数组中的所有元素以某分隔符连接成一个字符串
+
+const arr = ['red颜色', 'green颜色', 'blue颜色']
+console.log(arr.join('-'))      // red颜色-green颜色-blue颜色
+</code></pre>
+<ul>
+<li><strong>遍历数组—— forEach()</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = ['red', 'green', 'blue']
+const result = arr.forEach(function(item, index) {  // 加强版for循环，适合于遍历数组对象，越复杂越适合
+    console.log(item)	// 当前数组元素,item必写
+    console.log(index)	// 当前索引号
+    // 只遍历不返回值
+})
+</code></pre>
+<ul>
+<li><strong>筛选数组—— filter()</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [10, 20 30]
+
+const newArr = arr.filter(item =&gt; item &gt;=20)    // 返回数组，包含符合条件的所有元素；都不符合则返回空数组
+console.log(newArr)             // 筛选返回的是新数组，不会影响原数组
+</code></pre>
+<ul>
+<li><strong>累计器—— reduce()</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">// 返回累计处理的结果，经常用于求和等
+arr.reduce(function(){}, 起始值)
+arr.reduce(function(上一次值，当前值){}，初始值)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [1, 5, 8]
+
+const num1 = arr.reduce((prev, current) =&gt; prev + current)      // 14
+const num2 = arr.reduce((prev, current) =&gt; prev + current, 10)	// 24
+</code></pre>
+<p><strong>更多方法可以看JS进阶—day2—内置构造函数—Array</strong></p>
+<h2 id="%E5%87%BD%E6%95%B0">函数</h2>
+<p>命名规范</p>
+<ul>
+<li>和变量名基本一致</li>
+<li>尽量小驼峰式命名</li>
+<li>前缀应为动词：<code>can, has, is, get, set, load</code></li>
+</ul>
+<p><strong>具名函数</strong></p>
+
+<pre class="language-none"><code class="language-none">function 函数名(参数列表) {
+    函数体
+}
+</code></pre>
+
+<pre class="language-js"><code class="language-js">/* 如果没设置形参默认值，也没给实参，那么形参值默认是undefined */
+function getSum(start = 0, end = 1) {
+    let sum = 0
+    for(let i = start; i &lt;= end; i++) {
+    	sum += i
+    }
+    console.log(sum)
+}
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">function getArrSum(arr = []) {
+    let sum = 0
+    for(let i = 1; i &lt;= arr.length; i++) {
+        sum += i
+    }
+    return sum;
+}
+
+getArrSum()     // 0
+</code></pre>
+<p><strong>匿名函数</strong></p>
+<p><strong>1.函数表达式</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">let fn = function(x, y) {
+    // 函数体
+    console.log(x + y)
+}
+</code></pre>
+<p>具名函数的调用可以写到任何位置；<strong>匿名函数</strong>必须<strong>先声明函数表达式，后调用。</strong></p>
+<p><strong>2.立即执行函数</strong></p>
+<p>作用：防止被全局变量污染</p>
+<p>规定：立即执行函数开头或者结尾必须加  <code>;</code> 将它们分开</p>
+
+<pre class="language-none"><code class="language-none">(function () { console.log(11) })();
+
+(function () { console.log(11) }());
+</code></pre>
+<ul>
+<li><code>function(x, y)</code>：这是一个<strong>函数的声明</strong>，它定义了一个函数，但并没有立即执行它</li>
+<li><code>function(x, y) { console.log(x + y); }</code>：这是一个<strong>函数表达式</strong>，定义了一个匿名函数并包含了函数体。，也没有立即执行它</li>
+<li><code>function(x, y) { console.log(x + y); }(1, 3)</code>：这是一个<strong>立即调用函数表达式</strong>，在声明函数后，紧接着用 (1, 3) 立即调用它。这种写法在创建函数后立即执行，传递参数 1 和 3 给函数。但这种写法语法错误。</li>
+<li><code>(function(x, y) { console.log(x + y); }(1, 3))</code>：同上。只是加了外层括号才不会导致语法错误。最外部的括号是为了将函数声明转换为函数表达式，告诉 JavaScript 解释器这是一个表达式而不是函数声明。</li>
+<li><code>function(x, y) { console.log(x + y); }(1, 3)</code>：创建了一个匿名函数表达式，给它传递参数并立即调用</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">(function(x, y){
+    console.log(x + y)
+})(1, 2);     // 结果为3
+</code></pre>
+
+<pre class="language-js"><code class="language-js">(function (x, y) {
+        console.log(x + y)
+    }(1, 3));   // 结果为4
+</code></pre>
+<p><strong>案例：</strong>秒数转换时分表</p>
+
+<pre class="language-javascript"><code class="language-javascript">let second = +prompt(&quot;请输入秒数&quot;)
+
+function getTime(t) {
+    let h = parseInt(t / 60 / 60 % 24)
+    let m = parseInt(t / 60 % 60)
+    ls = parseInt(t % 60)
+
+    h = h &lt; 10 ? '0' + h : h
+    m = m &lt; 10 ? '0' + m : m
+    s = s &lt; 10 ? '0' + s : s
+
+    return ` 相当于${h}时${m}分${s}秒`
+}
+
+let str = `${second}秒 ` + getTime(second)
+document.write(str)
+</code></pre>
+<p>注意局部变量和全局变量的区别</p>
+<p><strong>作用域的特殊情况：如果函数内部，变量没有声明，直接赋值，也当全局变量看</strong>{% label 【强烈不提倡】 red %}</p>
+<h2 id="%E9%80%BB%E8%BE%91%E4%B8%AD%E6%96%AD">逻辑中断</h2>
+<p><strong>1.逻辑运算符里的短路</strong></p>
+<ul>
+<li>短路：只存在于 &amp;&amp; 和 || 中，当满足一定条件会让右边代码不执行</li>
+</ul>
+<table>
+<thead>
+<tr>
+  <th>符号</th>
+  <th>短路条件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>&amp;&amp;</td>
+  <td>左边为false就短路</td>
+</tr>
+<tr>
+  <td>||</td>
+  <td>左边为true就短路</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>原因：通过左边就能得到整个式子的结果，无需判断右边</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">// &amp;&amp;遇到false就中断，||遇到true就中断
+
+let age = 18	
+console.log(false &amp;&amp; age++)	// 代码先看左边为false，表达式为false，则右边直接不执行
+console.log(age)	// 18
+    
+console.log(true || age++)	// 代码先看左边为true，表达式为true，则右边直接不执行
+console.log(age)	// 18
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">console.log(11 &amp;&amp; 22)	// 判断到22才知道表达式为真，则返回最后一个值，22
+
+console.log(11 || 22)	// 看到11就知道表达式为真，则直接返回第一个真值，11
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">function fn(x, y) {
+    x = x || 0
+    y = y || 0
+    console.log(x + y)
+}
+fn(1, 2)	// 3
+fn()		// 0,如果没给实参，则形参为undefined当做0看待
+</code></pre>
+<p><img src="assets/images/js%E9%80%BB%E8%BE%91%E4%B8%AD%E6%96%AD.png" alt="" /></p>
+<p><strong>2.转换为Boolean型</strong></p>
+<blockquote>
+<p>显式转换</p>
+</blockquote>
+
+<pre class="language-javascript"><code class="language-javascript">// 就这几个为假。其他的都为真
+
+console.log(Boolean(0))
+console.log(Boolean(''))
+console.log(Boolean(undefined))
+console.log(Boolean(full))
+console.log(Boolean(NaN))
+</code></pre>
+<blockquote>
+<p>隐式转换</p>
+</blockquote>
+<ul>
+<li>字符串加法结果都为字符串：'' + 1 = '1'</li>
+<li>减法- 只能用于数字，它会使<strong>空字符串</strong><code>''</code>转换为0</li>
+<li>null 经过数字转换之后会变为0</li>
+<li>undefined 经过数字转换后变为NaN</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">null + 3 --&gt; 3
+undefined - 3 --&gt; NaN
+'' - 1 --&gt; -1
+'pink' - 1 --&gt; NaN
+
+null == undefined --&gt; true
+null === undefined --&gt; false
+</code></pre>
+<h2 id="%E5%AF%B9%E8%B1%A1">对象</h2>
+<p>对象是一个数据类型，是无序数据的集合，是对某个事物的描述</p>
+
+<pre class="language-javascript"><code class="language-javascript">let 对象名 = {
+    属性名: 属性值,
+    方法名: 函数
+}
+
+let 对象名 = new Object()
+
+// 属性名一般可以不用&quot;&quot;或''包着，但是遇到特殊符号如空格、中横线等情况需要加上
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">let obj = {
+    uname: 'pink',
+    age: 18,
+    gender: 'male'
+    'home-address': 'Fuzhou.Fujian'
+}
+
+console.log(obj.age)    // 查询属性 方法（1）
+obj.age = 23		// 重新赋值
+obj.height = 178	// 新增属性
+delete obj.height	// 删除属性
+
+console.log(obj['home-address'])	// 查询属性 方法（2）
+</code></pre>
+<p>如果<strong>属性名包含特殊字符</strong>则使用时会出错，所以属性名用<code>''</code>包住，用<code>对象名['属性名']</code>表示对象的属性 ，避免报错</p>
+<p>【技巧】null为一个空对象，先将对象设为null，将来要用了再替换掉：<code>let obj = null</code></p>
+<p><strong>方法</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">let person = {
+    name: 'andy',
+    sayHi: function() {
+        document.write('hi~~')
+    }
+}
+
+person.sayHi()
+</code></pre>
+<p><strong>遍历对象</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">for (let k in obj) {        // 遍历对象用for in
+    console.log(k)          // 这里的k是字符串
+    console.log(obj.k)      // 相当于obj.'xxx'，这会出错的
+    console.log(obj[k])     // 正确写法
+}
+</code></pre>
+<p><strong>内置对象</strong></p>
+<p>JS内部提供的<code>对象</code>，包含<strong>各种属性和方法</strong>给开发者调用</p>
+
+<pre class="language-markdown"><code class="language-markdown">— Math
+
+    random	生成[0,1)之间的随机数
+    ceil	向上取整
+    floor	向下取整
+    round	四舍五入
+    max、min 最大值最小值
+    pow		幂运算
+    sqrt	求平方根运算
+    abs		绝对值
+    ...Math对象在线文档
+
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">console.log(Math.round(-1.5))	// 值为-2;以绝对值四舍五入再加符号
+
+Math.floor(Math.random() * (10 + 1))	// 生成[0，10]之间的随机数
+Math.floor(Math.random() * (5 + 1)) + 5	// 生成[5，10]之间的随机数
+
+let arr = ['red', 'green', 'blue']      // 数组的随机下标，让 random * arr.length 就行
+let random_i = Math.floor(Math.random() * arr.length)
+console.log(arr[random_i])
+
+function getRandom(N, M) {		// 生成[N，M]之间的随机数
+    return Math.floor(Math.random() * (M - N + 1))	+ N	
+}
+
+</code></pre>
+<p><strong>案例：</strong>获取随机颜色</p>
+
+<pre class="language-css"><code class="language-css">&lt;style&gt;
+    div {
+        height: 300px;
+        width: 300px;
+    }
+&lt;/style&gt;
+</code></pre>
+
+<pre class="language-html"><code class="language-html">&lt;body&gt;
+    &lt;div&gt;&lt;/div&gt;
+
+    &lt;script&gt;
+        // 1. 自定义一个随机颜色函数
+        function getRandomColor(flag = true) {
+            if (flag) {
+                // 3. 如果是true 则返回 #ffffff
+                let str = '#'
+                let arr = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f']
+                // 利用for循环随机抽6次 累加到 str里面
+                for (let i = 1; i &lt;= 6; i++) {
+                    // 每次要随机从数组里面抽取一个  
+                    // random 是数组的索引号 是随机的
+                    let random = Math.floor(Math.random() * arr.length)
+                    str += arr[random]
+                }
+                return str
+            } else {
+                // 4. 否则是 false 则返回 rgb(255,255,255)
+                let r = Math.floor(Math.random() * 256)  
+                let g = Math.floor(Math.random() * 256)  
+                let b = Math.floor(Math.random() * 256)  
+                return `rgb(${r},${g},${b})`
+            }
+        }
+        const div = document.querySelector('div')
+        div.style.backgroundColor = getRandomColor()
+    &lt;/script&gt;
+&lt;/body&gt;
+</code></pre>
+<h2 id="%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E5%AD%98%E5%82%A8%E6%B3%A8%E6%84%8F%E7%82%B9">数据类型存储注意点</h2>
+<p>在<strong>基本数据类型</strong>中，变量指向栈中的某个空间</p>
+
+<pre class="language-javascript"><code class="language-javascript">let x = 10
+let y = x
+y = 20
+console.log(y)
+// 此时x的值还是10，因为y=x只是把x的存储空间内的值拷贝给了y所指的存储空间，即10，但y的指向还是自己的空间，
+// 所以y=20时还是改变y自己指向的空间内的值，与x无关
+</code></pre>
+<p>在<strong>引用数据类型</strong>中，变量指向栈中的某块存储空间.其中的值为堆的某块空间的首地址。而这块堆空间里面存的是这个对象的内容。例如：数组，对象，函数</p>
+
+<pre class="language-javascript"><code class="language-javascript">let obj1 = {
+    age: 18
+}
+let obj2 = obj1
+obj2.age = 20
+console.log(obj1.age)
+// 在堆中存放obj1对象的内容，obj1在栈中的一块空间内存储着这个堆的首地址
+// 然后obj2=obj1 即obj1把堆的首地址拷贝给obj2,此时两个栈空间内存的值相同,指向同一个堆
+// 因此obj2改变了该堆的age，那么obj1也指向这个堆，所以它的obj1.age也是20
+</code></pre>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/front-end/css3.html">
+                            <span class="icon"></span>
+                            <span class="label">CSS3</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/front-end/javascript02.html">
+                            <span class="label">Web-APIs-DOM</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>第一列链接</a><ul><li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+<li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+</ul>
+</li>
+<li><a>第二列链接</a><ul><li><a target="_blank" href="https://www.youtube.com/@CodeMonkeyUnity/videos">Code Monkey - Youtube</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">网站使用 teedoc 生成</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

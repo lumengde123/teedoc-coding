@@ -1,0 +1,1855 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn"  class=" heading_no_counter ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="JavaScript">
+    
+    
+    <meta name="description" content="JavaScript学习笔记">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>Web APIs--DOM,BOM - mengdelu</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": ["笔记", "JavaScript"], "date": "2024-06-16", "update": [], "ts": 1718467200, "author": "", "brief": "", "cover": "", "class": "heading_no_counter"}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>mengdelu</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/my_notes/">我的笔记</a></li>
+<li class="active"><a  href="/front-end/">前端三剑客</a></li>
+<li class=""><a  href="/vue/">Vue</a></li>
+<li class=""><a  href="/unity/">Unity</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">站内搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载搜索文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/front-end/index.html"><span class="label">文档说明</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/html5.html"><span class="label">HTML5</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css.html"><span class="label">CSS</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css3.html"><span class="label">CSS3</span><span class=""></span></a></li>
+<li class="active_parent no_link"><a><span class="label">JavaScript</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/front-end/javascript01.html"><span class="label">ECMAScript</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/front-end/javascript02.html"><span class="label">Web-APIs-DOM</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/javascript03.html"><span class="label">JavaScript进阶</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>Web APIs--DOM,BOM</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>笔记</li>
+                            
+                                <li>JavaScript</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2024-06-16">
+                                    2024-06-16
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="day1%EF%BC%9ADOM-%E8%8E%B7%E5%8F%96%E5%85%83%E7%B4%A0">day1：DOM-获取元素</h2>
+<p><strong>声明变量优先选 const</strong></p>
+<p>const 优先，尽量用const，其次再考虑let，var排除。<code>可以变量先用const，需要改变值了再改为let</code></p>
+<ul>
+<li>建议数组和对象使用 const 来声明</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">由上一小节数据类型存储注意点的内容可知
+let person = {
+    uname: 'pink',
+    age: 18,
+    gender: 'male'
+}
+person.address = '武汉黑马'
+console.log(person)
+// 这里的let可以用const替换，因为person是个对象，修改person的内容是修改&quot;堆&quot;里面的内容，
+// 与person在栈中存的内容（person在堆中的首地址）无关
+
+const arr = ['red', 'blue']
+arr = [1, 2, 3]
+console.log(arr)    // 此时会出错，相当于arr指向了另一块堆，这个堆空间由另一个栈空间指向，			 
+                    // 所以arr指向的栈空间发生了改变，因此不能用const，出错了
+</code></pre>
+<h3 id="Web-API-%E5%9F%BA%E6%9C%AC%E8%AE%A4%E7%9F%A5">Web API 基本认知</h3>
+<p>作用：使用 JS 去操作 html 和浏览器</p>
+<p>分类：DOM（文档对象模型）、BOM（浏览器对象模型）</p>
+<p><strong>DOM</strong></p>
+<ul>
+<li>操作网页内容，可以开发网页内容特效和实现用户交互</li>
+</ul>
+<p><strong>DOM树</strong></p>
+<ul>
+<li>将 HTML 文档以树状结构直观的表现出来（体现html中 标签与标签的关系）</li>
+</ul>
+<p><strong>DOM对象</strong></p>
+<ul>
+<li>浏览器根据 HTML 标签生成的 <strong>JS对象</strong></li>
+<li><code>所有的标签属性都可以在这个对象上找到</code></li>
+<li>修改这个对象的属性会自动映射到标签身上</li>
+</ul>
+<p><strong>DOM核心思想</strong></p>
+<ul>
+<li>把网页内容当作对象来处理</li>
+</ul>
+<p><strong>document对象</strong></p>
+<ul>
+<li>是 DOM 里提供的一个对象</li>
+<li>它提供的属性和方法都是用来<strong>访问和操作网页内容</strong>的</li>
+<li><code>网页所有内容都在 document 里面</code></li>
+</ul>
+<h3 id="%E8%8E%B7%E5%8F%96DOM%E5%AF%B9%E8%B1%A1">获取DOM对象</h3>
+<p><strong>根据CSS选择器来获取DOM元素（重点）</strong></p>
+<p>1.选择匹配的第一个元素</p>
+
+<pre class="language-javascript"><code class="language-javascript">document.querySelector('css选择器')
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const div = document.querySelector('div')
+const box = document.querySelector('.box')
+const nav = document.querySelector('#nav')
+const li = document.querySelector('ul li:first-child')
+
+// 返回值是一个HTMLElement元素；如果没有匹配到则返回null
+</code></pre>
+<p>获取的单个对象可以直接修改样式</p>
+
+<pre class="language-javascript"><code class="language-javascript">const nav = document.querySelector('#nav')
+nav.style.color = 'red'
+</code></pre>
+<p>2.选择匹配的多个元素</p>
+
+<pre class="language-javascript"><code class="language-javascript">document.querySelectorAll('css选择器')	// 得到的是一个伪数组：有长度有索引，但是没有pop()和push()
+                                        // 即使只有一个元素也会是数组
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const lis = document.querySelectorAll('.nav li')// 获取所有的li,返回值是一个NodeList对象集合(数组)
+
+for(let i = 0; i &lt; lis.length; i++) {	// 获得集合中的每个对象
+    console.log(lis[i])
+}
+</code></pre>
+<p><strong>其他获取DOM元素方法（了解，不再使用）</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">document.getElementById('nav')
+document.getElementByTagName('div')
+document.getElementByClassName('w')
+</code></pre>
+<h3 id="%E6%93%8D%E4%BD%9C%E5%85%83%E7%B4%A0%E5%86%85%E5%AE%B9">操作元素内容</h3>
+<p><strong>1.元素inerText属性</strong></p>
+<ul>
+<li>将文本内容添加/更新到任意标签位置</li>
+<li>只显示纯文本，<code>不解析标签</code></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const box = document.querySelector('.box')
+console.log(box.innerText)
+box.innerText = '&lt;strong&gt;我是一个盒子&lt;/strong&gt;'	// 不解析标签，所以文字不加粗，而是显示纯文本
+</code></pre>
+<p><strong>2.元素innerHTML属性</strong></p>
+<ul>
+<li>将文本内容添加/更新到任意标签位置</li>
+<li><code>会解析标签</code>，多标签建议使用模板字符</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">console.log(box.innerHTML)
+// box.innerHTML = '我要更换'
+box.innerHTML = '&lt;strong&gt;我要更换&lt;/strong&gt;'
+</code></pre>
+<p><strong>3.操作元素属性</strong></p>
+<ul>
+<li><p>操作元素常用属性</p>
+
+<pre class="language-javascript"><code class="language-javascript">const pic = document.querySelector('.pic')
+pic.src = './images/lion.webp'
+pic.width = 400;
+pic.alt = '图片不见了...'
+</code></pre>
+</li>
+<li><p>操作元素样式属性</p>
+<ul>
+<li><p>通过行内样式 <code>style</code> 属性修改样式</p>
+
+<pre class="language-javascript"><code class="language-javascript">const box = document.querySelector('.box')
+box.style.width = '300px'
+box.style.backgroundColor = 'hotpink'	// 多组单词的（含有符号：-），采用小驼峰命名法
+box.style.border = '2px solid blue'
+box.style.borderTop = '2px solid red'
+// 注意，行内样式的权重更高
+</code></pre>
+</li>
+<li><p>通过类名 <code>className</code> 修改样式</p>
+
+<pre class="language-javascript"><code class="language-javascript">.box {
+    //...
+}
+
+// 给 div 标签添上一个类名 box，直接获得box类的所有样式
+const div = document.querySelector('div')
+div.className = 'box'	// 特点：会直接覆盖以前的类名，新值换旧值
+</code></pre>
+</li>
+<li><p>通过<code>classList</code>修改样式</p>
+
+<pre class="language-javascript"><code class="language-javascript">const box = document.querySelector('.box')
+box.classList.add('active')     // 追加
+box.classList.remove('active')	// 删除
+box.classList.toggle('active')	// 切换：有就删除，没有就追加
+box.classList.contains('active')// 包含active类返回true，没有则返回false
+
+// 注意，里面只要填类名，不用加点
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p><strong>操作表单元素属性</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">&lt;input type=&quot;text&quot; value=&quot;电脑&quot;&gt;
+
+
+const uname = document.querySelector('input')
+
+console.log(uname.value) 	// 电脑
+// console.log(uname.innerHTML)  innertHTML 得不到表单的内容
+
+uname.value = '我要买电脑'
+console.log(uname.type)		//type为text
+uname.type = 'password'
+</code></pre>
+<ul>
+<li>表单属性中，添加就有效果，移除就没有效果，<strong>只接受布尔值表</strong>。true为添加，false为移除该属性</li>
+<li>例如：checked，disabled，selected</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">&lt;input type=&quot;checkbox&quot; name=&quot;&quot; id=&quot;&quot;&gt;
+
+// 1. 获取
+const ipt = document.querySelector('input')
+console.log(ipt.checked)  // 默认false，表示没有勾选
+ipt.checked = true
+
+// ipt.checked = 'true'  // 会选中，不提倡  有隐式转换
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">&lt;button&gt;点击&lt;/button&gt;
+
+const button = document.querySelector('button')
+// console.log(button.disabled)  // 默认false 不禁用
+button.disabled = true   // 禁用按钮
+
+// &lt;button disabled&gt;点击&lt;/button&gt;
+</code></pre>
+</li>
+<li><p>自定义属性</p>
+<ul>
+<li>html5 新推出的专门的 <code>data-自定义属性</code></li>
+<li>标签上一律以 <code>data-</code> 开头</li>
+<li>在DOM对象上一律以 <code>dataset</code> 对象方式获取自定义属性</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">&lt;div data-id=&quot;1&quot; data-spm=&quot;不知道&quot;&gt;1&lt;/div&gt;
+
+const one = document.querySelector('div')
+console.log(one.dataset.id)		// 1
+console.log(one.dataset.spm)	// 不知道
+</code></pre>
+</li>
+</ul>
+<p><strong>标准属性</strong>：标签天生自带的属性(class id title...)，可以直接使用点语法操作(checked disabled selected)</p>
+<h3 id="%E5%AE%9A%E6%97%B6%E5%99%A8-%E9%97%B4%E6%AD%87%E5%87%BD%E6%95%B0">定时器-间歇函数</h3>
+<p>定时器函数可以开启和关闭定时器</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 开启定时器
+setInterval(匿名函数/函数名, 间隔时间)		// 间隔时间单位是毫秒，返回值是该定时器的id。
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">setInterval(function() {
+    console.log('一秒执行一次')
+}, 1000)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">function fn() {
+    console.log('一秒执行一次')
+}
+
+setInterval(fn, 1000)	// 这里不要加()，不然只会调用一次。要让它自动调用
+</code></pre>
+<p>关闭定时器</p>
+
+<pre class="language-javascript"><code class="language-javascript">let timer = setInterval(function() {    // 开关定时器会赋新值(新的定时器，新的id)，所以用let
+    console.log('hi~')
+}, 1000)
+
+clearInterval(timer)
+</code></pre>
+<p><strong>案例：用户注册倒计时按钮</strong></p>
+
+<pre class="language-html"><code class="language-html">&lt;textarea name=&quot;&quot; id=&quot;&quot; cols=&quot;30&quot; rows=&quot;10&quot;&gt;
+    用户注册协议
+    欢迎注册成为京东用户！在您注册过程中，您需要完成我们的注册流程并通过点击同意的形式在线签署以下协议，请您务必仔细阅读、充分理解协议中的条款内容后再点击同意（尤其是以粗体或下划线标识的条款，因为这些条款可能会明确您应履行的义务或对您的权利有所限制）。
+    【请您注意】如果您不同意以下协议全部或任何条款约定，请您停止注册。您停止注册后将仅可以浏览我们的商品信息但无法享受我们的产品或服务。如您按照注册流程提示填写信息，阅读并点击同意上述协议且完成全部注册流程后，即表示您已充分阅读、理解并接受协议的全部内容，并表明您同意我们可以依据协议内容来处理您的个人信息，并同意我们将您的订单信息共享给为完成此订单所必须的第三方合作方（详情查看
+&lt;/textarea&gt;
+&lt;br&gt;
+&lt;button class=&quot;btn&quot; disabled&gt;我已经阅读用户协议(5)&lt;/button&gt;
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 1. 获取元素
+const btn = document.querySelector('.btn')
+// console.log(btn.innerHTML)  butto按钮特殊，要用innerHTML	--对象.value 用于单标签
+// 2. 倒计时
+let i = 5
+// 2.1 开启定时器
+let n = setInterval(function () {   // 返回值n为该定时器的编号，可用来选中该定时器
+    i--
+    btn.innerHTML = `我已经阅读用户协议(${i})`
+    if (i === 0) {
+        clearInterval(n)  // 关闭定时器
+        // 定时器停了，我就可以开按钮
+        btn.disabled = false
+        btn.innerHTML = '同意'
+    }
+}, 1000)
+</code></pre>
+<p><strong>案例：轮播图定时切换</strong></p>
+
+<pre class="language-html"><code class="language-html">&lt;div class=&quot;slider&quot;&gt;
+    &lt;div class=&quot;slider-wrapper&quot;&gt;
+        &lt;img src=&quot;./images/slider01.jpg&quot; alt=&quot;&quot; /&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;slider-footer&quot;&gt;
+        &lt;p&gt;对人类来说会不会太超前了？&lt;/p&gt;
+        &lt;ul class=&quot;slider-indicator&quot;&gt;
+        &lt;li class=&quot;active&quot;&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;div class=&quot;toggle&quot;&gt;
+        &lt;button class=&quot;prev&quot;&gt;&amp;lt;&lt;/button&gt;
+        &lt;button class=&quot;next&quot;&gt;&amp;gt;&lt;/button&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 1. 初始数据
+const sliderData = [
+    { url: './images/slider01.jpg', title: '对人类来说会不会太超前了？', color: 'rgb(100, 67, 68)' },
+    { url: './images/slider02.jpg', title: '开启剑与雪的黑暗传说！', color: 'rgb(43, 35, 26)' },
+    { url: './images/slider03.jpg', title: '真正的jo厨出现了！', color: 'rgb(36, 31, 33)' },
+    { url: './images/slider04.jpg', title: '李玉刚：让世界通过B站看到东方大国文化', color: 'rgb(139, 98, 66)' },
+    { url: './images/slider05.jpg', title: '快来分享你的寒假日常吧~', color: 'rgb(67, 90, 92)' },
+    { url: './images/slider06.jpg', title: '哔哩哔哩小年YEAH', color: 'rgb(166, 131, 143)' },
+    { url: './images/slider07.jpg', title: '一站式解决你的电脑配置问题！！！', color: 'rgb(53, 29, 25)' },
+    { url: './images/slider08.jpg', title: '谁不想和小猫咪贴贴呢！', color: 'rgb(99, 72, 114)' },
+]
+// 1. 获取元素 
+const img = document.querySelector('.slider-wrapper img')
+const p = document.querySelector('.slider-footer p')
+let i = 0  // 信号量 控制图片的张数
+// 2. 开启定时器
+// console.log(sliderData[i])  拿到对应的对象啦
+setInterval(function () {
+    i++
+    // 无缝衔接位置  一共八张图片，到了最后一张就是 8， 数组的长度就是 8
+    if (i &gt;= sliderData.length) {
+        i = 0
+    }
+    // console.log(i)
+    // console.log(sliderData[i])
+    // 更换图片路径  
+    img.src = sliderData[i].url
+    // 把字写到 p里面
+    p.innerHTML = sliderData[i].title
+    // 小圆点
+    // 先删除以前的active
+    document.querySelector('.slider-indicator .active').classList.remove('active')
+    // 只让当前li添加active
+    document.querySelector(`.slider-indicator li:nth-child(${i + 1})`).classList.add('active')
+}, 1000)
+</code></pre>
+<h2 id="day2%EF%BC%9ADOM-%E4%BA%8B%E4%BB%B6%E5%9F%BA%E7%A1%80">day2：DOM-事件基础</h2>
+<h3 id="%E4%BA%8B%E4%BB%B6%E7%9B%91%E5%90%AC">事件监听</h3>
+<ul>
+<li><strong>事件源</strong>：哪个DOM元素被事件触发了，要获取这个DOM元素</li>
+<li><strong>事件类型</strong>：用什么方式触发，比如鼠标单击click，鼠标经过mouseover等</li>
+<li><strong>事件调用的函数</strong>：要做什么事</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">元素对象.addEventListener('事件类型', 要执行的函数)	// 每次触发，每次执行
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const btn = document.querySelector('.btn')
+btn.addEventListener('click', function() {
+    alert('你好呀')
+})
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 关闭盒子功能
+// 1. 获取事件源
+const box = document.querySelector('.box')
+// 2. 事件侦听
+box.addEventListener('click', function () {
+    box.style.display = 'none'
+})
+</code></pre>
+<p><strong>案例：随机点名案例</strong><br />
+qs中显示当前名字，start和end为开始和关闭按钮</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 数据数组
+const arr = ['马超', '黄忠', '赵云', '关羽', '张飞']
+// 定时器的全局变量
+let timerId = 0
+// 随机号要全局变量
+let random = 0
+// 业务1.开始按钮模块
+const qs = document.querySelector('.qs')
+// 1.1 获取开始按钮对象
+const start = document.querySelector('.start')
+// 1.2 添加点击事件
+start.addEventListener('click', function () {
+    timerId = setInterval(function () {
+        // 随机数
+        random = parseInt(Math.random() * arr.length)
+        // console.log(arr[random])
+        qs.innerHTML = arr[random]
+    }, 35)
+    // 如果数组里面只有一个值了，还需要抽取吗？  不需要  让两个按钮禁用就可以
+    if (arr.length === 1) {
+        // start.disabled = true
+        // end.disabled = true
+        start.disabled = end.disabled = true
+    }
+})
+
+// 业务2.关闭按钮模块
+const end = document.querySelector('.end')
+end.addEventListener('click', function () {
+    clearInterval(timerId)
+    // 结束了，可以删除掉当前抽取的那个数组元素
+    arr.splice(random, 1)
+    console.log(arr)
+})
+</code></pre>
+<p>补充知识点：点击事件内，函数内的const常量，当我们执行完这次事件/函数，这个常量不再使用，它会被自动销毁/回收掉（这里用到了垃圾回收机制），下次再点击的时候会创建一个新的同名常量，<strong>所以它可以用const而不用let，不会冲突</strong></p>
+<ul>
+<li>事件监听历史版本：<code>事件源.on事件 = function(){}</code>，例如：btn.onclick(){...}</li>
+<li>区别：on方式后者会覆盖前者，但addEventListener方式可以绑定多次，拥有事件更多特性</li>
+</ul>
+<h3 id="%E4%BA%8B%E4%BB%B6%E7%B1%BB%E5%9E%8B">事件类型</h3>
+<p><strong>1.鼠标事件</strong>：click，mouseenter，mouseleave</p>
+<p>案例：轮播图完整版 day02-08</p>
+<p><strong>2.焦点事件</strong>：focus，blur</p>
+<p>案例：点击文本框显示下拉菜单</p>
+<ul>
+<li>失去焦点 <code>display:none</code>，获得焦点 <code>display:block</code></li>
+<li>文本框获得焦点改变边框颜色，单独写 一个css样式，add这个类；失去焦点就remove它</li>
+</ul>
+<p><strong>3.键盘事件</strong>：Keydown，Keyup</p>
+<p><strong>4.文本事件</strong>：input</p>
+<p>一旦在文本框内输入，就触发</p>
+<p><strong>5.change事件</strong></p>
+<p>当鼠标离开了表单，并且表单值发生了变化时触发</p>
+<p><strong>案例：用户当前输入字数统计 day02-13</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const tx = document.querySelector('#tx')
+const total = document.querySelector('.total')
+// 1. 当我们文本域获得了焦点，就让 total 显示出来
+tx.addEventListener('focus', function () {
+    total.style.opacity = 1
+})
+// 2. 当我们文本域失去了焦点，就让 total 隐藏出来
+tx.addEventListener('blur', function () {
+    total.style.opacity = 0
+})
+// 3. 检测用户输入
+tx.addEventListener('input', function () {
+    // console.log(tx.value.length)  得到输入的长度
+    total.innerHTML = `${tx.value.length}/200字`
+})
+</code></pre>
+<h3 id="%E4%BA%8B%E4%BB%B6%E5%AF%B9%E8%B1%A1">事件对象</h3>
+<p><strong>获取事件对象</strong></p>
+<p>事件对象是个对象，存了事件发生时的相关信息。例如：鼠标点击事件中，事件对象存了鼠标点击在哪个位置等信息</p>
+<p>在事件绑定的回调函数的第一个参数就是事件对象，一般命名为event、ev、e</p>
+
+<pre class="language-javascript"><code class="language-javascript">元素.addEventListener('click', function(e) {
+
+})
+</code></pre>
+<p><strong>事件对象常用属性</strong></p>
+<ul>
+<li><p>type：获取当前的事件类型</p>
+</li>
+<li><p>clientX/clientY：获取光标相对于浏览器可见窗口左上角的位置</p>
+</li>
+<li><p>offsetX/offsetY：获取光标相对于当前DOM元素左上角的位置</p>
+</li>
+<li><p>key：用户按下的键盘键的值。ketcode已废弃，不要用</p>
+
+<pre class="language-javascript"><code class="language-javascript">const input = document.querySelector('input')
+input.addEventListener('keyup', function(e) {
+    if(e.key === 'Enter') {
+        console.log('我按下了回车键')
+    }
+})
+</code></pre>
+</li>
+</ul>
+<p><strong>案例：按下回车发布评论 day02-15</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// 4. 按下回车发布评论
+tx.addEventListener('keyup', function (e) {
+    // 只有按下的是回车键，才会触发
+    // console.log(e.key)
+    if (e.key === 'Enter') {
+        // 如果用户输入的不为空就显示和打印
+        if (tx.value.trim()) {
+            item.style.display = 'block'
+            text.innerHTML = tx.value   // 用户输入的内容
+        }
+        // 等我们按下回车，结束，清空文本域
+        tx.value = ''
+        // 按下回车之后，就要把 字符统计 复原
+        total.innerHTML = '0/200字'
+    }
+})
+
+// .trim()方法，删除文字两侧的空格。如果全是空格，则删完是空字符串''
+</code></pre>
+<h3 id="%E7%8E%AF%E5%A2%83%E5%AF%B9%E8%B1%A1-this">环境对象 this</h3>
+<p>指的是函数内部特殊的变量<code>this</code>，它代表着<code>当前函数运行时所处的环境</code></p>
+<p>函数调用方式不同，this指代的对象也不同——粗略判断：<strong>谁调用，this就是谁</strong></p>
+<p>直接调用函数的话，相当于<code>window.函数</code>，所以this指代window</p>
+
+<pre class="language-javascript"><code class="language-javascript">function fn() {
+    //...
+}
+fn()		// 相当于window.fn()
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">btn.addEventListener('click', function() {
+    this.style.color = 'red'
+})
+</code></pre>
+<h3 id="%E5%9B%9E%E8%B0%83%E5%87%BD%E6%95%B0">回调函数</h3>
+<p>若将函数A作为参数传递给函数B时，称函数A为回调函数</p>
+
+<pre class="language-javascript"><code class="language-javascript">function fn() {
+    // fn为setInterval的回调函数
+}
+setInterval(fn, 1000)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">box.addEventListener('click', function() {
+    console.log('我也是回调函数')
+})
+</code></pre>
+<p>使用匿名函数作为回调函数比较常见</p>
+<p><strong>案例：Tab栏切换</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const as = document.querySelectorAll('.tab-nav a')
+
+for (let i = 0; i &lt; as.length; i++) {
+    // 要给 5个链接绑定鼠标经过事件
+    as[i].addEventListener('mouseenter', function () {
+
+        document.querySelector('.tab-nav .active').classList.remove('active')
+        this.classList.add('active')
+
+        document.querySelector('.tab-content .active').classList.remove('active')
+        document.querySelector(`.tab-content .item:nth-child(${i + 1})`).classList.add('active')
+    })
+}
+</code></pre>
+<p><strong>表单全选反选案例</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const checkAll = document.querySelector('#checkAll')
+const cks = document.querySelectorAll('.ck')
+
+checkAll.addEventListener('click', function() {
+    for(let i = 0; i &lt; cks.length; i++) {
+    	cks[i].checked = this.checked	/* 全选按钮控制所有按钮的值，值一致 */
+    }
+})
+
+for(let i = 0; i &lt; cks.length; i++) {
+    cks[i].addEventListener('click', function() {
+    	checkAll.checked = document.querySelectorAll('.ck:checked').length === cks.length
+        /* 全选了就是true，赋值给全选按钮勾上；否则为false，全选按钮不勾上 */
+    })
+}
+</code></pre>
+<h2 id="day3%EF%BC%9ADOM-%E4%BA%8B%E4%BB%B6%E8%BF%9B%E9%98%B6">day3：DOM-事件进阶</h2>
+<h3 id="%E4%BA%8B%E4%BB%B6%E6%B5%81">事件流</h3>
+<p><strong>事件流</strong></p>
+<ul>
+<li>定义：事件完整执行过程中的流动路径</li>
+<li>两个阶段：<code>捕获阶段（父-&gt;子）</code>-&gt; <code>冒泡阶段（子-&gt;父）</code></li>
+</ul>
+<p><strong>事件捕获（了解即可）</strong></p>
+<ul>
+<li><p>从DOM的根元素开始去执行对应的事件（<strong>从外到里</strong>）</p>
+</li>
+<li><p>事件捕获需要写对应代码才能看到效果</p>
+
+<pre class="language-none"><code class="language-none">DOM.addEventListener(事件类型, 事件处理函数, 是否使用捕获机制)	
+  // 第三个参数用true开启捕获阶段触发（少用），默认值为false
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">&lt;div class=&quot;father&quot;&gt;
+    &lt;div class=&quot;son&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+const fa = document.querySelector('.father')
+const son = document.querySelector('.son')
+
+document.addEventListener('click', function () {
+  alert('我是爷爷')
+}, true)
+fa.addEventListener('click', function () {
+  alert('我是爸爸')
+}, true)
+son.addEventListener('click', function () {
+  alert('我是儿子')
+}, true)
+
+// 如果点击son盒子，捕获阶段：我是爷爷-&gt;我是爸爸-&gt;我是儿子；冒泡阶段：我是儿子-&gt;我是爸爸-&gt;我是爷爷
+</code></pre>
+<p>若是L0(传统)事件监听，则只有冒泡阶段，没有捕获</p>
+</li>
+</ul>
+<p><strong>事件冒泡</strong></p>
+<ul>
+<li>当一个元素触发事件后，会依次向上调用所有父级元素的同名/同类型事件（<strong>由里到外</strong>）</li>
+<li>事件冒泡默认存在，即L2事件监听第三个参数默认是false</li>
+<li>鼠标经过事件的区别<ul>
+<li>mouseover和mouseout有冒泡效果；mouseenter和mouseleave没有冒泡效果（推荐）</li>
+</ul>
+</li>
+</ul>
+<p><strong>阻止冒泡</strong></p>
+<p>若想把事件就限制在当前元素内，就需要阻止冒泡</p>
+
+<pre class="language-none"><code class="language-none">事件对象.stopPropagation()	// 阻止事件流动传播(捕获+冒泡)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">son.addEventListener('click', function (e) {
+    alert('我是儿子')
+    e.stopPropagation()
+},)
+</code></pre>
+<p><strong>阻止元素默认行为</strong></p>
+
+<pre class="language-html"><code class="language-html">&lt;form action=&quot;http://www.itcast.cn&quot;&gt;
+    &lt;input type=&quot;submit&quot; value=&quot;免费注册&quot;&gt;
+&lt;/form&gt;
+
+&lt;a href=&quot;http://www.baidu.com&quot;&gt;百度一下&lt;/a&gt;
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const form = document.querySelector('form')
+form.addEventListener('submit', function (e) {
+    e.preventDefault()      // 阻止默认行为  提交
+})
+
+const a = document.querySelector('a')
+a.addEventListener('click', function (e) {
+    e.preventDefault()
+})
+</code></pre>
+<p><strong>解绑事件</strong></p>
+<p>1.对于<code>on事件方式</code>，直接赋值为null进行覆盖，就能实现事件的解绑</p>
+
+<pre class="language-javascript"><code class="language-javascript">btn.onclick = function() {
+    alert('点击了')
+}
+// L0事件解绑
+btn.onclick = null
+</code></pre>
+<p>2.对于<code>addEventListener方式</code>，用removeEventListener(事件类型，事件处理函数，[获取捕获或者冒泡阶段])</p>
+
+<pre class="language-javascript"><code class="language-javascript">function fn() {
+    alert('点击了')
+}
+// 绑定事件
+btn.addEventListener('click', fn)
+// L2事件解绑
+btn.removeEventListener('click', fn)
+// 注意：匿名函数无法被解绑
+</code></pre>
+<p>总结：<strong>L0事件和L2事件的区别</strong></p>
+<ul>
+<li>传统on注册（L0）<ul>
+<li>同一个对象，后面注册的事件会覆盖前面注册（同一个事件）</li>
+<li>直接使用null覆盖偶可以实现事件的解绑</li>
+<li>都是冒泡阶段执行的</li>
+</ul>
+</li>
+<li>事件监听注册（L2）<ul>
+<li>语法：.addEventListener(事件类型, 事件处理函数, 是否使用捕获机制)</li>
+<li>后面注册的事件不会覆盖前面注册的的事件（同一个事件）</li>
+<li>可以通过第三个参数去确定是在冒泡还是捕获阶段执行</li>
+<li>必须使用.removEventListener(事件类型, 事件处理函数, 是否使用捕获机制)解绑</li>
+<li>匿名函数无法被解绑</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E4%BA%8B%E4%BB%B6%E5%A7%94%E6%89%98">事件委托</h3>
+<ul>
+<li><p>优点：减少注册次数，可以提高程序性能</p>
+</li>
+<li><p>原理：<strong>利用事件冒泡的特点</strong>——给父元素注册事件，当触发子元素时，会冒泡到父元素身上，从而触发父元素的事件</p>
+</li>
+<li><p>实现：<code>事件对象.target.tagName</code> 可以获得真正触发事件的元素</p>
+</li>
+</ul>
+
+<pre class="language-js"><code class="language-js">// 点击每个小li 当前li 文字变为红色
+// 按照事件委托的方式  委托给父级，事件写到父级身上
+// 1. 获得父元素
+const ul = document.querySelector('ul')
+ul.addEventListener('click', function (e) {
+    // this.style.color = 'red'
+    // console.dir(e.target) // 就是我们点击的那个对象
+    // e.target.style.color = 'red'
+    // 我的需求，我们只要点击li才会有效果
+    if (e.target.tagName === 'LI') {
+        e.target.style.color = 'red'
+    }
+})
+// 点击一个li，会把跟这次点击事件相关的信息通过e传给函数中。
+//其中e是该点击事件PointerEvent，e.target表示事件涉及的元素对象，即我们点击的那个li对象
+// e.target.tagName即点击的对象的标签名(大写)，可以真正找到该元素
+</code></pre>
+<p><strong>案例：Tab栏切换改造</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const ul = document.querySelector('.tab-nav ul')
+const items = document.querySelectorAll('.tab-content .item')
+
+ul.addEventListener('click', function (e) {
+    if (e.target.tagName === 'A') {
+        document.querySelector('.tab-nav .active').classList.remove('active')
+        e.target.classList.add('active')
+
+        const i = +e.target.dataset.id
+        document.querySelector('.tab-content .active').classList.remove('active')
+        // document.querySelector(`.tab-content .item:nth-child(${i + 1})`).classList.add('active')
+        items[i].classList.add('active')
+    }
+})
+</code></pre>
+<h3 id="%E5%85%B6%E4%BB%96%E4%BA%8B%E4%BB%B6">其他事件</h3>
+<p><strong>1.页面加载事件</strong></p>
+<p>1.load事件</p>
+<p>页面加载外部资源（如图片、外联CSS和JavaScript等等），加载完毕时才去触发的事件——监听整个页面资源window</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 等待页面所有资源加载完毕，就回去执行回调函数
+window.addEventListener('load', function() {
+    // 执行的操作
+})
+</code></pre>
+<p>也可以针对某个资源绑定load事件</p>
+
+<pre class="language-js"><code class="language-js">img.addEventListener('load', function() {
+    // 等待图片加载完毕，再去执行里面的代码
+})
+</code></pre>
+<p>2.DOMContentLoaded事件</p>
+<p>当初始的HTML文档（即所有的DOM元素）被完全加载和解析完成后，DOMContentLoaded事件被触发，而无需等待图片等外部资源完全加载——监听document</p>
+
+<pre class="language-javascript"><code class="language-javascript">document.addEventListener('DOMContentLoaded', function() {
+    // ...
+})
+</code></pre>
+<p><strong>2.页面滚动事件</strong></p>
+<p>在滚动条滚动的时候持续触发的事件——监听整个页面滚动</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 页面滚动事件
+window.addEventListener('scroll', function() {
+    // 执行的操作
+})
+</code></pre>
+<p>也可以监听某个元素的内部滚动</p>
+<p><strong>scrollLeft和scrollTop</strong>——获取元素内容向左/向上滚动的距离；这两个值可读写</p>
+<p>滚动的时候其实是最大的标签即html进行滚动</p>
+<p>获取body：document.body</p>
+<p>获取html：document.documentElement</p>
+
+<pre class="language-javascript"><code class="language-javascript">window.addEventListener('scroll', function() {
+    const n = document.documentElement.scrollTop
+    console.log(n)	// 数字型，不带单位；可读值也可赋值
+})
+</code></pre>
+<p>回到顶部功能就是把scrollTop值赋值为0</p>
+<p>滚动到指定坐标：<code>window.scrollTo(0, 1000)</code></p>
+<p><strong>3.页面尺寸事件</strong></p>
+<p>resize会在浏览器页面尺寸改变的时候触发</p>
+
+<pre class="language-javascript"><code class="language-javascript">window.addEventListener('resize', function() {
+    // 执行的代码
+})
+</code></pre>
+<p>检测屏幕宽度</p>
+
+<pre class="language-javascript"><code class="language-javascript">window.addEventListener('resize', function() {
+    let w = document.documentElement.clientWidth
+    console.log(w)
+})
+</code></pre>
+<p><strong>clientWidth和clientHeight</strong>：获取元素可见部分宽高——除去border</p>
+<h3 id="%E5%85%83%E7%B4%A0%E5%B0%BA%E5%AF%B8%E4%B8%8E%E4%BD%8D%E7%BD%AE">元素尺寸与位置</h3>
+<p><strong>获取元素的大小（1）即整个宽高</strong>——包含元素自身宽高、padding、border（若隐藏，则宽高为0）</p>
+<p>——使用offsetWidth、offsetHeight——以自己的<strong>父元素为参照物</strong>——<strong>只读属性</strong></p>
+<p><strong>获取元素的位置</strong>——参照物为<strong>最近一级带有定位的祖先元素</strong></p>
+<p>——使用offsetLeft、offsetTop——<strong>只读属性</strong></p>
+<p>案例：滚动条下滑出现固定顶部导航栏</p>
+
+<pre class="language-javascript"><code class="language-javascript">const sk = document.querySelector('.sk')
+const header = document.querySelector('.header')
+// 页面滚动事件
+window.addEventListener('scroll', function () {
+    // 当页面滚动到 秒杀模块的时候，就改变 头部的 top值
+    // 页面被卷去的头部 &gt;=  秒杀模块的位置 offsetTop
+    const n = document.documentElement.scrollTop
+    header.style.top = n &gt;= sk.offsetTop ? 0 : '-80px'
+})
+</code></pre>
+<p><strong>获取元素大小（2）</strong></p>
+<p>element.getBoundingClientRect()——返回元素的大小及和目前相对于视口的位置</p>
+<p>element.getBoundingClientRect().left、element.getBoundingClientRect().right</p>
+<p><strong>综合案例：电梯导航★★★</strong></p>
+<p>1.window滑动到大于某个高度时，电梯导航的poacity设为1，否则设为0。点击返回顶部就设置html的scrollTo(0,0)</p>
+<p>2.点击电梯导航，设置active，并把对应list的offsetTop赋值给scrollTop</p>
+<p>​	解决处理初次获取不到active报错的问题</p>
+<ul>
+<li><p>不能直接获取这个类然后移除，这样会报错</p>
+</li>
+<li><p>先获取这个类，然后判断：如果有这个类，就移除；如果没有这个类，返回为null，就不执行移除，就不报错了</p>
+</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const old = document.querySelector('.xtx-elevator-list .active')
+// console.log(old)	// null
+// 判断 如果原来有active类的对象，就移除类，如果开始就没有对象，就不删除，所以不报错
+if (old) old.classList.remove('active')
+// 当前元素添加 active 
+e.target.classList.add('active')
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const top = document.querySelector(`.xtx_goods_${e.target.dataset.name}`).offsetTop
+document.documentElement.scrollTop = top
+</code></pre>
+<p>3.当scrollTop在某两个list之间时，设置对应的list为active</p>
+<h2 id="day4%EF%BC%9ADOM-%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C">day4：DOM-节点操作</h2>
+<h3 id="%E6%97%A5%E6%9C%9F%E5%AF%B9%E8%B1%A1">日期对象</h3>
+<p>用来表示时间的对象——可以得到当前系统时间</p>
+<p><strong>实例化</strong></p>
+<p>即通过new关键字创建一个对象</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 获得系统当前时间
+const date = new Date()
+// 指定时间
+const date1 = new Date('2023-8-8 08:30:00')
+
+// 因为返回的日期格式无法直接使用，所以需要时间对象方法
+</code></pre>
+<p><strong>时间对象方法</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// 获得日期对象
+const date = new Date()
+// 使用里面的方法
+console.log(date.getFullYear())
+
+/*
+    - getFullYear()	    获得当前四位年份
+    - getMonth()	    获得当前月份，0~11，所以要 + 1
+    - getDate()		    获取当前的日
+    - getDay()		    获取星期，0~6
+    -getHours()、getMinutes()、getSeconds()	0~23/0~59,不会自动补零
+*/
+</code></pre>
+<p><strong>案例：显示格式化的时间</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const div = document.querySelector('div')
+
+function getMyDate() {
+    const date = new Date()
+    let h = date.getHours()
+    let m = date.getMinutes()
+    let s = date.getSeconds()
+    h = h &lt; 10 ? '0' + h : h
+    m = m &lt; 10 ? '0' + m : m
+    s = s &lt; 10 ? '0' + s : s
+
+    return `现在是：${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日 
+              ${h}:${m}:${s}  星期${date.getDay()}`
+
+}
+div.innerHTML = getMyDate()	// 先写入一次，这样在开启定时器前的一秒div不会留空白
+setInterval(function() {
+    div.innerHTML = getMyDate()
+}, 1000)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 快速获得时间的方式——对格式没有要求的时候
+
+const div = document.querySelector('div')
+// 得到日期对象
+const date = new Date()
+div.innerHTML = date.toLocaleString()  // 2022/4/1 09:41:21
+setInterval(function () {
+    const date = new Date()
+    div.innerHTML = date.toLocaleString()  // 2022/4/1 09:41:21
+}, 1000)
+
+// div.innerHTML = date.toLocaleDateString()  // 2022/4/1
+// div.innerHTML = date.toLocaleTimeString()  // 09:41:21
+</code></pre>
+<p><strong>时间戳</strong></p>
+<p>使用场景：时间不太好进行加减运算，所以例如倒计时效果，需要借助时间戳完成</p>
+<p>定义：是1970年第0秒至今的毫秒数，是一种特殊的计量时间的方式</p>
+<p>算法</p>
+<ul>
+<li>将来的时间戳 - 现在的时间戳 = 剩余时间毫秒数</li>
+<li>剩余时间毫秒数 转换为 剩余时间的年月日时分秒 就是倒计时时间</li>
+<li>比如：将来时间戳2000ms - 现在时间戳1000ms = 1000ms——转换为0时0分1秒</li>
+</ul>
+<p>获取方式</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 1.getTime()方法
+const date = new Date()
+console.log(date.getTime())
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 2.+new Date()方法	- 这个最好
+console.log(+new Date())
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 3.Date.now()方法
+console.log(Date.now())
+</code></pre>
+<p>前两种能返回任意时间的时间戳，可以用来做倒计时，但是第三种只能返回当前的时间戳。二三无需实例化</p>
+<p>案例：倒计时功能</p>
+
+<pre class="language-javascript"><code class="language-javascript">const countdown = document.querySelector('.countdown')
+countdown.style.backgroundColor = getRandomColor()
+// 函数封装 getCountTime
+function getCountTime() {
+    // 1. 得到当前的时间戳
+    const now = +new Date()
+    // 2. 得到将来的时间戳
+    const last = +new Date('2022-4-1 18:30:00')
+    // console.log(now, last)
+    // 3. 得到剩余的时间戳 count  记得转换为 秒数
+    const count = (last - now) / 1000
+    // console.log(count)
+    // 4. 转换为时分秒
+    let h = parseInt(count / 60 / 60 % 24)
+    h = h &lt; 10 ? '0' + h : h
+    let m = parseInt(count / 60 % 60)
+    m = m &lt; 10 ? '0' + m : m
+    let s = parseInt(count % 60)
+    s = s &lt; 10 ? '0' + s : s
+    console.log(h, m, s)
+
+    //  5. 把时分秒写到对应的盒子里面
+    document.querySelector('#hour').innerHTML = h
+    document.querySelector('#minutes').innerHTML = m
+    document.querySelector('#scond').innerHTML = s
+}
+// 先调用一次
+getCountTime()
+
+// 开启定时器
+setInterval(getCountTime, 1000)
+</code></pre>
+<h3 id="%E8%8A%82%E7%82%B9%E6%93%8D%E4%BD%9C">节点操作</h3>
+<p><strong>DOM节点</strong></p>
+<ul>
+<li>DOM树里每一个内容都称之为节点</li>
+<li>节点类型：元素节点、属性节点、文本节点、其他</li>
+</ul>
+<p><strong>查找节点</strong></p>
+<ul>
+<li><p>查找父节点</p>
+
+<pre class="language-javascript"><code class="language-javascript">子元素.parentNode	// 返回最近一级的父节点，找不到返回null
+</code></pre>
+</li>
+<li><p>查找子节点</p>
+
+<pre class="language-javascript"><code class="language-javascript">父元素.childNodes	// 获得所有子节点，包括文本节点、注释节点等等	不常用
+父元素.children	// 仅获得所有元素节点亲儿子，返回的是一个伪数组
+</code></pre>
+</li>
+<li><p>查找兄弟节点</p>
+
+<pre class="language-javascript"><code class="language-javascript">nextElementSibling	// 下一个兄弟节点
+previousElementSibling	// 上一个兄弟节点
+</code></pre>
+</li>
+</ul>
+<p><strong>增加节点</strong></p>
+<ul>
+<li><p>1.创建节点</p>
+
+<pre class="language-javascript"><code class="language-javascript">document.createElement('标签名')
+</code></pre>
+</li>
+<li><p>2.追加节点</p>
+<ul>
+<li><p>插入到父元素的最后一个子元素</p>
+
+<pre class="language-javascript"><code class="language-javascript">父元素.appendChild(要插入的元素)
+</code></pre>
+</li>
+<li><p>插入到父元素的某个子元素前面</p>
+
+<pre class="language-javascript"><code class="language-javascript">父元素.insertBefore(要插入的元素，在哪个元素前面)
+
+例：ul.insertBefore(li, ul.children[0])
+</code></pre>
+</li>
+</ul>
+</li>
+<li><p>克隆节点</p>
+
+<pre class="language-javascript"><code class="language-javascript">元素.cloneNode(布尔值)
+
+/*	克隆一个已有的元素结点，括号内传入布尔值	- 深克隆
+  若为true，则克隆时包括后代节点一并克隆	  - 潜克隆
+  默认为false，不克隆后代节点
+*/
+
+例：ul.appendChild(ul.children[0].cloneNode(true))
+</code></pre>
+</li>
+</ul>
+<p><strong>删除节点</strong></p>
+<p>在JS原生DOM操作中，要删除元素必须通过父元素删除</p>
+
+<pre class="language-javascript"><code class="language-javascript">父元素.removeChild(要删除的元素)
+</code></pre>
+<h3 id="M%E7%AB%AF%E4%BA%8B%E4%BB%B6">M端事件</h3>
+<p>了解移动端常见的事件</p>
+<table>
+<thead>
+<tr>
+  <th>触屏touch事件</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>touchstart</td>
+  <td>手指触摸到一个DOM元素时触发</td>
+</tr>
+<tr>
+  <td>touchmove</td>
+  <td>手指在一个DOM元素上滑动时触发</td>
+</tr>
+<tr>
+  <td>touchend</td>
+  <td>手指从一个DOM元素上移开时触发</td>
+</tr>
+</tbody>
+</table>
+<h3 id="JS%E6%8F%92%E4%BB%B6">JS插件</h3>
+<p>M端的JS插件Swiper：<a href="https://www.swiper.com.cn/"  target="_blank">https://www.swiper.com.cn/</a> ,Swiper常用于移动端网站的内容触摸滑动</p>
+<p>下载完毕后找到package文件夹，把css、js粘到项目中就好</p>
+<p>在线演示中找到想要的效果，打开源代码，慢慢cv</p>
+<h2 id="day5%EF%BC%9ABOM-%E6%93%8D%E4%BD%9C%E6%B5%8F%E8%A7%88%E5%99%A8">day5：BOM-操作浏览器</h2>
+<h3 id="%E4%B8%80%E3%80%81Window%E5%AF%B9%E8%B1%A1">一、Window对象</h3>
+<p>学习目标：学习window对象的常见属性，知道各个BOM对象的功能含义</p>
+<h3 id="BOM-%E6%B5%8F%E8%A7%88%E5%99%A8%E5%AF%B9%E8%B1%A1%E6%A8%A1%E5%9E%8B">BOM-浏览器对象模型</h3>
+<p>window = navigator + location + document + history + screen</p>
+<ul>
+<li>window对象是一个全局对象，可以说是JavaScript中的顶级对象</li>
+<li>基本BOM的属性和方法都是window的；像document、alert()、console.log()这些都是window的属性</li>
+<li>所有通过var定义在全局作用域中的变量、函数都会变成window对象的属性和方法</li>
+<li>window对象下的属性和方法调用的时候可以省略window</li>
+</ul>
+<h3 id="%E5%AE%9A%E6%97%B6%E5%99%A8---%E5%BB%B6%E6%97%B6%E5%87%BD%E6%95%B0">定时器 - 延时函数</h3>
+<p>JavaScript中内置了一个延时执行代码的函数（仅执行一次），setTimeout</p>
+
+<pre class="language-javascript"><code class="language-javascript">setTimeout(回调函数，等待的毫秒数)
+</code></pre>
+<p>清除延时函数：</p>
+
+<pre class="language-javascript"><code class="language-javascript">let timer = setTimeout(回调函数，等待的毫秒数)
+clearTimeout(timer)
+</code></pre>
+<p>注意：间歇函数是每隔一段时间执行一次，而延时函数只执行一次就不再执行</p>
+<h3 id="JS%E6%89%A7%E8%A1%8C%E6%9C%BA%E5%88%B6">JS执行机制</h3>
+<p>JavaScript最大的一个特点是单线程，即同一时间只能做一件事</p>
+<p>即所有任务都需要排队，前一个任务执行完才会执行下一个任务</p>
+<p>导致问题：如果JS执行的时间过长，会造成页面的渲染不连贯，导致页面渲染加载阻塞的感觉</p>
+<p>为了解决这个问题，利用多核CPU的计算能力，H5提出Web Worker标准，允许JavaScript脚本创建多个线程</p>
+<p>于是JavaScript出现了<code>同步</code>和<code>异步</code></p>
+<p><strong>同步</strong>：前一任务执行完再执行下一任务，程序的执行顺序和任务的排列顺序是一致的、同步的</p>
+<p><strong>异步</strong>：在做一件事要花费很多时间，在这同时再去做其他事情</p>
+<p>同步任务：都在主线程上执行，形成一个执行栈</p>
+<p>异步任务：通过回调函数实现</p>
+<ul>
+<li>普通事件，如click，resize等</li>
+<li>资源加载，如load，errir等</li>
+<li>定时器，包括setInterval、setTimeout等</li>
+</ul>
+<p>异步任务相关添加到任务队列(消息队列)中</p>
+<ol>
+<li>先执行执行栈中的同步任务；异步任务放入任务队列中</li>
+<li>当执行栈中所有同步任务执行完毕，系统就按次序读取任务队列中的异步任务，于是被读取的异步任务结束等待状态，进入执行栈，开始执行</li>
+</ol>
+<img src="前端学习笔记★.assets/image-20230827083624308.png" alt="image-20230827083624308" style="zoom: 67%;" />
+<p>异步API部分是交给浏览器执行，浏览器可以多线程</p>
+<p>由于主线程不断的重复获得任务、执行任务，一直循环——这种机制被称为<code>事件循环(event loop)</code></p>
+<h3 id="location%E5%AF%B9%E8%B1%A1">location对象</h3>
+<p>location的数据类型是对象，它拆分并保存了URL地址的各个组成部分</p>
+<ul>
+<li>href</li>
+</ul>
+
+<pre class="language-none"><code class="language-none">location.href       // 得到当前文件URL地址
+location.href = 'http://www.itcast.cn'  // 可以通过js方式跳转到目标地址
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 案例：点击跳转或者倒计时结束自动跳转
+&lt;a href=&quot;http://www.itcast.cn&quot;&gt;支付成功，&lt;span&gt;5&lt;/span&gt;秒钟后跳转到首页&lt;/a&gt;
+&lt;script&gt;
+    a = document.querySelector('a')
+    let num = 5
+    let timerId = setInterval(function() {
+        num--
+        a.innerHTML = `支付成功，&lt;span&gt;${num}&lt;/span&gt;秒钟后跳转到首页`
+        if(num === 0) {
+            clearInterval(timerId)
+            location.href = 'http://www.itcast.cn'
+        }
+    }, 1000)
+&lt;/script&gt;
+</code></pre>
+<ul>
+<li><p>search 属性获取地址中携带的参数，符号？及后面部分——例如表单get提交时？后面的内容</p>
+</li>
+<li><p>hash 属性获取地址中的哈希值，符号#后面部分——例如‘#/download’。经常用于不刷新页面就可以显示不同页面</p>
+</li>
+<li><p>reload() 方法用来刷新当前页面，传入参数true时表示强制刷新</p>
+</li>
+</ul>
+<h3 id="navigator%E5%AF%B9%E8%B1%A1">navigator对象</h3>
+<p>navigator的数据类型是对象，该对象下记录了浏览器自身的相关信息</p>
+<ul>
+<li>通过userAgent检测浏览器的版本及平台</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">// 检测 userAgent（浏览器信息）
+!(function () {
+    const userAgent = navigator.userAgent
+    // 验证是否为Android或iPhone
+    const android = userAgent.match(/(Android);?[\s\/]+([\d.]+)?/)
+    const iphone = userAgent.match(/(iPhone\sOS)\s([\d_]+)/)
+    // 如果是Android或iPhone，则跳转至移动站点
+    if (android || iphone) {
+        location.href = 'http://m.itcast.cn'
+    }
+})();
+// !function () { }()   也是立即执行函数，加！可以把前面看成一个整体。不加！会报错
+</code></pre>
+<h3 id="history%E5%AF%B9%E8%B1%A1">history对象</h3>
+<p>history的数据类型是对象，主要管理历史记录，该对象与浏览器地址栏的操作相对应，如前进、后退、历史记录等</p>
+<p>该对象一般在实际开发中<strong>比较少用</strong></p>
+<ul>
+<li>back()方法：后退功能</li>
+<li>forward()方法：前进功能</li>
+<li>go(参数) 方法：参数为正数就前进几个页面，为负数就后退几个页面</li>
+</ul>
+<h3 id="%E4%BA%8C%E3%80%81%E6%9C%AC%E5%9C%B0%E5%AD%98%E5%82%A8">二、本地存储</h3>
+<p>本地存储介绍</p>
+<ul>
+<li>数据存储在用户浏览器中</li>
+<li>设置、读取方便，甚至页面刷新不丢失数据</li>
+<li>容量较大，sessionStorage和localStorage约5M左右</li>
+</ul>
+<p>本地存储分类</p>
+<h3 id="%3Cstrong%3E1.localStorage%3C/strong%3E"><strong>1.localStorage</strong></h3>
+<p>作用：可以将数据永久存储在本地（用户的电脑），除非手动删除，否则关闭页面也会存在</p>
+<p>特性：可以同一浏览器多页面、多窗口共享(跨域不行)；以键值对的形式存储使用</p>
+<p>语法：</p>
+
+<pre class="language-javascript"><code class="language-javascript">localStorage.setItem('key', 'value')        // 存储数据、已有key时就是改数据
+localStorage.getItem('key')                 // 获取数据
+localStorage.removeItem('key')              // 删除数据
+
+// 本地存储只能存储字符串数据类型，返回值也是字符串
+</code></pre>
+<h3 id="2.sessionStorage">2.sessionStorage</h3>
+<p>特性：</p>
+<ul>
+<li>生命周期为关闭浏览器窗口</li>
+<li>在同一个窗口/页面下数据可以共享</li>
+<li>以键值对的形式存储使用</li>
+<li>用法跟localStorage基本相同</li>
+</ul>
+<h3 id="%E5%AD%98%E5%82%A8%E5%A4%8D%E6%9D%82%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B">存储复杂数据类型</h3>
+<p>问题：本地只能存储字符串，无法存储复杂数据类型</p>
+
+<pre class="language-javascript"><code class="language-javascript">const obj = {
+    uname: 'pink老师',
+    age: 18,
+    gender: '女'
+}
+localStorage.setItem('obj', obj)
+console.log(localStorage.getItem('obj'))
+</code></pre>
+<table>
+<thead>
+<tr>
+  <th>key</th>
+  <th>value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>obj</td>
+  <td>[object Object]</td>
+</tr>
+</tbody>
+</table>
+<p>解决：需要将<strong>复杂数据类型</strong><code>转换成</code><strong>JSON字符串</strong>，再存储到本地</p>
+<p>语法：</p>
+
+<pre class="language-javascript"><code class="language-javascript">JSON.stringify(复杂数据类型)
+JSON.parse(JSON字符串)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const obj = {
+    uname: 'pink老师',
+    age: 18,
+    gender: '女'
+}
+localStorage.setItem('obj', JSON.stringify(obj))
+console.log(localStorage.getItem('obj'))    // {&quot;uname&quot;: &quot;pink老师&quot;, &quot;age&quot;: 18, &quot;gender&quot;: &quot;女&quot;}
+                                            // JSON对象，属性和值统一都有双引号&quot;&quot;
+console.log(JSON.parse(localStorage.getItem('obj')))        // JSON.parse()方法 将JSON字符串转换成JS对象
+</code></pre>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B">综合案例</h3>
+<p>day4+5 ——学生信息表实时渲染案例（待完成）</p>
+
+<pre class="language-javascript"><code class="language-javascript">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;学生信息表渲染案例&lt;/title&gt;
+    &lt;style&gt;
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        a {
+            text-decoration: none;
+            color: #721c24;
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin: 20px 0;
+        }
+
+        table {
+            margin: 20px auto;
+            width: 800px;
+            border-collapse: collapse;
+            color: #004085;
+        }
+
+        th {
+            padding: 10px;
+            background: #cfe5ff;
+
+            font-size: 20px;
+            font-weight: 400;
+        }
+
+        td,
+        th {
+            border: 1px solid #b8daff;
+        }
+
+        td {
+            padding: 10px;
+            color: #666;
+            text-align: center;
+            font-size: 16px;
+        }
+
+        tbody tr {
+            background: #fff;
+        }
+
+        tbody tr:hover {
+            background: #e1ecf8;
+        }
+
+        .info {
+            width: 900px;
+            margin: 50px auto;
+            text-align: center;
+        }
+
+        .info input,
+        .info select {
+            width: 80px;
+            height: 27px;
+            outline: none;
+            border-radius: 5px;
+            border: 1px solid #b8daff;
+            padding-left: 5px;
+            box-sizing: border-box;
+            margin-right: 15px;
+        }
+
+        .info button {
+            width: 60px;
+            height: 27px;
+            background-color: #004085;
+            outline: none;
+            border: 0;
+            color: #fff;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        .info .age {
+            width: 50px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+    &lt;h1&gt;新增学员&lt;/h1&gt;
+    &lt;form class=&quot;info&quot; autocomplete=&quot;off&quot;&gt;
+        姓名：&lt;input type=&quot;text&quot; class=&quot;uname&quot; name=&quot;uname&quot; /&gt;
+        年龄：&lt;input type=&quot;text&quot; class=&quot;age&quot; name=&quot;age&quot; /&gt;
+        性别：&lt;select class=&quot;gender&quot; name=&quot;gender&quot;&gt;
+            &lt;option value=&quot;男&quot;&gt;男&lt;/option&gt;
+            &lt;option value=&quot;女&quot;&gt;女&lt;/option&gt;
+        &lt;/select&gt;
+        薪资：&lt;input type=&quot;text&quot; class=&quot;salary&quot; name=&quot;salary&quot; /&gt;
+        就业城市：&lt;select class=&quot;city&quot; name=&quot;city&quot;&gt;
+            &lt;option value=&quot;北京&quot;&gt;北京&lt;/option&gt;
+            &lt;option value=&quot;上海&quot;&gt;上海&lt;/option&gt;
+            &lt;option value=&quot;广州&quot;&gt;广州&lt;/option&gt;
+            &lt;option value=&quot;深圳&quot;&gt;深圳&lt;/option&gt;
+        &lt;/select&gt;
+        &lt;button class=&quot;add&quot;&gt;录入&lt;/button&gt;
+    &lt;/form&gt;
+
+    &lt;h1&gt;就业榜&lt;/h1&gt;
+    &lt;table&gt;
+        &lt;thead&gt;
+            &lt;tr&gt;
+                &lt;th&gt;学号&lt;/th&gt;
+                &lt;th&gt;姓名&lt;/th&gt;
+                &lt;th&gt;年龄&lt;/th&gt;
+                &lt;th&gt;性别&lt;/th&gt;
+                &lt;th&gt;薪资&lt;/th&gt;
+                &lt;th&gt;就业城市&lt;/th&gt;
+                &lt;th&gt;操作&lt;/th&gt;
+            &lt;/tr&gt;
+        &lt;/thead&gt;
+        &lt;tbody&gt;
+            &lt;!-- &lt;tr&gt;
+                &lt;td&gt;1001&lt;/td&gt;
+                &lt;td&gt;欧阳霸天&lt;/td&gt;
+                &lt;td&gt;19&lt;/td&gt;
+                &lt;td&gt;男&lt;/td&gt;
+                &lt;td&gt;15000&lt;/td&gt;
+                &lt;td&gt;上海&lt;/td&gt;
+                &lt;td&gt;
+                    &lt;a href=&quot;javascript:&quot;&gt;删除&lt;/a&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt; --&gt;
+        &lt;/tbody&gt;
+    &lt;/table&gt;
+
+    &lt;script&gt;
+        // 参考数据
+        // const initData = [
+        //     {
+        //         stuId: 1001,
+        //         uname: '欧阳霸天',
+        //         age: 19,
+        //         gender: '男',
+        //         salary: '20000',
+        //         city: '上海',
+        //     }
+        // ]
+
+        // 读取本地的 student-data 的数据
+        const data = localStorage.getItem('student-data')
+        const arr = data ? JSON.parse(data) : []
+
+        const tbody = document.querySelector('tbody')
+
+        // ——渲染模板函数
+        function render() {
+            const trArr = arr.map(function (item, i) {
+                return `
+                &lt;tr&gt;
+                    &lt;td&gt;${item.stuId}&lt;/td&gt;
+                    &lt;td&gt;${item.uname}&lt;/td&gt;
+                    &lt;td&gt;${item.age}&lt;/td&gt;
+                    &lt;td&gt;${item.gender}&lt;/td&gt;
+                    &lt;td&gt;${item.salary}&lt;/td&gt;
+                    &lt;td&gt;${item.city}&lt;/td&gt;
+                    &lt;td&gt;
+                        &lt;a href=&quot;javascript:&quot; data-id=${i}&gt;删除&lt;/a&gt;
+                    &lt;/td&gt;
+                &lt;/tr&gt; 
+                `
+            })
+
+            tbody.innerHTML = trArr.join('')
+        }
+        render()
+
+        // ——录入模块
+        const info = document.querySelector('.info')
+        const items = info.querySelectorAll('[name]')
+
+        info.addEventListener('submit', function (e) {
+            // 阻止提交表单的默认行为
+            e.preventDefault()
+
+            const obj = {}
+            obj.stuId = arr.length ? arr[arr.length - 1].stuId + 1 : 1
+
+            // 非空判断
+            for (let i = 0; i &lt; items.length; i++) {
+                const item = items[i]
+                if (items[i].value === '') {
+                    return alert('输入不能为空')
+                }
+                // item.name为当前处理的表单元素的name属性值(名)，item.value为当前正在处理的表单元素的值；这里实际是在添加键值对
+                obj[item.name] = item.value
+            }
+            arr.push(obj)
+
+            // arr存储到本地存储
+            localStorage.setItem('student-data', JSON.stringify(arr))
+            // 渲染页面
+            render()
+            // 重置表单
+            this.reset()
+        })
+
+        // ——删除模块
+        tbody.addEventListener('click', function (e) {
+            arr.splice(e.target.dataset.id, 1)
+            localStorage.setItem('student-data', JSON.stringify(arr))
+            render()
+        })
+
+    &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="day6%EF%BC%9A%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">day6：正则表达式</h2>
+<h3 id="%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D">基本介绍</h3>
+<p>正则表达式是用于匹配字符串中字符组合的模式</p>
+<p>作用：</p>
+<ul>
+<li>验证表单（匹配）</li>
+<li>过滤敏感词（替换）</li>
+<li>字符串中提取想要的部分（提取）</li>
+</ul>
+<p>语法：</p>
+
+<pre class="language-javascript"><code class="language-javascript">const str = '我们在学习前端，希望学习前端能高薪毕业'
+// 正则表达式使用：
+// 1. 定义规则
+const reg = /前端/
+// 2. 是否匹配
+console.log(reg.test(str))  // 返回true   test()方法——判断是否有符合规则的字符串，找到返回true，否则false
+// 3. exec()
+console.log(reg.exec(str))  // 返回数组     exec()方法——用于检索(查找)符合规则的字符串，找到返回数组，否则null
+</code></pre>
+<h3 id="%E5%85%83%E5%AD%97%E7%AC%A6">元字符</h3>
+<p>普通字符：仅描述本身的字符，例如所有字母和数字</p>
+<p>元字符：具有特殊含义的字符，可以极大提高灵活性，有强大的匹配功能，例如<strong>[a-z]</strong>表示abcd...xyz</p>
+<p>分类：</p>
+<ul>
+<li><strong>边界符</strong>——提示字符所处的位置，即必须用什么开头，用什么结尾</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">^           表示匹配行首的文本（即以谁开始）
+$           表示匹配行尾的文本（即以谁结束）
+————————————————————————————————————————————————————
+console.log(/^二哈/.test('二哈笑哈哈'))        // true
+console.log(/^二哈/.test('傻子二哈'))         // false
+
+console.log(/二哈$/.test('这是一只傻二哈'))      // true
+console.log(/二哈$/.test('这只二哈很傻'))       // false
+
+console.log(/^二哈$/.test('二哈笑哈哈'))       // false
+console.log(/^二哈$/.text('二哈'))              // true --&gt; ^和$一起必须是精确匹配
+</code></pre>
+<ul>
+<li><strong>量词</strong>——设定某个模式出现的次数，即重复次数</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">*       重复0、多次
++       重复1、多次
+?       重复0、1次
+{n}     重复n次
+{n,}    重复n、更多次
+{n,m}   重复n~m次
+——————————————————————————————————————————————————
+console.log(/^哈{4,}$/.test('哈哈哈'))      // false
+console.log(/^哈{4,}$/.test('哈哈哈哈'))     // true
+console.log(/^哈{4,}$/.test('哈哈哈哈哈'))    // true
+</code></pre>
+<ul>
+<li><strong>字符类</strong>——比如<code>\d</code>表示0~9</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">[]      匹配字符集合，只要匹配到内部任何一个字符都返回true，只匹配单个字符
+[^a-z]  表示匹配除了小写字母以外的字符
+.       匹配除换行符以外的任何单个字符
+
+console.log(/^[abc]{2}$/.test('ab'))    // true
+console.log(/[abc]/.test('die'))    // flase
+console.log(/^[a-zA-Z0-9]$/.test('P'))  // true
+
+腾讯QQ号格式(从1000开始)：^[1-9][0-9]{4,}$
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">// 案例：验证用户名格式
+const reg = /^[a-zA-Z0-9-_]{6,16}$/
+const input = document.querySelector('input')
+const span = input.nextElementSibling
+
+input.addEventListener('blur', function () {
+    // console.log(reg.test(this.value))
+    if (reg.test(this.value)) {
+        span.innerHTML = '输入正确'
+        span.className = 'right'
+    } else {
+        span.innerHTML = '请输入6~16位的英文数字下划线'
+        span.className = 'error'
+    }
+})
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">预定义类——某些常见模式的简写方法
+
+\d      [0-9]
+\D      [^0-9]
+\w      [a-zA-Z0-9_]
+\W      [^a-zA-Z0-9_]
+\s      [\t\r\n\v\f]
+\S      [^\t\r\n\v\f]
+
+日期格式：^\d{4}-\d{1,2}-\d{1,2}
+</code></pre>
+<h3 id="%E4%BF%AE%E9%A5%B0%E7%AC%A6">修饰符</h3>
+<p>修饰符约束正则执行的某些细节行为，如是否区分大小写、是否支持多行匹配等等</p>
+
+<pre class="language-javascript"><code class="language-javascript">格式：/表达式/修饰符
+
+i           即ignore，正则匹配时字母不区分大小写
+g           即global，匹配所有满足正则表达式的结果
+replace     找到想要的文本进行替换
+
+
+const str = 'java是一门编程语言， 学完JAVA工资很高'
+// const re = str.replace(/java|JAVA/g, '前端')
+const re = str.replace(/java/ig, '前端')
+console.log(re)         // 输出：前端是一门编程语言， 学完前端工资很高
+
+
+btn.addEventListener('click', function() {
+    div.innerHTML = tx.value.replace(/激情|基情/g, '**')
+})
+</code></pre>
+<p><strong>案例：小兔鲜注册页的输入验证、登录页面、主界面导航栏用户名</strong></p>
+<h2 id="day7%EF%BC%9A%E5%AE%9E%E6%88%98-%E5%B0%8F%E5%85%94%E9%B2%9C%E4%B8%AA%E4%BA%BA%E5%AE%9E%E6%88%98">day7：实战-小兔鲜个人实战</h2>
+<h3 id="%E6%94%BE%E5%A4%A7%E9%95%9C%E6%95%88%E6%9E%9C">放大镜效果</h3>
+<p><strong>业务分析：</strong></p>
+<p>①：鼠标经过对应小盒子，左侧中等盒子显示对应中等图片</p>
+<p>②： 鼠标经过中盒子，右侧会显示放大镜效果的大盒子</p>
+<p>③： 黑色遮罩盒子跟着鼠标来移动</p>
+<p>④： 鼠标在中等盒子上移动，大盒子的图片跟着显示对应位置</p>
+<p><strong>思路分析：</strong></p>
+<p>①：鼠标经过小盒子，左侧中等盒子显示对应中等图片</p>
+<ol>
+<li><p>获取对应的元素</p>
+</li>
+<li><p>采取事件委托的形式，监听鼠标经过小盒子里面的图片， 注意此时需要使用 <code>mouseover</code> 事件，因为需要事件冒泡触发small</p>
+</li>
+<li><p>让鼠标经过小图片的爸爸li盒子，添加类，其余的li移除类（注意先移除，后添加）</p>
+</li>
+<li><p>鼠标经过小图片，可以拿到小图片的src， 可以做两件事</p>
+<p>- 让中等盒子的图片换成这个 这个小图片的src</p>
+<p>- 让大盒子的背景图片，也换成这个小图片的 src （稍后做）</p>
+</li>
+</ol>
+<p>②： 鼠标经过中等盒子，右侧大盒子显示</p>
+<ol>
+<li><p>用到鼠标经过和离开，鼠标经过中盒子，大盒子 利用 display 来显示和隐藏</p>
+</li>
+<li><p>鼠标离开不会立马消失，而是有200ms的延时，用户体验更好，所以尽量使用定时器做个延时 setTimeout</p>
+</li>
+<li><p>显示和隐藏也尽量定义一个函数，因为鼠标经过离开中等盒子，会显示隐藏；同时，鼠标经过大盒子，也会显示和隐藏</p>
+</li>
+<li><p>给大盒子里面的背景图片一个默认的第一张图片</p>
+</li>
+</ol>
+<p>③： 黑色遮罩盒子跟着鼠标来移动</p>
+<ol>
+<li><p>先做鼠标经过 中等盒子，显示隐藏 黑色遮罩 的盒子</p>
+</li>
+<li><p>让黑色遮罩跟着鼠标来走, 需要用到鼠标移动事件  mousemove</p>
+</li>
+<li><p>让黑色盒子的移动的核心思想：不断把鼠标在中等盒子内的坐标给黑色遮罩层 let  top 值，这样遮罩层就可以跟着移动了</p>
+<p>- 需求</p>
+<p>- 我们要的是 鼠标在 中等盒子内的坐标， 没有办法直接得到</p>
+</li>
+</ol>
+<p>​      - 得到1：  鼠标在页面中的坐标</p>
+<p>​      - 得到2：  中等盒子在页面中的坐标</p>
+<p>- 算法</p>
+<p>- 得到鼠标在页面中的坐标   利用事件对象的  pageX</p>
+<p>- 得到middle中等盒子在页面中的坐标  middle.getBoundingClientRect()</p>
+<p>- 鼠标在middle 盒子里面的坐标  =  鼠标在页面中的坐标  -  middle 中等盒子的坐标</p>
+<p>- 黑色遮罩层不断得到    鼠标在middle 盒子中的坐标 就可以移动起来了</p>
+<p><em>&gt;注意 y坐标特殊，需要减去 页面被卷去的头部</em></p>
+<p><em>&gt;</em></p>
+<p><em>&gt;为什么不用 box.offsetLet 和 box.offsetTop  因为这俩属性跟带有定位的父级有关系，很容被父级影响，而getBoundingClientRect() 不受定位的父元素的影响</em></p>
+<p>- 限定遮罩的盒子只能在middle 内部移动，需要添加判断</p>
+<p>- 限定水平方向 大于等于0 并且小于等于 400</p>
+<p>- 限定垂直方向 大于等于0 并且小于等于 400</p>
+<p>- 遮罩盒子移动的坐标：</p>
+<p>- 声明一个 mx 作为移动的距离</p>
+<p>- 水平坐标 x 如果 小于等于100 ，则移动的距离 mx 就是  0  不应该移动</p>
+<p>- 水平坐标 如果 大于等于100 并且小于300，移动的距离就是  mx - 100 （100是遮罩盒子自身宽度的一半）</p>
+<p>- 水平坐标 如果 大于等于300，移动的距离就是  mx  就是200  不应该在移动了</p>
+<p>- 其实我们发现水平移动， 就在 100 ~ 200 之间移动的</p>
+<p>- 垂直同理</p>
+
+<pre class="language-javascript"><code class="language-javascript">let mx = 0, my = 0;
+
+if (x &lt;= 100) mx = 0
+if (x &gt; 100 &amp;&amp; x &lt; 300) mx = x - 100
+if (x &gt;= 300) mx = 200
+
+if (y &lt;= 100) my = 0
+if (y &gt; 100 &amp;&amp; y &lt; 300) my = y - 100
+if (y &gt;= 300) my = 200
+</code></pre>
+<p>- 大盒子图片移动的计算方法：</p>
+<p>- 中等盒子是 400px  大盒子 是 800px 的图片</p>
+<p>- 中等盒子移动1px， 大盒子就应该移动2px， 只不过是负值</p>
+
+<pre class="language-javascript"><code class="language-javascript">large.style.backgroundPositionX = - 2 * mx + 'px'
+
+large.style.backgroundPositionY = - 2 * my + 'px'
+</code></pre>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/front-end/javascript01.html">
+                            <span class="icon"></span>
+                            <span class="label">ECMAScript</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                        <a href="/front-end/javascript03.html">
+                            <span class="label">JavaScript进阶</span>
+                            <span class="icon"></span>
+                        </a>
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>第一列链接</a><ul><li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+<li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+</ul>
+</li>
+<li><a>第二列链接</a><ul><li><a target="_blank" href="https://www.youtube.com/@CodeMonkeyUnity/videos">Code Monkey - Youtube</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">网站使用 teedoc 生成</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>

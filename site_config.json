@@ -1,0 +1,70 @@
+{
+    "site_name": "mengdelu",
+    "site_slogon": "我的各种学习笔记",
+    "site_root_url": "/",
+    "site_domain": "my_name.github.io",
+    "site_protocol": "https",
+    "config_template_dir": "config",
+    "route": {
+        "docs": {
+            "/my_notes/": "docs/我的笔记",
+            "/front-end/": "docs/front-end",
+            "/vue/": "docs/vue",
+            "/unity/": "docs/unity"
+        },
+        "pages": {
+            "/": "pages/index"
+        },
+        "assets": {
+            "/static/": "static"
+        }
+    },
+    "plugins": {
+        "teedoc-plugin-markdown-parser":{
+            "from": "pypi",
+            "config": {
+            }
+        },
+        "teedoc-plugin-theme-default":{
+            "from": "pypi",
+            "config": {
+                "dark": true,
+                "show_print_page": false,
+                "env":{
+                    "main_color": "#4caf7d"
+                }
+            }
+        },
+        "teedoc-plugin-search":{
+            "from": "pypi",
+            "config": {
+                "search_hint": "站内搜索",
+                "input_hint": "输入关键词，多关键词空格隔开",
+                "loading_hint": "正在加载，请稍候。。。",
+                "download_err_hint": "下载搜索文件失败，请刷新重试或检查网络",
+                "other_docs_result_hint": "来自其它文档的结果",
+                "curr_doc_result_hint": "当前文档搜索结果"
+            }
+        },
+        "teedoc-plugin-assets": {
+            "from": "pypi",
+            "config": {
+                "header_items": [
+                    "/static/css/custom.css"
+                ],
+                "footer_items": [
+                    "/static/js/custom.js"
+                ],
+                "env":{
+                    "main_color": "#4caf7d",
+                    "second_color": "#0a7d43"
+                }
+            }
+        }
+    },
+    "rebuild_changes_delay": 1,
+    "robots":{
+        "User-agent": "*"
+    },
+    "layout_root_dir": "layout"
+}

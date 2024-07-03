@@ -1,0 +1,13 @@
+items:
+-   label: 本站简介
+    file: README.md
+-   label: teedoc 使用教程
+    file: teedoc_notes.md
+-   label: 一级目录
+    collapsed: false
+    items:
+    -   label: 二级目录01
+    -   label: 二级目录02
+-   label: 目录可以是跳转链接
+    url: https://github.com/teedoc/teedoc
+    target: _blank

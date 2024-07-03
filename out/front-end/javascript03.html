@@ -1,0 +1,1343 @@
+<!DOCTYPE html>
+
+<html lang="zh-cn"  class=" heading_no_counter ">
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="keywords" content="JavaScript">
+    
+    
+    <meta name="description" content="JavaScript学习笔记">
+    
+    <meta name="generator" content="teedoc">
+    <meta name="theme" content="teedoc-plugin-theme-default">
+    
+        
+        <meta name="markdown-generator" content="teedoc-plugin-markdown-parser">
+        
+        <script>
+MathJax = {"loader": {"load": ["output/svg"]}, "tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]]}, "svg": {"fontCache": "global"}};
+</script>
+        
+        <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+        
+        <script src="/static/js/theme_default/pre_main.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/prism.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/viewer.min.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/dark.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/theme_default/light.css" type="text/css"/>
+        
+        <script src="/static/js/theme_default/jquery.min.js"></script>
+        
+        <script src="/static/js/theme_default/split.js"></script>
+        
+        <link rel="stylesheet" href="/static/css/search/style.css" type="text/css"/>
+        
+        <link rel="stylesheet" href="/static/css/custom.css" type="text/css"/>
+        
+    
+    
+    <title>JavaScript 进阶 - mengdelu</title>
+    
+    <script type="text/javascript">js_vars = {}</script>
+    <script type="text/javascript">metadata = {"tags": ["笔记", "JavaScript"], "date": "2024-06-16", "update": [], "ts": 1718467200, "author": "", "brief": "", "cover": "", "class": "heading_no_counter"}</script>
+</head>
+
+
+<body class="type_doc">
+    
+    <div id="navbar">
+        <div id="navbar_menu">
+            <a class="site_title" href="/">
+                
+                
+                    <h2>mengdelu</h2>
+                
+        </a>
+            <a id="navbar_menu_btn"></a>
+        </div>
+        <div id="navbar_items">
+            <div>
+                <ul id="nav_left">
+<li class=""><a  href="/my_notes/">我的笔记</a></li>
+<li class="active"><a  href="/front-end/">前端三剑客</a></li>
+<li class=""><a  href="/vue/">Vue</a></li>
+<li class=""><a  href="/unity/">Unity</a></li>
+</ul>
+
+            </div>
+            <div>
+                <ul id="nav_right">
+</ul>
+
+                <ul class="nav_plugins"><li><a id="themes" class="light"></a></li></ul><ul class="nav_plugins"><li><a id="search"><span class="icon"></span><span class="placeholder">站内搜索</span>
+                            <div id="search_hints">
+                                <span id="search_input_hint">输入关键词，多关键词空格隔开</span>
+                                <span id="search_loading_hint">正在加载，请稍候。。。</span>
+                                <span id="search_download_err_hint">下载搜索文件失败，请刷新重试或检查网络</span>
+                                <span id="search_other_docs_result_hint">来自其它文档的结果</span>
+                                <span id="search_curr_doc_result_hint">当前文档搜索结果</span>
+                            </div></a></li></ul>
+            </div>
+        </div>
+    </div>
+    
+    <div id="wrapper">
+        <div id="sidebar_wrapper">
+            <div id="sidebar">
+                <div id="sidebar_title">
+                    
+                </div>
+                <ul class="show">
+<li class="not_active with_link"><a href="/front-end/index.html"><span class="label">文档说明</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/html5.html"><span class="label">HTML5</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css.html"><span class="label">CSS</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/css3.html"><span class="label">CSS3</span><span class=""></span></a></li>
+<li class="active_parent no_link"><a><span class="label">JavaScript</span><span class="sub_indicator"></span></a><ul class="show">
+<li class="not_active with_link"><a href="/front-end/javascript01.html"><span class="label">ECMAScript</span><span class=""></span></a></li>
+<li class="not_active with_link"><a href="/front-end/javascript02.html"><span class="label">Web-APIs-DOM</span><span class=""></span></a></li>
+<li class="active with_link"><a href="/front-end/javascript03.html"><span class="label">JavaScript进阶</span><span class=""></span></a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+        </div>
+        <div id="article">
+            <div id="menu_wrapper">
+                <div id="menu">
+                </div>
+            </div>
+            <div id="content_wrapper">
+                <div id="content_body">
+                    <div id="article_head">
+                        <div id="article_title">
+                            
+                            <h1>JavaScript 进阶</h1>
+                            
+                        </div>
+                        <div id="article_tags">
+                            <ul>
+                            
+                                <li>笔记</li>
+                            
+                                <li>JavaScript</li>
+                            
+                            </ul>
+                        </div>
+                        <div id="article_info">
+                        <div id="article_info_left">
+                            <span class="article_author">
+                                
+                            </span>
+                            
+                                <span class="article_date" title="最后修改日期： 2024-06-16">
+                                    2024-06-16
+                                </span>
+                            
+                        </div>
+                        <div id="article_info_right">
+                            
+                        </div>
+                        </div>
+                    </div>
+                    <div id="article_tools">
+                        <span></span>
+                        <span id="toc_btn"></span>
+                    </div>
+                    <div id="update_history">
+                        
+                    </div>
+                    <div id="article_content">
+                        
+                            <h2 id="day1-%E4%BD%9C%E7%94%A8%E5%9F%9F%26amp%3B%E8%A7%A3%E6%9E%84%26amp%3B%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">day1-作用域&amp;解构&amp;箭头函数</h2>
+<h3 id="%E4%BD%9C%E7%94%A8%E5%9F%9F">作用域</h3>
+<p><strong>- 局部作用域</strong></p>
+<ul>
+<li>函数作用域：函数执行完毕，内部的变量就被清空</li>
+<li>块作用域：let声明的变量和const声明的常量产生块作用域、var不会产生块作用域</li>
+</ul>
+<p><strong>- 全局作用域</strong></p>
+<ul>
+<li>即<code>&lt;script&gt;</code>标签和.js文件的【最外层】</li>
+<li>全局作用域中声明的变量在其他任何作用域都可以被访问</li>
+</ul>
+<h4 id="%3Cstrong%3E--%E4%BD%9C%E7%94%A8%E5%9F%9F%E9%93%BE%3C/strong%3E"><strong>- 作用域链</strong></h4>
+<ul>
+<li>本质上是底层的<strong>变量查找机制</strong></li>
+<li>在函数被执行时，会<strong>优先查找当前</strong>函数作用域中的变量</li>
+<li>若当前作用域查找不到则会依次<strong>逐级查找父级作用域</strong>直到全局作用域</li>
+<li>-》嵌套关系的作用域串联起来形成了作用域链；子作用域能访问父作用域，但是不能反过来</li>
+</ul>
+<h4 id="%3Cstrong%3E--JS%E5%9E%83%E5%9C%BE%E5%9B%9E%E6%94%B6%E6%9C%BA%E5%88%B6%28GC%29%3C/strong%3E"><strong>- JS垃圾回收机制(GC)</strong></h4>
+<p>JS中内存的分配和回收都是自动完成的，内存在不使用的时候会被垃圾回收器自动回收</p>
+<p>内存的生命周期：</p>
+<ul>
+<li>内存分配：声明变量、函数、对象时，系统自动为其分配内存</li>
+<li>内存使用：读写内存，即使用变量、函数等</li>
+<li>内存回收：使用完毕，由垃圾回收器自动回收不再使用的内存</li>
+</ul>
+<p>​		内存泄漏：程序中分配的内存由于某种原因未释放或无法释放</p>
+<p>堆栈空间分配区别：</p>
+<ul>
+<li>栈（操作系统)∶由操作系统自动分配释放函数的参数值、局部变量等，基本数据类型放到栈里面。</li>
+<li>堆〈操作系统)∶一般由程序员分配释放，若程序员不释放，由垃圾回收机制回收。<strong>复杂数据类型放到堆里面</strong>。</li>
+</ul>
+<p>两种常见的<strong>浏览器垃圾回收算法</strong>:</p>
+<ul>
+<li><p>引用计数法</p>
+<p>IE采用的引用计数算法，定义“内存不再使用”，就是看一个对象是否有指向它的引用，没有引用了就回收对象算法:<br />
+1．跟踪记录被引用的次数<br />
+2．如果被引用了一次，那么就记录次数1,多次引用会累加++</p>
+<p>3.如果减少一个引用就减1 --<br />
+4．如果引用次数是0，则释放内存</p>
+
+<pre class="language-javascript"><code class="language-javascript">let person = {		// 引用次数0-&gt;1
+  age: 18,
+  name: '佩奇'
+}
+let p = person		// 引用次数1-&gt;2
+person = 1			// 引用次数2-&gt;1
+p = null			// 引用次数1-&gt;0，此时该对象被回收
+</code></pre>
+<p>存在一个致命问题：嵌套引用，即若两个对象相互引用，即使它们不再使用也不会被回收，导致内存泄漏</p>
+</li>
+<li><p>标记清除法</p>
+</li>
+</ul>
+<p>​	现代浏览器通用的大多是基于标记清除算法的某些改进算法，总体思想都是一致的。核心:</p>
+
+<pre class="language-none"><code class="language-none">1. 标记清除算法将“**不再使用的对象**”定义为“**无法达到的对象**”。
+2. 就是从根部（在JS中就是全局对象）出发定时扫描内存中的对象。凡是能从根部到达的对象，都是还需要使用的。
+3. 那些无法由根部出发触及到的对象被**标记为不再使用，稍后进行回收**。
+
+</code></pre>
+<h4 id="%3Cstrong%3E--%E9%97%AD%E5%8C%85%3C/strong%3E"><strong>- 闭包</strong></h4>
+<p>一个函数对周围状态的引用捆绑在一起，内层函数中访问到其外层函数的作用域</p>
+<p>即 <strong>闭包 = 内层函数 + 外层函数的变量</strong></p>
+<p>闭包作用：封闭数据，提供操作，外部也可以访问函数内部的变量</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 闭包基本格式
+function outer() {
+    let a = 1
+    function fn() {
+    	console.log(a)
+    }
+    return fn
+}
+const fun = outer()
+fun()
+// 外部函数可以使用函数内部的的变量,这里fun()就使用的outer()内部的变量a的值
+//简约写法：
+function outer() {
+    let a = 1
+    return function fn() {
+    	console.log(a)
+    }
+}
+</code></pre>
+<p>闭包可以<strong>实现数据的私有</strong>，即外部可以访问函数内部的变量，但是无法直接修改其值；保证了数据安全</p>
+
+<pre class="language-javascript"><code class="language-javascript">function count() {
+    let i = 0
+    function fn() {
+    	i++
+    	console.log(`函数被调用了${i}次`)
+    }
+    return fn
+}
+const fun = count()		// count()被fun引用，根据标记清除法，count()、fn()、i只有在关闭页面的时候被回收
+    					// 因此导致了内存泄漏
+</code></pre>
+<h4 id="%3Cstrong%3E--%E5%8F%98%E9%87%8F%E6%8F%90%E5%8D%87%28%E4%BA%86%E8%A7%A3%29%3C/strong%3E"><strong>- 变量提升(了解)</strong></h4>
+<p>仅存在于var声明变量，它允许在变量声明之前即被访问</p>
+
+<pre class="language-javascript"><code class="language-javascript">//var num	 ——&gt;变量提升 
+console.log(num + '件')	// undefined件
+var num = 10
+</code></pre>
+<p>代码在执行之前，先检测当前作用域下所有var声明的变量，把<strong>它们的声明</strong>全部<strong>提升</strong>到当前作用域的最前面</p>
+<p>注意：<strong>只提升声明，不提升赋值</strong>，不提倡使用</p>
+<h3 id="%E5%87%BD%E6%95%B0%E8%BF%9B%E9%98%B6">函数进阶</h3>
+<h4 id="%E5%87%BD%E6%95%B0%E6%8F%90%E5%8D%87">函数提升</h4>
+<p>代码在执行前，会把所有函数声明提升到当前作用域的最前面，但是不提升函数调用（不提倡，可以忍）</p>
+
+<pre class="language-javascript"><code class="language-javascript">fn()
+function() {
+    //...
+}
+
+//函数表达式是赋值，不是声明，fun不是一个函数。所以不可以提升，会报错
+fun()
+var fun = function() {
+    //函数表达式必须先声明和赋值后调用
+}
+</code></pre>
+<h4 id="%E5%87%BD%E6%95%B0%E5%8F%82%E6%95%B0">函数参数</h4>
+<ul>
+<li><strong>动态参数</strong></li>
+</ul>
+<p><code>arguments</code>是函数内部内置的<strong>伪数组变量</strong>，它包含了调用函数时传入的所有实参</p>
+
+<pre class="language-javascript"><code class="language-javascript">function getSum() {
+    // arguments 动态参数 只存在于 函数里面
+    // 是伪数组 里面存储的是传递过来的实参
+    // console.log(arguments)  [2,3,4]
+    let sum = 0
+    for (let i = 0; i &lt; arguments.length; i++) {
+    	sum += arguments[i]
+    }
+    console.log(sum)
+}
+getSum(2, 3, 4)
+getSum(1, 2, 3, 4, 2, 2, 3, 4)
+</code></pre>
+<p>箭头函数中没有arguments</p>
+<ul>
+<li><strong>剩余参数(更提倡)</strong></li>
+</ul>
+<p>剩余参数允许我们将一个不定数量的参数表示为一个数组</p>
+
+<pre class="language-javascript"><code class="language-javascript">function getSum(a, b, ...arr) {
+    console.log(arr)  // 使用的时候不需要写 ...
+}
+getSum(2, 3)			// a=2,b=3,arr为空
+getSum(1, 2, 3, 4, 5)	// a=1,b=2,arr=3,4,5
+</code></pre>
+<p>...是语法符号，置于最末函数形参之前，用于获取多余的实参</p>
+<p>借助...获取的是剩余实参，是个真数组</p>
+<ul>
+<li><strong>展开运算符</strong></li>
+</ul>
+<p>展开运算符<code>...</code>，能将一个数组进行展开</p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [1,5,3,8,2]
+console.log(...arr)
+</code></pre>
+<p>不会修改原数组</p>
+<p>典型运用场景：求数组最值、合并数组</p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr1 = [1, 2, 3]
+// 展开运算符 可以展开数组
+// console.log(...arr)
+
+// console.log(Math.max(1, 2, 3))
+// ...arr1  === 1,2,3
+// 1 求数组最大值
+console.log(Math.max(...arr1)) // 3
+console.log(Math.min(...arr1)) // 1
+// 2. 合并数组
+const arr2 = [3, 4, 5]
+const arr = [...arr1, ...arr2]
+console.log(arr)
+</code></pre>
+<h4 id="%E7%AE%AD%E5%A4%B4%E5%87%BD%E6%95%B0">箭头函数</h4>
+<p>适合于本来需要匿名函数的地方，写法更简洁</p>
+<p><strong>基本语法</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// 函数基本写法
+const fn = function () {
+    console.log(123)
+}
+————————————————————————————
+// 箭头函数基本写法
+const fn = () =&gt; {
+    console.log(123)
+}
+fn()
+————————————————————————————
+// 箭头函数带参数
+const fn = (x,y) =&gt; {
+    console.log(x + ' ' + y)
+}
+fn(5, 20)
+————————————————————————————
+// 只有一个形参时 可以省略小括号
+const fn = x =&gt; {
+    console.log(x)
+}
+fn(1)
+————————————————————————————
+// 只有一行代码时，可以省略大括号
+const fn = x =&gt; console.log(x)
+fn(1)
+————————————————————————————
+// 只有一行代码的时候，可以省略return
+const fn = (x, y) =&gt; x + y
+console.log(fn(1, 2))
+————————————————————————————
+// 箭头函数可以直接返回一个对象
+const fn = (uname) =&gt; ({ uname: uname })
+console.log(fn('Lucy'))
+</code></pre>
+<p><strong>参数</strong></p>
+<p>没有动态参数arguments，但是有剩余参数...arr</p>
+
+<pre class="language-javascript"><code class="language-javascript">const getSum = (...arr) =&gt; {
+    let sum = 0
+    for(let i = 0; i &lt; arr.length; i++) {
+    	sum += arr[i]
+    }
+    return sum
+}
+const result = getSum(2,3,4)
+console.log(result)
+</code></pre>
+<p><strong>箭头函数的this★</strong></p>
+<p>箭头函数不会创建自己的this，所以this指的是自己的<strong>作用域链的上一层</strong>（函数里面才有this）</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 1.以前this的指向：  谁调用的这个函数，this 就指向谁
+console.log(this)  // window
+// 普通函数
+function fn() {
+    console.log(this)  // window
+}
+window.fn()
+
+// 对象方法里面的this
+const obj = {
+    name: 'andy',
+    sayHi: function () {
+        console.log(this)  // obj
+    }
+}
+obj.sayHi()
+
+// 2.箭头函数的this  是上一层作用域的this 指向
+const fn = () =&gt; {
+    console.log(this)  // window
+}
+fn()
+// 对象方法箭头函数 this
+const obj = {
+    uname: 'pink老师',
+    sayHi: () =&gt; {
+        console.log(this)  // this 指向谁？ window
+    }
+    sayHello: function() {
+        let i = 10
+        const count = () =&gt; {
+            console.log(this)	// this指向作用域链上一层即function()，普通函数的this指向它的调用者即obj
+        }
+        count()
+    }
+}
+obj.sayHi()
+
+// 普通函数，此时this指向了DOM对象btn
+btn.addEventListener('click', function() {
+    console.log(this)
+})
+// 箭头函数，没有自己的this，此时this指向了window
+btn.addEventListener('click', () =&gt; {
+    console.log(this)
+})
+// DOM事件回调函数为了简便，不推荐使用箭头函数(this将为全局的window)
+</code></pre>
+<h3 id="%E8%A7%A3%E6%9E%84%E8%B5%8B%E5%80%BC">解构赋值</h3>
+<h4 id="%E6%95%B0%E7%BB%84%E8%A7%A3%E6%9E%84">数组解构</h4>
+<p>数组解构是将数组的单元快速批量赋值给一系列变量的简洁语法</p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [100, 60, 80]
+const [max, min, avg] = arr
+console.log(min)
+
+// 交换x y的值
+let x = 1
+let y = 4;		// 必须加分号
+[x, y] = [y, x]
+console.log(x, y)
+</code></pre>
+<p><strong>注意：js前面必须加分号的情况</strong></p>
+<ul>
+<li><p>多个立即执行函数之间</p>
+
+<pre class="language-none"><code class="language-none">(function t() {})();
+或者
+;(function t() {})()
+</code></pre>
+</li>
+<li><p>数组解构</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 如果前面有代码，还以数组作为一行的开头，会出错，需要用分号隔开
+;[x, y] = [y, x]
+</code></pre>
+</li>
+</ul>
+<p><strong>1.变量多、单元值少的情况——</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const [a,b,c,d] = [1,2,3]
+//1,2,3,undefined
+</code></pre>
+<p><strong>2.变量少，单元值多的情况——</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const [a,b] = [1,2,3]
+//1,2
+</code></pre>
+<p><strong>3.剩余参数 变量少，单元值多的情况——</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const [a,b,...arr] = [1,2,3,4]	// 剩余参数只能放在末尾
+//1,2,[3,4]真数组
+</code></pre>
+<p><strong>4.可以&quot;设置默认值&quot; 来防止有undefined传递单元值的情况——</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const [a = 0, b = 0] = [1, 2]	//1,2
+cosnt [a = 0, b = 0] = []		//0,0
+</code></pre>
+<p><strong>5.按需导入，忽略某些返回值</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// 看见了，假装没看见
+const [a, , c] = ['小米', '苹果', '华为']
+</code></pre>
+<p><strong>6.支持多维数组的解构</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [1,2,[3,4]]
+console.log(arr[2][0])	// 3
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const [a,b,[c,d]] = [1,2,[3,4]]
+console.log(d)		// 4
+</code></pre>
+<h4 id="%E5%AF%B9%E8%B1%A1%E8%A7%A3%E6%9E%84%E2%98%85">对象解构★</h4>
+<p>对象解构是将对象的属性和方法快速批量赋值给一系列变量的简洁语法</p>
+
+<pre class="language-javascript"><code class="language-javascript">const obj = {
+    uname: 'pink老师',
+    age: 18,
+};
+
+const {uname, age} = obj	// uname = obj.uname, age = uname.age
+</code></pre>
+<ul>
+<li>对象的属性名要和变量名必须一致</li>
+<li>注意解构的变量名不要与外面的变量名冲突，否则报错</li>
+<li>对象中找不到与变量名一致的属性时变量值为undefined</li>
+</ul>
+<p><strong>对象解构的变量名 可以重新改名 ——旧变量名: 新变量名</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const { uname: username, age } = { uname: 'pink老师', age: 18 }
+
+console.log(username)
+
+console.log(age)
+</code></pre>
+<p><strong>解构数组对象</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const pig = [
+    {
+    	name: '佩奇',
+    	'age' 6
+    }
+]
+
+const [{name, age}] = pig
+console.log(name. age)
+</code></pre>
+<p><strong>多级对象解构</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const pig = {
+    name: '佩奇',
+    family: {
+    	mother: '猪妈妈',
+    	father: '猪爸爸',
+        sister: '乔治'
+    }
+    age: 6
+}
+
+const { name, family: { mother, father, sister } } = pig
+console.log(sister)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const person = [
+    {
+        name: '佩奇',
+        family: {
+            mother: '猪妈妈',
+            father: '猪爸爸',
+            sister: '乔治'
+    	},
+    	age: 6
+    }
+]
+const [{ name, family: { mother, father, sister } }] = person
+console.log(mother)
+</code></pre>
+<p>案例：获取json中的data数据并更名为myDate</p>
+
+<pre class="language-javascript"><code class="language-javascript">// 这是后台传递过来的数据
+const msg = {
+    &quot;code&quot;: 200,
+    &quot;msg&quot;: &quot;获取新闻列表成功&quot;,
+    &quot;data&quot;: [
+        {
+            &quot;id&quot;: 1,
+            &quot;title&quot;: &quot;5G商用自己，三大运用商收入下降&quot;,
+            &quot;count&quot;: 58
+        },
+        {...},
+        {...},
+    ]
+}
+
+function render({ data: myData }) {
+      // 内部处理
+      console.log(myData)
+    }
+render(msg)
+</code></pre>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E2%80%94%E2%80%94%E4%BB%B7%E6%A0%BC%E7%AD%9B%E9%80%89">综合案例——价格筛选</h3>
+
+<pre class="language-html"><code class="language-html">&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+
+&lt;head&gt;
+  &lt;meta charset=&quot;UTF-8&quot;&gt;
+  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+  &lt;title&gt;商品渲染&lt;/title&gt;
+  &lt;style&gt;
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    .list {
+      width: 990px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .item {
+      width: 240px;
+      margin-left: 10px;
+      padding: 20px 30px;
+      transition: all .5s;
+      margin-bottom: 20px;
+    }
+
+    .item:nth-child(4n) {
+      margin-left: 0;
+    }
+
+    .item:hover {
+      box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+      transform: translate3d(0, -4px, 0);
+      cursor: pointer;
+    }
+
+    .item img {
+      width: 100%;
+    }
+
+    .item .name {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: #666;
+    }
+
+    .item .price {
+      font-size: 22px;
+      color: firebrick;
+    }
+
+    .item .price::before {
+      content: &quot;¥&quot;;
+      font-size: 14px;
+    }
+
+    .filter {
+      display: flex;
+      width: 990px;
+      margin: 0 auto;
+      padding: 50px 30px;
+    }
+
+    .filter a {
+      padding: 10px 20px;
+      background: #f5f5f5;
+      color: #666;
+      text-decoration: none;
+      margin-right: 20px;
+    }
+
+    .filter a:active,
+    .filter a:focus {
+      background: #05943c;
+      color: #fff;
+    }
+  &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;div class=&quot;filter&quot;&gt;
+    &lt;a data-index=&quot;1&quot; href=&quot;javascript:;&quot;&gt;0-100元&lt;/a&gt;
+    &lt;a data-index=&quot;2&quot; href=&quot;javascript:;&quot;&gt;100-300元&lt;/a&gt;
+    &lt;a data-index=&quot;3&quot; href=&quot;javascript:;&quot;&gt;300元以上&lt;/a&gt;
+    &lt;a href=&quot;javascript:;&quot;&gt;全部区间&lt;/a&gt;
+  &lt;/div&gt;
+  &lt;div class=&quot;list&quot;&gt;
+    &lt;!-- &lt;div class=&quot;item&quot;&gt;
+      &lt;img src=&quot;&quot; alt=&quot;&quot;&gt;
+      &lt;p class=&quot;name&quot;&gt;&lt;/p&gt;
+      &lt;p class=&quot;price&quot;&gt;&lt;/p&gt;
+    &lt;/div&gt; --&gt;
+  &lt;/div&gt;
+  &lt;script&gt;
+    // 2. 初始化数据
+    const goodsList = [
+      {
+        id: '4001172',
+        name: '称心如意手摇咖啡磨豆机咖啡豆研磨机',
+        price: '289.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/84a59ff9c58a77032564e61f716846d6.jpg',
+      },
+      {
+        id: '4001594',
+        name: '日式黑陶功夫茶组双侧把茶具礼盒装',
+        price: '288.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/3346b7b92f9563c7a7e24c7ead883f18.jpg',
+      },
+      {
+        id: '4001009',
+        name: '竹制干泡茶盘正方形沥水茶台品茶盘',
+        price: '109.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/2d942d6bc94f1e230763e1a5a3b379e1.png',
+      },
+      {
+        id: '4001874',
+        name: '古法温酒汝瓷酒具套装白酒杯莲花温酒器',
+        price: '488.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/44e51622800e4fceb6bee8e616da85fd.png',
+      },
+      {
+        id: '4001649',
+        name: '大师监制龙泉青瓷茶叶罐',
+        price: '139.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/4356c9fc150753775fe56b465314f1eb.png',
+      },
+      {
+        id: '3997185',
+        name: '与众不同的口感汝瓷白酒杯套组1壶4杯',
+        price: '108.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/8e21c794dfd3a4e8573273ddae50bce2.jpg',
+      },
+      {
+        id: '3997403',
+        name: '手工吹制更厚实白酒杯壶套装6壶6杯',
+        price: '100.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/af2371a65f60bce152a61fc22745ff3f.jpg',
+      },
+      {
+        id: '3998274',
+        name: '德国百年工艺高端水晶玻璃红酒杯2支装',
+        price: '139.00',
+        picture: 'https://yanxuan-item.nosdn.127.net/8896b897b3ec6639bbd1134d66b9715c.jpg',
+      },
+    ]
+
+    // 1. 渲染函数  封装
+    function render(arr) {
+      // 声明空字符串
+      let str = ''
+      // 遍历数组 
+      arr.forEach(item =&gt; {
+        // 解构
+        const { name, picture, price } = item
+        str += `
+         &lt;div class=&quot;item&quot;&gt;
+          &lt;img src=${picture} alt=&quot;&quot;&gt;
+          &lt;p class=&quot;name&quot;&gt;${name}&lt;/p&gt;
+          &lt;p class=&quot;price&quot;&gt;${price}&lt;/p&gt;
+        &lt;/div&gt; 
+        `
+      })
+      // 追加给list 
+      document.querySelector('.list').innerHTML = str
+    }
+    render(goodsList)  // 页面一打开就需要渲染
+
+    // 2. 过滤筛选  
+    document.querySelector('.filter').addEventListener('click', e =&gt; {
+      // e.target.dataset.index   e.target.tagName
+      const { tagName, dataset } = e.target
+      // 判断 
+      if (tagName === 'A') {
+        // console.log(11) 
+        // arr 返回的新数组
+        let arr = goodsList		
+        //★index = 4为全部区间，所以如果index不是1,2,3那么就一定是4，则arr直接为goodsList，即全部商品
+        if (dataset.index === '1') {
+          arr = goodsList.filter(item =&gt; item.price &gt; 0 &amp;&amp; item.price &lt;= 100)
+        } else if (dataset.index === '2') {
+          arr = goodsList.filter(item =&gt; item.price &gt;= 100 &amp;&amp; item.price &lt;= 300)
+        } else if (dataset.index === '3') {
+          arr = goodsList.filter(item =&gt; item.price &gt;= 300)
+        }
+        // 渲染函数
+        render(arr)
+      }
+    })
+  &lt;/script&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</code></pre>
+<h2 id="day2-%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%26amp%3B%E6%95%B0%E6%8D%AE%E5%B8%B8%E7%94%A8%E5%87%BD%E6%95%B0">day2-构造函数&amp;数据常用函数</h2>
+<h3 id="%E6%B7%B1%E5%85%A5%E5%AF%B9%E8%B1%A1">深入对象</h3>
+<h4 id="%E5%88%9B%E5%BB%BA%E5%AF%B9%E8%B1%A1%E4%B8%89%E7%A7%8D%E6%96%B9%E5%BC%8F">创建对象三种方式</h4>
+<ul>
+<li>1.利用对象字面量创建对象</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const o = {
+    name: '佩奇'
+}
+</code></pre>
+<ul>
+<li>2.利用new Object创建对象</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const o = new Object {{ name: '佩奇' }}
+console.log(o)	// {name: '佩奇'}
+</code></pre>
+<ul>
+<li>3.利用构造函数创建对象↓</li>
+</ul>
+<h4 id="%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">构造函数</h4>
+<p>可以利用构造函数来<strong>快速创建多个类似的对象</strong></p>
+<p>约定：</p>
+<ul>
+<li>命名以大写字母开头</li>
+<li>只能由<code>new</code>关键字来执行</li>
+</ul>
+<p>说明：</p>
+<ul>
+<li>使用new关键字调用函数的行为被称为实例化</li>
+<li>实例化构造函数时没有参数时可以省略()</li>
+<li>构造函数内部无需写return，返回值即为新创建的对象；写了return返回的值也是无效的</li>
+<li>new Object()、new Date()也是实例化构造函数</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">function Goods(name, price, count) {
+    this.name = name			// 左边为属性，右边为形参
+    this.price = price
+    this.count = count
+}
+
+const mi = new Goods('小米', 1999, 20)
+console.log(mi)
+const hw = new Goods('华为', 3999, 50)
+console.log(hw)
+</code></pre>
+<p>实例化执行过程</p>
+<ol>
+<li>创建新对象——空对象</li>
+<li>构造函数this指向新对象</li>
+<li>执行构造函数代码，修改this，添加新的属性</li>
+<li>返回新对象——含有数据</li>
+</ol>
+<h4 id="%E5%AE%9E%E4%BE%8B%E6%88%90%E5%91%98%26amp%3B%E9%9D%99%E6%80%81%E6%88%90%E5%91%98">实例成员&amp;静态成员</h4>
+<p>通过构造函数创建的对象为实例对象，实例对象中的属性和方法称为<strong>实例成员</strong>（实例属性和实例方法）</p>
+
+<pre class="language-javascript"><code class="language-javascript">const mi = new Goods('小米', 1999, 20)
+mi.name = 'vivo'	// mi是实例对象，它的属性name和方法intro()是实例成员
+mi.intro = function () { }
+</code></pre>
+<p>构造函数创建的实例对象<strong>彼此独立</strong>互不影响</p>
+<p>————————</p>
+<p>构造函数中的属性和方法被称为<strong>静态成员</strong>（静态属性和静态方法）</p>
+<p>静态成员只能构造函数来访问</p>
+<p>静态方法中的this指向构造函数</p>
+<p>比如：Date.now()、Math.PI、Math.random()</p>
+
+<pre class="language-javascript"><code class="language-javascript">Goods.num = 10					// Goods是构造函数，它的属性num和方法sayhi()是静态成员
+Goods.sayhi = function () { }
+</code></pre>
+<h3 id="%E5%86%85%E7%BD%AE%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0">内置构造函数</h3>
+<p>JS中主要的数据类型有6种——基本数据类型：字符串、数值、布尔、undefined、null；引用类型：对象</p>
+
+<pre class="language-javascript"><code class="language-javascript">const str = 'pink'
+// js底层完成，把简单数据类型包装为了引用数据类型
+const str = new String('pink')
+</code></pre>
+<p>字符串、数值、布尔等基本数据类型也有专门的构造函数，我们称为<strong>包装类型</strong></p>
+<p>JS中几乎所有数据都可以基于构造函数创建</p>
+<ul>
+<li>引用类型<ul>
+<li>Object，Array，RegExp，Date等</li>
+</ul>
+</li>
+<li>包装类型<ul>
+<li>String，Number，Boolean等</li>
+</ul>
+</li>
+</ul>
+<h4 id="Object">Object</h4>
+<p><strong>Object是内置构造函数，用于创建普通对象</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const user = new Object({name: '小明', age: 15})
+</code></pre>
+<p>当然，推荐使用字面量方式声明对象，而不是Object构造函数</p>
+<ul>
+<li><strong>Object.keys()、Object.values()静态方法</strong>——获取对象中所有属性(键)，返回一个数组</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const o = { name: '佩奇', age: 6}
+// 获取对象中所有键，并且返回的是一个数组
+console.log(Object.keys(o))
+console.log(Object.values(o))
+
+旧方法：
+for (let k in o) {
+    console.log(k)		// 属性
+    console.log(o[k])	// 值
+}
+</code></pre>
+<ul>
+<li><strong>Object.assign()静态方法</strong>——常用于对象追加式拷贝（有的就覆盖，没有的就追加）</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const o = { name: '佩奇', age: 6}
+const obj = {}
+Object.assign(obj, o)	// 把对象o拷贝给对象obj
+console.log(obj)
+</code></pre>
+<p>使用场景：给对象追加属性</p>
+
+<pre class="language-javascript"><code class="language-javascript">const o = { name: '佩奇', age: 6}
+Object.assign(o, {gender: '女'})
+console.log(o)			// { name: '佩奇', age: 6, gender: '女'}
+</code></pre>
+<h4 id="Array">Array</h4>
+<p><strong>Array是内置构造函数，用于创建数组</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = new Array(3,5)
+</code></pre>
+<p>建议使用字面量创建，不用Array构造函数创建</p>
+<p>一、数组常见<strong>核心实例方法</strong>：</p>
+<table>
+<thead>
+<tr>
+  <th>方法</th>
+  <th>作用</th>
+  <th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td>forEach</td>
+  <td>遍历数组</td>
+  <td>不返回数组，经常用于<strong>查找遍历</strong>数组元素</td>
+</tr>
+<tr>
+  <td>filter</td>
+  <td>过滤数组</td>
+  <td><strong>返回新数组</strong>，返回的是<strong>满足筛选条件</strong>的数组元素</td>
+</tr>
+<tr>
+  <td>map</td>
+  <td>迭代数组</td>
+  <td><strong>返回新数组</strong>，返回的是<strong>处理后</strong>的数组元素</td>
+</tr>
+<tr>
+  <td>reduce</td>
+  <td>累计器</td>
+  <td>返回累计处理的结果，经常用于求和等</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>reduce()累计器</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">arr.reduce(function(){}, 起始值)
+arr.reduce(function(上一次值，当前值){}，初始值)
+</code></pre>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [1, 5, 8]
+
+const num1 = arr.reduce((prev, current) =&gt; prev + current)		// 14
+const num2 = arr.reduce((prev, current) =&gt; prev + current, 10)	// 24
+</code></pre>
+<p>计算薪资案例：</p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [{
+    name: '张三',
+    salary: 10000
+},
+    ...
+]
+const money = arr.reduce((prev, item) =&gt; prev + item.salary * 1.3, 0)
+console.log(money)
+</code></pre>
+<p>二、数组常见<strong>其他实例方法</strong>：</p>
+<p>join——数组元素拼接为字符串，返回字符串<strong>(重点)</strong></p>
+<p>find——查找元素，返回符合测试条件的第一个数组元素值，如果没有符合条件的则返回undefined<strong>(重点)</strong></p>
+
+<pre class="language-javascript"><code class="language-javascript">// find查找的价值在于可以返回第一个符合测试条件  的对象
+const mi = arr.find(item =&gt; item.name === '小米')
+console.log(mi)
+</code></pre>
+<p>every——检测数组所有元素<strong>是否都符合指定条件</strong>，如果所有元素都通过检测返回true，否则返回false<strong>(重点)</strong></p>
+<p>some——检测数组中的元素是否满足指定条件<strong>如果数组中有元素满足条件返回true</strong>，否则返回false</p>
+<p>concat——合并两个数组，返回生成新数组</p>
+<p>sort——对原数组单元值排序</p>
+<p>splice——删除或替换原数组单元</p>
+<p>reverse——反转数组</p>
+<p>findIndex——查找元素的索引值</p>
+<p><strong>——有问题上mdn查</strong></p>
+<p><strong>静态方法Array.from()</strong>——伪数组转换为真数组</p>
+<p>伪数组没有pop等方法，需要转为真数组</p>
+<h4 id="String">String</h4>
+<p>length——用来获取字符串的度长(重点)</p>
+<p><code>split( '分隔符')</code>——用来将字符串拆分成数组(重点)；join('连接符')方法与之相反</p>
+<p><code>substring (开始的索引号[,结束的索引号])</code>——截取索引号之间的字符串(重点)</p>
+<p><code>startswith(检测字符串[，检测位置索引号])</code>——检测是否以某字符开头(重点)</p>
+
+<pre class="language-javascript"><code class="language-javascript">let str = 'To be, or not to be, that is the question.'
+
+alert(str.startswith(&quot;not to be&quot;, 10));		// true
+</code></pre>
+<p><code>endswith</code>——检测是否以某字符结尾</p>
+<p><code>includes(搜索的字符串[，检测位置索引号])</code>——判断一个字符串是否包含在另一个字符串中，根据情况返回true或 false(重点)</p>
+<p>toUppercase——用于将字母转换成大写</p>
+<p>toLowercase——用于将就转换成小写</p>
+<p>indexof——检测是否包含某字符</p>
+<p>replace——用于替换字符串，支持正则匹配</p>
+<p>match——用于查找字符串，支持正则匹配</p>
+<h4 id="Number">Number</h4>
+<p><strong>Number是内置构造函数，用来创建数值</strong></p>
+<p>toFixed()——设置保留小数位的长度</p>
+
+<pre class="language-javascript"><code class="language-javascript">const price = 12.345
+const num = 10
+console.log(price.toFixed(2))	// 12.34
+console.log(num.toFixed(2))	// 10.00
+</code></pre>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%28%E5%BE%85%E5%AE%8C%E6%88%90%29">综合案例(待完成)</h3>
+<p><strong>购物车案例</strong>（待完成）</p>
+<h2 id="day3-%E6%B7%B1%E5%85%A5%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1">day3-深入面向对象</h2>
+<h3 id="%E7%BC%96%E7%A8%8B%E6%80%9D%E6%83%B3">编程思想</h3>
+<p>面向过程——分析问题所需的解决步骤，用函数一步步实现，一个个依次调用函数</p>
+<p><strong>面向对象</strong>——把事务分解成为一个个对象，由对象之间分工与合作。即以对象功能来划分问题，而不是步骤</p>
+<ul>
+<li>特性：封装性、继承性、多态性</li>
+</ul>
+<p>面向过程性能更高，但是不灵活，复用性差；	面向对象更易维护、复用和扩展，但是性能不好</p>
+<p><strong>构造函数</strong></p>
+<p>构造函数体现了面向对象的封装性；构造函数实例创建的对象彼此独立、互不影响；</p>
+<p>也存在浪费内存的问题，构造函数中的函数会多次创建，即使一模一样的代码也会分别开辟内存</p>
+<p>原型——可以解决构造函数浪费内存的问题，即把函数单独存储起来，写在原型对象中，所有实例对象共享</p>
+<h3 id="%E5%8E%9F%E5%9E%8B%E5%AF%B9%E8%B1%A1prototype">原型对象prototype</h3>
+<ul>
+<li><p>构造函数通过prototype属性分配的函数是所有对象所 <strong>共享的</strong>。</p>
+</li>
+<li><p>JavaScript 规定，<strong>每一个构造函数都有一个 prototype 属性</strong>，指向原型对象</p>
+</li>
+<li><p>原型对象可以挂载函数，对象实例化不会多次创建原型对象上的函数，可以节约内存</p>
+</li>
+<li><p>把内容不变的方法，直接定义在 prototype 对象上，这样所有对象的实例就可以共享这些方法</p>
+</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">function Star(uname, age) {
+    this.uname = uname
+    this.age = age
+}
+Star.prototype.sing = function() {
+    console.log('唱歌')
+}
+const ldh = new Star('刘德华',55)
+const zxy = new Star('张学友', 58)
+
+ldh.sing()
+zxy.sing()
+    
+console.log(ldh.sing === zxy.sing)	// true
+</code></pre>
+<p><em>公共属性写在构造函数里，公共方法写在原型对象上</em></p>
+<ul>
+<li><strong>构造函数的this</strong> 和 <strong>原型对象(函数)中的this</strong> 都指向 <strong>实例化的对象</strong></li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">let that
+function Star(uname) {
+    // that = this
+    // console.log(this)
+    this.uname = uname
+}
+// 原型对象里面的函数this指向的还是 实例对象 ldh
+Star.prototype.sing = function () {
+    that = this
+    console.log('唱歌')
+}
+// 实例对象 ldh   
+// 构造函数里面的 this 就是  实例对象  ldh
+const ldh = new Star('刘德华')
+ldh.sing()
+console.log(that === ldh)
+</code></pre>
+<p>小例子——给Array添加求最大值和求和方法</p>
+
+<pre class="language-javascript"><code class="language-javascript">const arr = [1,2,3]
+
+Array.prototype.max = function() {
+    return Math.max(...this)
+}
+Array.prototype.sum = function() {
+    return this.reduce((prev, item) =&gt; prev + item, 0)
+}
+
+console.log(arr.max())
+console.log([2,5,3].max())
+console.log([1,2,3].sum())
+</code></pre>
+<h3 id="constructor%E5%B1%9E%E6%80%A7">constructor属性</h3>
+<p>每个构造函数默认有一个原型对象；每个原型对象里默认有一个constructor属性，指向该原型对象的构造函数（指回爸爸）</p>
+<p>原型对象里面的<strong>constructor属性</strong>的<strong>作用</strong>是<strong>知道创建自己的是哪个构造函数</strong>。如果没有constructor属性，这个原型对象就是孤儿</p>
+
+<pre class="language-javascript"><code class="language-javascript">function Star() { }
+console.log(Star.prototype)
+Star.prototype = {
+    // constructor: Star,      // 重新指回创建这个原型对象的构造函数
+    sing: function() {
+        console.log('唱歌')
+    },
+    dance: function() {
+        console.log('跳舞')
+    }
+}
+console.log(Star.prototype)
+</code></pre>
+<h3 id="%E5%AF%B9%E8%B1%A1%E5%8E%9F%E5%9E%8B%3Ccode%3E__proto__%3C/code%3E">对象原型<code>__proto__</code></h3>
+<p>每一个对象都有一个属性<code>__proto__</code>指向构造函数的prototype原型对象，因此实例对象可以使用构造函数的prototype原型对象的属性和方法</p>
+<ul>
+<li><code>__proto__</code>是JS非标准属性，标准写法是[[prototype]]，意义相同</li>
+<li>表明当前实例对象指向哪个原型对象prototype</li>
+<li><code>__proto_</code>里面也有一个constructor，指向创建该实例对象的构造函数</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">function Star() { }
+const ldh = new Star()
+console.log(ldh.__proto__ === Star.prototype)	// true
+console.log(ldh.__proto__.constructor === Star)	// true
+</code></pre>
+<img src="前端学习笔记★.assets/image-20230917171128569.png" alt="image-20230917171128569" style="zoom: 67%;" />
+<h3 id="%E5%8E%9F%E5%9E%8B%E7%BB%A7%E6%89%BF">原型继承</h3>
+<p>JS中大多借助原型对象实现继承的特性</p>
+<p>原型继承，即通过原型来继承</p>
+
+<pre class="language-javascript"><code class="language-javascript">const Person = {
+    eyes: 2,
+    head: 1
+}
+function Man(){ }
+Man.prototype = Person
+Man.prototype.constructor = Man
+const ldh = new Man()
+console.log(ldh.eyes)
+console.log(Man.prototype)
+</code></pre>
+<p>遇到问题：把Person对象挂载到Woman和Man构造函数上。如果给Woman的prototype添加baby方法，则其实是给Person对象添加baby方法，会出现Man的原型对象也会有baby方法</p>
+<p>解决方法：原型对象用构造函数</p>
+<p>——把构造函数Person挂载到Woman和Man构造函数上。Woman和Man的原型对象都是基于构造函数Person创建的对象，所以Woman和Man的原型对象相同，但是相互独立互不影响，此时给Woman的原型对象添加baby方法不会影响Man的原型对象</p>
+
+<pre class="language-javascript"><code class="language-javascript">function Person() {
+    this.eyes = 2
+    this.head = 1
+}
+
+function Woman() { }
+Woman.prototype = new Person()
+Woman.prototype.constructor = Woman
+Woman.prototype.baby = function () {
+    console.log('宝贝')
+}
+const xiaohua = new Woman()
+console.log(red)
+
+function Man() { }
+Man.prototype = new Person()
+Man.prototype.constructor = Man
+const pink = new Man()
+console.log(pink)
+</code></pre>
+<h3 id="%E5%8E%9F%E5%9E%8B%E9%93%BE">原型链</h3>
+<p><code>Object.prototype.__proto__</code> <strong>=&gt;</strong> <code>null</code></p>
+<p><code>Person.prototype.__proto__</code><strong>=&gt;</strong> <code>Object.prototype</code></p>
+<p><code>ldh.__proto__</code><strong>=&gt;</strong> <code>Person.prototype</code></p>
+<p>基于原型对象的继承使得不同构造函数的原型对象关联在一起，并且呈现一种链状的结构，我们将其称为<strong>原型链</strong></p>
+<p>通俗来讲：一层一层往上，每层都是一个（构造函数，原型对象，实例对象）的三角，将三角串起来的就是原型链</p>
+<ul>
+<li>只要是对象，就有<code>__proto__</code></li>
+<li>只要是原型对象，就有<code>constructor</code></li>
+</ul>
+<p>原型链——查找规则（查找链）：</p>
+<ol>
+<li>当访问一个对象的属性(包括方法)时，首先查找这个对象自身有没有该属性。</li>
+<li>如果没有就查找它的原型 (也就是 _proto 指向的 prototype 原型对象)</li>
+<li>如果还没有就查找原型对象的原型 (object的原型对象)</li>
+<li>依此类推一直找到 object 为止 (null)</li>
+<li><code>__proto__</code> 对象原型的意义就在于为对象成员查找机制提供一个方向，或者说一条路线</li>
+<li>可以使用 instanceof 运算符用于检测构造函数的 prototype 属性是否出现在某个实例对象的原型链上</li>
+</ol>
+
+<pre class="language-javascript"><code class="language-javascript">console.log(ldh instanceof Person)	// true 检测构造函数Person的prototype 是否出现在ldh实例对象的原型链上
+console.log(ldh instanceof Object)	// true
+console.log(ldh instanceof Array)	// false
+console.log(Array instanceof Object)// true
+</code></pre>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B%E2%80%94%E6%B6%88%E6%81%AF%E6%A1%86">综合案例—消息框</h3>
+<p>消息提示框对象封装</p>
+
+<pre class="language-javascript"><code class="language-javascript">function Modal(title = '', message = '') {
+    this.title = title
+    this.message = message
+    this.modalBox = document.createElement('div')
+    this.modalBox.className = 'modal'
+    this.modalBox.innerHTML = `
+        &lt;div class=&quot;header&quot;&gt;${this.title} &lt;i&gt;x&lt;/i&gt;&lt;/div&gt;
+        &lt;div class=&quot;body&quot;&gt;${this.message}&lt;/div&gt;
+    `
+}
+
+Modal.prototype.open = function() {				// 需要用到this，所以这里不用箭头函数
+    if(!document.querySelector('.modal')){
+        document.body.appendChild(this.modalBox)
+        this.modalBox.querySelector('i').addEventListener('click', () =&gt; {
+            this.close()
+        })
+    }
+}
+
+Modal.prototype.close =function() {
+    document.body.removeChild(this.modalBox)
+}
+
+document.querySelector('#delete').addEventListener('click', () =&gt; {
+    const m = new Modal('温馨提示', '您没有权限删除')
+    m.open()
+})
+
+document.querySelector('#login').addEventListener('click', () =&gt; {
+    const m = new Modal('友情提示', '您还没有注册账号')
+    m.open()
+})
+</code></pre>
+<h2 id="day4-%E9%AB%98%E9%98%B6%E6%8A%80%E5%B7%A7">day4-高阶技巧</h2>
+<h3 id="%E6%B7%B1%E6%B5%85%E6%8B%B7%E8%B4%9D">深浅拷贝</h3>
+<p>深浅拷贝<strong>只针对引用类型，即Array、Object等</strong></p>
+<p>直接赋值：赋值地址，直接赋值的对象任何修改都能影响原对象</p>
+<ul>
+<li>浅拷贝：<strong>简单数据类型</strong>直接拷贝<strong>值</strong>；<strong>引用数据类型</strong>拷贝的是<strong>地址</strong>（即如果是多层对象会出现问题）</li>
+</ul>
+
+<pre class="language-javascript"><code class="language-javascript">const obj = {
+    uname: 'pink',
+    age: 18,
+    family: {
+    	baby: '小pink'
+    }
+}
+const o = {}
+Object.assign(o, obj)
+o.age = 20
+o.family.baby = '老pink'	
+console.log(o)		// age = 20, family: {baby: '老pink'}
+console.log(obj)	// age = 18, family: {baby: '老pink'}	多层对象是引用数据类型，拷贝地址，一改全改
+</code></pre>
+<ul>
+<li>深拷贝：<strong>简单数据类型</strong>直接拷贝<strong>值</strong>；<strong>引用数据类型</strong>拷贝的是对象<ul>
+<li>通过递归实现</li>
+<li>lodash/cloneDeep</li>
+<li>通过JSON.stringify()实现</li>
+</ul>
+</li>
+</ul>
+<h3 id="%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86">异常处理</h3>
+<h3 id="%E5%A4%84%E7%90%86this">处理this</h3>
+<h3 id="%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96">性能优化</h3>
+<h3 id="%E7%BB%BC%E5%90%88%E6%A1%88%E4%BE%8B">综合案例</h3>
+
+                        
+                    </div>
+                </div>
+                <div id="previous_next">
+                    <div id="previous">
+                        
+                        <a href="/front-end/javascript02.html">
+                            <span class="icon"></span>
+                            <span class="label">Web-APIs-DOM</span>
+                        </a>
+                        
+                    </div>
+                    <div id="next">
+                        
+                    </div>
+                </div>
+                <div id="comments-container"></div>
+            </div>
+            <div id="toc_wrapper">
+                <div id="toc">
+                    <div id="toc_content">
+                            
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <a id="to_top" href="#"></a>
+    <div id="doc_footer">
+        <div id="footer">
+            <div id="footer_top">
+                <ul>
+<li><a>第一列链接</a><ul><li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+<li><a target="_blank" href="https://lumengde.com">我的博客</a></li>
+</ul>
+</li>
+<li><a>第二列链接</a><ul><li><a target="_blank" href="https://www.youtube.com/@CodeMonkeyUnity/videos">Code Monkey - Youtube</a></li>
+</ul>
+</li>
+</ul>
+
+            </div>
+            <div id="footer_bottom">
+                <ul>
+<li><a target="_blank" href="https://github.com/teedoc/teedoc">网站使用 teedoc 生成</a></li>
+</ul>
+
+            </div>
+        </div>
+    </div>
+    
+        <script src="/teedoc-plugin-markdown-parser/mermaid.min.js"></script>
+    
+        <script>mermaid.initialize({startOnLoad:true});</script>
+    
+        <script src="/static/js/theme_default/tocbot.min.js"></script>
+    
+        <script src="/static/js/theme_default/main.js"></script>
+    
+        <script src="/static/js/theme_default/viewer.min.js"></script>
+    
+        <script src="/static/css/theme_default/prism.min.js"></script>
+    
+        <script src="/static/js/search/search_main.js"></script>
+    
+        <script src="/static/js/custom.js"></script>
+    
+        <script type="text/javascript" src="/static/js/live.js"></script>
+    
+</body>
+
+</html>
